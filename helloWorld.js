@@ -1,8 +1,8 @@
 // Return the string 'Hello World!'
-//P- String
-//R- Return the string 'Hello World!'
-//E- return 'string'
-/*P- function helloWorld():  
+//Parameter- String
+//Returns- Return the string 'Hello World!'
+//Example- return 'string'
+/*Pseduo code- function helloWorld():  
       return string
 */
         
