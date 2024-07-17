@@ -11,3 +11,12 @@ country
 NOTE: The United States is written as 'USA' in the table.
 
 NOTE: Your solution should use pure SQL.*/
+
+
+
+--Pseduo code: SELECT names and countries of origin of ALL travelers table NOT from Canada,Mexico, or the USA
+
+
+--Your Code Here
+SELECT * FROM travelers 
+WHERE country NOT IN ('Canada', 'Mexico', 'USA');
