@@ -1,7 +1,7 @@
 // Return the string 'Hello World!'
 //Parameter- String
 //Returns- Return the string 'Hello World!'
-//Example- return 'string'
+//Example- return 'Hello World!'
 /*Pseduo code- f()=>'Hello World!"
 */
         
