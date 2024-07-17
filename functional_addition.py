@@ -9,3 +9,8 @@ def add(n):
   def add_helper(m):
     return n+m
   return add_helper
+
+
+#refactored
+def add(n):
+  return lambda x: x+n 
