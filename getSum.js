@@ -3,7 +3,7 @@
 
 //Parameter - sum of two numbers (integres)
 //Return - integer
-//Example - n + m 
+//Example - a + b
 //Pseduo code - a function with two argumments that both are integres returming the sum of those two arguments
 
 
