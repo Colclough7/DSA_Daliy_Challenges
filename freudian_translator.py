@@ -11,8 +11,16 @@ In this kata, the function will take a string as its argument, and return a stri
 
 #PARAMETER - STRING
 #RETURN - STRING (empty string or no argument return an empty string)
-#EXAMPLE - 
-#PSEDUO CODE - "I Love the pico" returns "sex sex sex sex"
+#EXAMPLE - "I Love the pico" returns "sex sex sex sex"
+#PSEDUO CODE - write a function that expects a string argument, split the string into a list by "spaces", the length of the list should be multiplied by the the string "sex" and returned, if the list length equals 0 then return an empty string ''.
 
 def to_freud(sentence):
   #your code here
+  list = sentence.split()
+    if len(list) == 0:
+        return ''
+    else:
+        new_sentence =  "sex "*len(list)
+        return new_sentence.rstrip()
+
+
