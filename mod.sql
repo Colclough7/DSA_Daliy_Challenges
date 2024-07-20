@@ -9,3 +9,10 @@ Return a table with one column (mod) which is the output of number1 modulus numb
 
 
 -- Pseduo code -  Select number1 modulus (%) number2 with the alise of mod from the decimals table.
+
+/*  SQL  */
+SELECT 
+    number1 % number2 AS mod
+FROM 
+    decimals;
+
