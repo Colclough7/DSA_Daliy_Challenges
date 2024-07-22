@@ -11,5 +11,6 @@ Since alcohol will be served, you can only attend if you are 21 or older
 You can't attend if the attending column returns anything but true*/
 
 -- Psedocode - Insert into participants table(name,age,attending)
+--values('name',age,boolean);
 
 
