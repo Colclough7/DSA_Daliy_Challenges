@@ -9,3 +9,10 @@ semester (integer)
 mentor (string)
 tuition_received (Boolean)
 NOTE: Your solution should use pure SQL.*/
+
+--Pseduocode - SELECT ALL FROM students table WHERE tuition_received is false
+
+
+-- Your Code Here
+SELECT * FROM students
+WHERE tuition_received = False;
