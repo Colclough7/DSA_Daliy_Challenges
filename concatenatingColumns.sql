@@ -13,3 +13,13 @@ Your task is to use a select statement to return a single column table containin
 
 title
 Don't forget to add spaces.*/
+
+
+
+--Pseduocode - SELECT FNConcat(prefix + ' ' + first + ' ' + last + ' ' + suffix) AS title FROM names;
+
+
+/* SQL */
+
+SELECT CONCAT(prefix,' ',first,' ',last,' ',suffix) AS title 
+FROM names;
