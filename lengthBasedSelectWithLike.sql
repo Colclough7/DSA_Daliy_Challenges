@@ -9,3 +9,12 @@ last_name
 results table schema
 first_name
 last_name*/
+
+--Pseduocode - SELECT firstName, lastName FROM names table WHERE firstName LIKE '______%' (6 characters)
+
+
+--code
+
+SELECT first_name,last_name
+FROM names
+WHERE first_name LIKE '______%'
