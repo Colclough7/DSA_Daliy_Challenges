@@ -11,3 +11,13 @@ lastname
 all names are in lowercase
 
 To aid the scribes, return the firstname and lastname column concatenated, separated by a space, into a single shortlist column, and capitalise the first letter of each name.*/
+
+
+/*SQL*/
+
+
+SELECT CONCAT(INITCAP(firstname), ' ', INITCAP(lastname)) AS shortlist 
+FROM elves
+WHERE
+  firstname LIKE '%tegil%'
+  OR lastname LIKE '%astar%'
