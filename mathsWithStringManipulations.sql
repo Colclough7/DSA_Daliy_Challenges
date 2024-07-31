@@ -9,3 +9,8 @@ return a single column named calculation where the value is the bit length of na
 
 
 /*SQL*/
+
+SELECT
+  (length(race) + bit_length(name)) as calculation
+FROM
+  demographics;
