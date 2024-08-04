@@ -2,3 +2,13 @@
 
 
 
+
+/*input:   [numerator, denominator]
+output:  [reduced numerator, reduced denominator]
+example: [45, 120] --> [3, 8]
+All numerators and denominators will be positive integers.*/
+
+
+
+
+
