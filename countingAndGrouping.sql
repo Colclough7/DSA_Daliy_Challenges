@@ -12,3 +12,12 @@ you need to return a table that shows a count of each race represented, ordered 
 
 race
 count*/
+
+
+
+SELECT
+   race
+  ,COUNT(*) AS count
+FROM demographics
+GROUP BY race
+ORDER BY count DESC
