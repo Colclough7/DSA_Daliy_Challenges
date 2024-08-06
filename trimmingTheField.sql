@@ -1,9 +1,21 @@
-/*Write a function that takes a positive integer n, sums all the cubed values from 1 to n (inclusive), and returns that sum.
+/*You have access to a table of monsters as follows:
 
-Assume that the input n will always be a positive integer.
+monsters schema
 
-Examples: (Input --> output)
+id
+name
+legs
+arms
+characteristics
+The monsters in the provided table have too many characteristics, they really only need one each. 
+Your job is to trim the characteristics down so that each monster only has one. If there is only one already, provide that. 
+If there are multiple, provide only the first one (don't leave any commas in there).
 
-2 --> 9 (sum of the cubes of 1 and 2 is 1 + 8)
-3 --> 36 (sum of the cubes of 1, 2, and 3 is 1 + 8 + 27)*/
+You must return a table with the format as follows:
 
+output schema
+
+id
+name
+characteristic
+Order by id*/
