@@ -15,3 +15,7 @@ Function should return true if it is possible and false if not.*/
 
 
 /*SQL*/
+
+
+SELECT distance_to_pump,mpg,fuel_left, (distance_to_pump * 1.0/mpg) <= fuel_left AS res
+FROM zerofuel
