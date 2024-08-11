@@ -5,3 +5,9 @@ your car runs on about 25 miles per gallon. There are 2 gallons left.
 Considering these factors, write a function that tells you if it is possible to get to the pump or not.
 
 Function should return true if it is possible and false if not.*/
+
+
+
+
+
+--# write your SQL statement here: you are given a table 'zerofuel' with columns 'distance_to_pump', 'mpg' and 'fuel_left', return a table with all the columns and your result in a column named 'res'
