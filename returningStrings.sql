@@ -2,3 +2,6 @@
 
 
 --person table has name data
+
+
+/*SQL*/
