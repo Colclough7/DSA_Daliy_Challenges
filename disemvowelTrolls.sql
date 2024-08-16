@@ -15,3 +15,8 @@ Note: for this kata y isn't considered a vowel.*/
 
 
 /*SQL*/
+
+
+
+SELECT str,TRANSLATE(str,'AEIOUaeiou','') AS res
+FROM disemvowel
