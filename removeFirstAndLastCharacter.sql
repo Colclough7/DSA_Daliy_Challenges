@@ -8,3 +8,7 @@ You don't have to worry about strings with less than two characters.*/
 
 
 /*SQL*/
+
+
+select s,substr(s, 2, length(s) - 2) AS res
+FROM removechar
