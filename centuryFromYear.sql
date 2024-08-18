@@ -17,3 +17,7 @@ In SQL, you will be given a table years with a column yr for the year. Return a 
 
 
 /*SQL*/
+
+
+select 1 + (yr - 1) / 100 as century
+FROM years
