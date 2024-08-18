@@ -5,3 +5,6 @@ For example: month 2 (February), is part of the first quarter; month 6 (June), i
 Constraint:
 
 1 <= month <= 12*/
+
+
+-- # write your SQL statement here: you are given a table 'quarterof' with column 'month', return a table with column 'month' and your result in a column named 'res'.
