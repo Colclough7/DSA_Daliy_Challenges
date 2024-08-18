@@ -14,3 +14,6 @@ In SQL, you will be given a table years with a column yr for the year. Return a 
 
 
 --your statment goes here--
+
+
+/*SQL*/
