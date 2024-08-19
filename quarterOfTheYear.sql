@@ -11,3 +11,15 @@ Constraint:
 
 
 /*SQL*/
+
+
+SELECT 
+    month,
+    CASE
+        WHEN month IN (1, 2, 3) THEN 1
+        WHEN month IN (4, 5, 6) THEN 2
+        WHEN month IN (7, 8, 9) THEN 3
+        WHEN month IN (10, 11, 12) THEN 4
+    END AS res
+FROM 
+    quarterof;
