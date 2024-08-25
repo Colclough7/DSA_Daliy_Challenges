@@ -5,3 +5,7 @@ Your task is to calculate how many blank pages do you need. If n < 0 or m < 0 re
 Example:
 n= 5, m=5: 25
 n=-5, m=5:  0*/
+
+
+
+-- # write your SQL statement here: you are given a table 'paperwork' with columns 'id', 'n' and 'm', return a table with columns 'n', 'm' and your result in a column named 'res'.
