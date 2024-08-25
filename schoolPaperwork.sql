@@ -9,3 +9,6 @@ n=-5, m=5:  0*/
 
 
 -- # write your SQL statement here: you are given a table 'paperwork' with columns 'id', 'n' and 'm', return a table with columns 'n', 'm' and your result in a column named 'res'.
+
+
+/*SQL*/
