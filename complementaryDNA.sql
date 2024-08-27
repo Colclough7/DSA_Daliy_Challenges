@@ -12,3 +12,6 @@ you need to return the other complementary side. DNA strand is never empty or th
 
 "ATTGC" --> "TAACG"
 "GTAT" --> "CATA"*/
+
+
+--# write your SQL statement here: you are given a table 'dnastrand' with column 'dna', return a table with column 'dna' and your result in a column named 'res'.
