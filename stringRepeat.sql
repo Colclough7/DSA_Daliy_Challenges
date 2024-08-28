@@ -9,3 +9,9 @@ Examples (input -> output)
 
 
 /*SQL*/
+
+
+
+
+SELECT s, n, REPEAT(s, n) AS res
+FROM repeatstr;
