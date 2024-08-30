@@ -15,3 +15,11 @@ For example (Input -> Output):
 
 
 /*SQL*/
+
+
+SELECT 
+    n,
+    (n * (n + 1) / 2) AS res
+FROM 
+    kata;
+
