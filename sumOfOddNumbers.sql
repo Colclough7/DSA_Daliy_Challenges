@@ -10,3 +10,9 @@ Calculate the sum of the numbers in the nth row of this triangle (starting at in
 
 1 -->  1
 2 --> 3 + 5 = 8*/
+
+
+/*
+the table "nums" contains an integer "n", the number
+return your result in a column "res"
+*/
