@@ -16,3 +16,6 @@ Calculate the sum of the numbers in the nth row of this triangle (starting at in
 the table "nums" contains an integer "n", the number
 return your result in a column "res"
 */
+
+
+/*SQL*/
