@@ -19,3 +19,23 @@ return your result in a column "res"
 
 
 /*SQL*/
+
+
+WITH RowInfo AS (
+    SELECT
+        n,
+        -- Calculate the starting odd number for the nth row
+        (n * (n - 1)) + 1 AS starting_number
+    FROM nums
+),
+OddNumbers AS (
+    SELECT
+        n,
+        starting_number,
+        -- Sum of the nth row of consecutive odd numbers
+        (n * starting_number) + (n * (n - 1)) AS sum_of_row
+    FROM RowInfo
+)
+SELECT
+    sum_of_row AS res
+FROM OddNumbers;
