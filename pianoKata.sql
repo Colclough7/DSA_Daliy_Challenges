@@ -35,3 +35,6 @@ but considering how many years it would take it is just not possible) and return
 -- you are given a table 'pianokeys' with column 'n'.
 -- return a table with:
 --   this column and your result in a column named 'res'
+
+
+/*SQL*/
