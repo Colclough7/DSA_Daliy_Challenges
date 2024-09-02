@@ -18,3 +18,6 @@ results table schema
 id
 name
 stock*/
+
+
+-- select all of the items
