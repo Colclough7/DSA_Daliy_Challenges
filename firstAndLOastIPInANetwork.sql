@@ -25,5 +25,11 @@ Output table
 Example
 For the IP address 182.240.42.115/24 the first address in the network is 182.240.42.0/24, and the last one is 182.240.42.255/24.*/
 
+/*SQL*/
 
-SELECT * FROM connections;
+
+
+
+
+
+
