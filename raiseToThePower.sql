@@ -8,3 +8,4 @@ Return a table with a single column result which is the output of number1 raised
 
 
 
+/*  SQL  */
