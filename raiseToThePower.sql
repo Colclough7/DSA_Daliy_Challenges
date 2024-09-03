@@ -9,3 +9,7 @@ Return a table with a single column result which is the output of number1 raised
 
 
 /*  SQL  */
+
+
+SELECT POWER(number1, number2) AS result
+FROM decimals;
