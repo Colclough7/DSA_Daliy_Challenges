@@ -97,4 +97,9 @@ input       description
 
 
 
+-- # write your SQL statement here: 
+-- you are given a table 'score' with column 's' (text)
+-- return a query with column 's' and your result in a column named 'res' (boolean)
+-- sort results by column 's' ascending
+
 
