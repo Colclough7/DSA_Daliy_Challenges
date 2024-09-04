@@ -33,3 +33,38 @@ film_id | title                             | special_features                  
 
 
 -- Your SQL
+
+
+WITH SpecialFeatureCounts AS (
+    -- Unnest the special_features array into individual rows and count the occurrences of each feature
+    SELECT
+        unnest(special_features) AS feature,
+        COUNT(*) AS feature_count
+    FROM
+        film
+    GROUP BY
+        feature
+),
+MostPopularFeature AS (
+    -- Find the feature with the highest count
+    SELECT
+        feature
+    FROM
+        SpecialFeatureCounts
+    ORDER BY
+        feature_count DESC
+    LIMIT 1
+)
+-- Select the films that have the most popular feature
+SELECT
+    f.film_id,
+    f.title,
+    f.special_features
+FROM
+    film f
+JOIN
+    MostPopularFeature mpf
+    ON mpf.feature = ANY(f.special_features)
+ORDER BY
+    f.title ASC,
+    f.film_id ASC;
