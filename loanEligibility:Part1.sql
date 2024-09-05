@@ -29,3 +29,36 @@ customer_id	loan_eligibility
 
 
 -- Substitute with your SQL
+
+
+WITH customer_loans AS (
+    SELECT
+        c.id AS customer_id,
+        c.age,
+        COALESCE(SUM(CASE WHEN l.loan_status = 'unpaid' THEN 1 ELSE 0 END), 0) AS unpaid_loan_count
+    FROM
+        customers c
+    LEFT JOIN
+        loans l ON c.id = l.customer_id
+    WHERE
+        c.id BETWEEN 1 AND 10
+    GROUP BY
+        c.id, c.age
+),
+eligibility AS (
+    SELECT
+        customer_id,
+        CASE
+            WHEN age BETWEEN 18 AND 65 AND unpaid_loan_count = 0 THEN 'loan can be given'
+            ELSE 'loan cannot be given'
+        END AS loan_eligibility
+    FROM
+        customer_loans
+)
+SELECT
+    customer_id,
+    loan_eligibility
+FROM
+    eligibility
+ORDER BY
+    customer_id DESC;
