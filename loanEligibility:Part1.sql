@@ -26,3 +26,6 @@ customer_id	loan_eligibility
 9	loan can be given
 8	loan cannot be given
 ...*/
+
+
+-- Substitute with your SQL
