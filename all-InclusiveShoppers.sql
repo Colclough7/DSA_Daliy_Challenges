@@ -1,18 +1,26 @@
-/*Overview
-For this kata we will be using the DVD Rental database.
+/*Let's consider a situation where we have three tables:
 
-You are working for a company that wants to reward its top 10 customers with a free gift. You have been asked to generate a simple report that returns the top 10 customers by total amount spent ordered from highest to lowest. Total number of payments has also been requested.
+users table:
 
-The query should output the following columns:
+Columns: id, name
+Primary key: id
+products table:
 
-customer_id [int4]
-email [varchar]
-payments_count [int]
-total_amount [float]
-and has the following requirements:
+Columns: id, product_name
+Primary key: id
+orders table:
 
-only returns the 10 top customers, ordered by total amount spent from highest to lowest
-Database Schema*/
+Columns: id, user_id, product_id
+Primary key: id
+Foreign keys: user_id references users(id), product_id references products(id)
+In this kata, we need to find out the names and IDs of all users who ordered every available product at least once. The result should be ordered by user_id in descending order.
 
+GLHF!
 
--- Replace with your query (in pure SQL)
+Desired Output
+The desired output should look like this:
+
+user_id	name
+20	Lelia Bergstrom Sr.
+15	Johnathon Hoppe
+1	Sen. Ashley Brakus*/
