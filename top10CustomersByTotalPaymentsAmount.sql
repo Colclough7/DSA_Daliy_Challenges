@@ -15,3 +15,4 @@ only returns the 10 top customers, ordered by total amount spent from highest to
 Database Schema*/
 
 
+-- Replace with your query (in pure SQL)
