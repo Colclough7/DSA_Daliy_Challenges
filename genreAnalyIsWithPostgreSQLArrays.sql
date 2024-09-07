@@ -25,3 +25,31 @@ Political	1	{1984}*/
 
 
 -- Substitute with your SQL
+
+
+WITH UnnestedGenres AS (
+    SELECT
+        unnest(genres) AS genre,
+        title
+    FROM
+        books
+),
+AggregatedData AS (
+    SELECT
+        genre,
+        COUNT(*) AS count,
+        ARRAY_AGG(title ORDER BY title) AS books
+    FROM
+        UnnestedGenres
+    GROUP BY
+        genre
+)
+SELECT
+    genre,
+    count,
+    books
+FROM
+    AggregatedData
+ORDER BY
+    count DESC,  -- Sort by the number of books in descending order
+    genre;       -- Sort by genre alphabetically if counts are the same
