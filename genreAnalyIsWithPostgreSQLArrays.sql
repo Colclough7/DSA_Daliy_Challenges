@@ -22,3 +22,6 @@ Dystopian	2	{1984,"Brave New World"}
 Fantasy	2	{"Harry Potter","Lord of the Rings"}
 Science Fiction	2	{"Brave New World",Foundation}
 Political	1	{1984}*/
+
+
+-- Substitute with your SQL
