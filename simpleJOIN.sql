@@ -10,3 +10,6 @@ companies table schema
 id
 name
 You should return all product fields as well as the company name as "company_name".*/
+
+
+-- Create your SELECT statement here
