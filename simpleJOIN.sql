@@ -13,3 +13,19 @@ You should return all product fields as well as the company name as "company_nam
 
 
 -- Create your SELECT statement here
+
+
+
+SELECT 
+    products.id,
+    products.name,
+    products.isbn,
+    products.company_id,
+    products.price,
+    companies.name AS company_name
+FROM 
+    products
+INNER JOIN 
+    companies
+ON 
+    products.company_id = companies.id;
