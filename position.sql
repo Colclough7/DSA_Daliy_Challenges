@@ -18,3 +18,12 @@ The comma column will contain the position of the comma within the characteristi
 
 
 /*  SQL  */
+
+
+SELECT
+    ID,
+    NAME,
+    POSITION(',' IN CHARACTERISTICS) AS comma
+FROM
+    MONSTERS
+ORDER BY comma;
