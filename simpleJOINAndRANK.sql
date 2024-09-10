@@ -12,3 +12,4 @@ price
 You should return all people fields as well as the sale count as "sale_count" and the rank as "sale_rank".*/
 
 
+-- Create your SELECT statement here
