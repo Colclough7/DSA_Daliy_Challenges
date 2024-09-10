@@ -13,3 +13,26 @@ You should return all people fields as well as the sale count as "sale_count" an
 
 
 -- Create your SELECT statement here
+
+WITH SalesCount AS (
+    SELECT
+        people_id,
+        COUNT(*) AS sale_count
+    FROM sales
+    GROUP BY people_id
+),
+RankedSales AS (
+    SELECT
+        people_id,
+        sale_count,
+        RANK() OVER (ORDER BY sale_count DESC) AS sale_rank
+    FROM SalesCount
+)
+SELECT
+    p.id,
+    p.name,
+    COALESCE(r.sale_count, 0) AS sale_count,
+    COALESCE(r.sale_rank, 0) AS sale_rank
+FROM people p
+LEFT JOIN RankedSales r
+    ON p.id = r.people_id;
