@@ -1,17 +1,15 @@
-/*The objective of this Kata is to show that you are proficient at string manipulation (and perhaps that you can use extensively subqueries).
+/*For this challenge you need to create a simple SUM statement that will sum all the ages.
 
-You will use people table but will focus solely on the name column
-
+people table schema
+id
 name
-Greyson Tate Lebsack Jr.
-Elmore Clementina O'Conner
-you will be provided with a full name and you have to return the name in columns as follows.
+age
+select table schema
+age_sum (sum of ages)
+NOTE: Your solution should use pure SQL. Ruby is used within the test cases to do the actual testing.
 
-name	first_lastname	second_lastname
-Greyson Tate	Lebsack	Jr.
-Elmore	Clementina	O'Conner
-Note: Don't forget to remove spaces around names in your result.
-Note: Due to multicultural context, if full name has more than 3 words, consider the last 2 as first_lastname and second_lastname, all other names belonging to name.*/
+NOTE2: You need to use ALIAS for creating age_sum*/
+
 
 
 /*SQL*/
