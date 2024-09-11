@@ -14,3 +14,4 @@ Note: Don't forget to remove spaces around names in your result.
 Note: Due to multicultural context, if full name has more than 3 words, consider the last 2 as first_lastname and second_lastname, all other names belonging to name.*/
 
 
+/*SQL*/
