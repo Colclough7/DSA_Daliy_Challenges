@@ -15,3 +15,9 @@ NOTE2: You need to use ALIAS for creating age_sum*/
 /*SQL*/
 
 -- Create your SELECT statement here
+
+
+SELECT
+    SUM(age) AS age_sum
+FROM
+    people;
