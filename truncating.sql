@@ -8,3 +8,12 @@ Return a table with a single column towardzero where the values are the result o
 
 
 /*  SQL  */
+
+
+SELECT 
+    CASE
+        WHEN (number1 + number2) >= 0 THEN FLOOR(number1 + number2)
+        ELSE CEIL(number1 + number2)
+    END AS towardzero
+FROM 
+    decimals;
