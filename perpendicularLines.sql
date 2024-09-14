@@ -13,3 +13,11 @@ Examples with 3 and 4 lines*/
 
 
 /*SQL*/
+
+
+
+SELECT
+    n,
+    (n * n) / 4 AS res
+FROM
+    perpendicular;
