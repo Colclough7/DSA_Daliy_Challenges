@@ -12,3 +12,12 @@ The given input is always an integer greater than or equal to zero that is why t
 
 
 -- # write your SQL statement here: you are given a table 'numofopenlockers' with column 'n', return a table with column 'n' and your result in a column named 'res'.
+
+
+-- Calculate the number of open lockers for each `n` in the table
+SELECT 
+    n,
+    -- Number of perfect squares less than or equal to `n`
+    CAST(FLOOR(SQRT(n)) AS INTEGER) AS res
+FROM 
+    numofopenlockers;
