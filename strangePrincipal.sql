@@ -9,3 +9,6 @@ So input of the function is just one number which shows number of lockers and nu
 For example if there are 1000 lockers and 1000 students in school then input is 1000 and function returns number of open lockers after 1000th student completes his action.
 
 The given input is always an integer greater than or equal to zero that is why there is no need for validation.*/
+
+
+-- # write your SQL statement here: you are given a table 'numofopenlockers' with column 'n', return a table with column 'n' and your result in a column named 'res'.
