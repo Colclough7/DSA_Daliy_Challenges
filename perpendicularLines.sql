@@ -9,3 +9,7 @@ Examples with 3 and 4 lines*/
 --# write your SQL statement here: 
 -- you are given a table 'perpendicular' with column 'n'
 -- return a table with this column and your result in a column named 'res'.
+
+
+
+/*SQL*/
