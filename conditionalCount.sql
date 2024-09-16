@@ -33,4 +33,37 @@ month | total_count | total_amount | mike_count | mike_amount | jon_count | jon_
 
 
 
+
 -- Replace with your SQL Query
+
+
+
+
+
+WITH PaymentSummary AS (
+    SELECT
+        EXTRACT(MONTH FROM payment_date) AS month,
+        COUNT(*) AS total_count,
+        SUM(amount) AS total_amount,
+        SUM(CASE WHEN staff_id = 1 THEN 1 ELSE 0 END) AS mike_count,
+        SUM(CASE WHEN staff_id = 1 THEN amount ELSE 0 END) AS mike_amount,
+        SUM(CASE WHEN staff_id = 2 THEN 1 ELSE 0 END) AS jon_count,
+        SUM(CASE WHEN staff_id = 2 THEN amount ELSE 0 END) AS jon_amount
+    FROM
+        payment
+    GROUP BY
+        EXTRACT(MONTH FROM payment_date)
+)
+
+SELECT
+    month,
+    total_count,
+    total_amount,
+    mike_count,
+    mike_amount,
+    jon_count,
+    jon_amount
+FROM
+    PaymentSummary
+ORDER BY
+    month;
