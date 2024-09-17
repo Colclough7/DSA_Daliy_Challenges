@@ -25,3 +25,30 @@ Return the top 6. Don't worry about ties.*/
 
 
 /*SQL*/
+
+
+WITH FilteredFights AS (
+    SELECT
+        f.name,
+        f.won,
+        f.lost,
+        wm.move
+    FROM
+        fighters f
+    JOIN
+        winning_moves wm ON f.move_id = wm.id
+    WHERE
+        wm.move NOT IN ('Hadoken', 'Shouoken', 'Kikoken')
+)
+
+SELECT
+    name,
+    SUM(won) AS won,
+    SUM(lost) AS lost
+FROM
+    FilteredFights
+GROUP BY
+    name
+ORDER BY
+    won DESC
+LIMIT 6;
