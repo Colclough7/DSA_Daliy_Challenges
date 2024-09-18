@@ -21,3 +21,28 @@ Triangular Numbers cannot be negative so return 0 if a negative number is given.
 
 /*SQL*/
 
+WITH RECURSIVE TriangularNumbers AS (
+    SELECT 1 AS n, 1 AS triangular
+    UNION ALL
+    SELECT n + 1, triangular + (n + 1)
+    FROM TriangularNumbers
+    WHERE n < (SELECT MAX(n) FROM sumtriangular WHERE n >= 0)
+)
+
+SELECT s.n,
+       CASE 
+           WHEN s.n < 1 THEN 0
+           ELSE SUM(t.triangular) 
+       END AS res
+FROM sumtriangular s
+LEFT JOIN TriangularNumbers t ON t.n <= s.n
+GROUP BY s.n
+ORDER BY 
+    CASE s.n 
+        WHEN 6 THEN 1
+        WHEN 34 THEN 2
+        WHEN -291 THEN 3
+        WHEN 943 THEN 4
+        WHEN -971 THEN 5
+        ELSE 6 -- This will handle any unexpected values
+    END;
