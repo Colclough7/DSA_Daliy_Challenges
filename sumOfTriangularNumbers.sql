@@ -14,7 +14,9 @@ Triangular Numbers cannot be negative so return 0 if a negative number is given.
 
 
 
-
+--# write your SQL statement here: 
+-- you are given a table 'sumtriangular' with column 'n'
+-- return a table with this column and your result in a column named 'res'.
 
 
 /*SQL*/
