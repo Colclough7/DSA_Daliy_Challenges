@@ -18,4 +18,4 @@ Triangular Numbers cannot be negative so return 0 if a negative number is given.
 
 
 /*SQL*/
---no
+
