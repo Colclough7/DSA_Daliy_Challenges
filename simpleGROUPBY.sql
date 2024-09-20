@@ -7,3 +7,8 @@ age
 select table schema
 age [group by]
 people_count (people count)*/
+
+
+
+
+-- Create your SELECT statement here
