@@ -12,3 +12,6 @@ people_count (people count)*/
 
 
 -- Create your SELECT statement here
+
+
+/*SQL*/
