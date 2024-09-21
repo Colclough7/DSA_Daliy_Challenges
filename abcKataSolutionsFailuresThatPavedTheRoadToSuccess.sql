@@ -69,3 +69,40 @@ GLHF!
 
 
 /*SQL*/
+
+
+
+
+WITH ProjectBudgets AS (
+    SELECT 
+        p.project_id,
+        p.project_name,
+        p.completion_status,
+        SUM(bc.component_value) AS total_budget
+    FROM 
+        projects p
+    LEFT JOIN 
+        budget_components bc ON p.project_id = bc.project_id
+    GROUP BY 
+        p.project_id, p.project_name, p.completion_status
+),
+AverageBudget AS (
+    SELECT 
+        AVG(total_budget) AS avg_budget
+    FROM 
+        ProjectBudgets
+)
+
+SELECT 
+    pb.project_id,
+    pb.project_name,
+    pb.completion_status,
+    pb.total_budget::money AS total_budget
+FROM 
+    ProjectBudgets pb
+JOIN 
+    AverageBudget ab ON pb.total_budget > ab.avg_budget
+WHERE 
+    pb.completion_status <> 'Completed'
+ORDER BY 
+    pb.project_name ASC;
