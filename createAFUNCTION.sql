@@ -9,3 +9,6 @@ people table schema
 id
 name
 age*/
+
+
+/*SQL*/
