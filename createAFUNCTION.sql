@@ -12,3 +12,10 @@ age*/
 
 
 /*SQL*/
+
+
+CREATE FUNCTION increment(age INT) RETURNS INT AS $$
+BEGIN
+    RETURN age + 1;
+END;
+$$ LANGUAGE plpgsql;
