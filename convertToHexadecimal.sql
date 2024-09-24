@@ -11,4 +11,7 @@ Your task is to turn the numeric columns (arms, legs) into equivalent hexadecima
 output table schema
 legs
 arms*/
+
+
+
 /*SQL*/
