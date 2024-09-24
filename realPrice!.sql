@@ -21,3 +21,6 @@ name (string)
 weight (float)
 price (float)
 price_per_kg (float)*/
+
+
+/*SQL*/
