@@ -48,3 +48,29 @@ actor_id | full_name           |     film_title
 
 
 -- provide your SQL
+
+
+
+
+
+SELECT
+    a.actor_id,
+    CONCAT(a.first_name, ' ', a.last_name) AS full_name,
+    f.title AS film_title
+FROM
+    actor a
+JOIN
+    film_actor fa ON a.actor_id = fa.actor_id
+JOIN
+    film f ON fa.film_id = f.film_id
+WHERE
+    a.first_name LIKE 'J%'
+AND
+    fa.film_id = (
+        SELECT MAX(fa_sub.film_id)
+        FROM film_actor fa_sub
+        WHERE fa_sub.actor_id = a.actor_id
+    )
+ORDER BY
+    a.actor_id ASC;
+
