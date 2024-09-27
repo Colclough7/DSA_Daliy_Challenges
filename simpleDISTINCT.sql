@@ -11,3 +11,8 @@ age (distinct)*/
 
 
 /*SQL*/
+
+
+
+SELECT DISTINCT age
+FROM people;
