@@ -7,3 +7,7 @@ age
 select table schema
 age (distinct)*/
 
+-- Create your SELECT statement here
+
+
+/*SQL*/
