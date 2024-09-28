@@ -14,3 +14,13 @@ NOTE: To keep it simple assume that the user_id will be having varchar type*/
 
 
 /*SQL*/
+
+
+
+
+SELECT 
+    name,
+    greeting,
+    ARRAY_TO_STRING(REGEXP_MATCHES(greeting, '#([0-9]+)'), '') AS user_id
+FROM 
+    greetings;
