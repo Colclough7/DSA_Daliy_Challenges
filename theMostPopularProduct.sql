@@ -1,23 +1,25 @@
-/*Your job is working with documents: creating, modifying, and deleting them. It is a very important task, so you must also keep a changelog of performed operations. Updating it manually every time is very tedious, so you decided to automate the job.
+/*Let's consider a situation where we have three tables:
 
-You have to do something, so that all the changes done on the documents table are reflected in the documents_changelog table:
+users table:
 
-On insert copy the new data into the new_data column
-On update copy the previous data into the old_data and the new data into the new_data columns
-On delete copy the old data into the old_data column
-If the operation has no new/old data to work with, the respective column should store NULL
-Note: the id column of the documents table is autoincrementing, hence when new records will be inserted there by the test code, the id's will not be provided explicitly - some language features which could be used for solving this kata may not work because of this fact.
+Columns: id, name
+Primary key: id
+products table:
 
-Tables
---------------------------------------------
-|        Table        |   Column    | Type |
-|---------------------+-------------+------|
-| documents           | id          | int  |
-|                     | data        | text |
-|---------------------+-------------+------|
-| documents_changelog | id          | int  |
-|                     | document_id | int  |
-|                     | old_data    | text |
-|                     | new_data    | text |
---------------------------------------------
-*/
+Columns: id, product_name
+Primary key: id
+orders table:
+
+Columns: id, user_id, product_id
+Primary key: id
+Foreign keys: user_id references users(id), product_id references products(id)
+In this kata, we need to find the most popular product (i.e., the product that has been ordered the most). In case of a tie in the number of orders, return all most ordered products ordered by product ID in descending order. Include in the result also the total number of orders for that product.
+
+GLHF!
+
+Desired Output
+The desired output should look like this:
+
+product_id	product_name	count_orders
+2	Product2	20
+1	Product1	20*/
