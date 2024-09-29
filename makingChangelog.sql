@@ -1,47 +1,23 @@
-/*Task
-Given the database where all the users' data is stored in one huge XML string, fetch it as separate rows and columns.
+/*Your job is working with documents: creating, modifying, and deleting them. It is a very important task, so you must also keep a changelog of performed operations. Updating it manually every time is very tedious, so you decided to automate the job.
 
-Notes
-The private field determines whether the user's email address should be publicly visible
-If the profile is private, email_address should equal "Hidden"
-The users may have multiple email addresses
-If no email addresses are provided, email_address should equal "None"
-If there're multiple email addresses, the first one should be shown
-The date_of_birth is in the yyyy-mm-dd format
-The age fields represents the user's age in years
-Order the result by the first_name, and last_name columns
-Input table
--------------------------
-| Table | Column | Type |
-|-------+--------+------|
-| users | id     | int  |
-|       | data   | xml  |
--------------------------
-XML format
-<data>
-    <user>
-        <first_name>...</first_name>
-        <last_name>...</last_name>
-        <date_of_birth>...</date_of_birth>
-        <private>...</private>
-        <email_addresses>
-            <address>...</address>
-            <address>...</address>
-            ...
-            <address>...</address>
-        </email_addresses>
-    </user>
-    <user>...</user>
-    ...
-    <user>...</user>
-</data>
-Output table
-------------------------
-|    Column     | Type |
-|---------------+------|
-| first_name    | text |
-| last_name     | text |
-| age           | int  |
-| email_address | text |
-------------------------
+You have to do something, so that all the changes done on the documents table are reflected in the documents_changelog table:
+
+On insert copy the new data into the new_data column
+On update copy the previous data into the old_data and the new data into the new_data columns
+On delete copy the old data into the old_data column
+If the operation has no new/old data to work with, the respective column should store NULL
+Note: the id column of the documents table is autoincrementing, hence when new records will be inserted there by the test code, the id's will not be provided explicitly - some language features which could be used for solving this kata may not work because of this fact.
+
+Tables
+--------------------------------------------
+|        Table        |   Column    | Type |
+|---------------------+-------------+------|
+| documents           | id          | int  |
+|                     | data        | text |
+|---------------------+-------------+------|
+| documents_changelog | id          | int  |
+|                     | document_id | int  |
+|                     | old_data    | text |
+|                     | new_data    | text |
+--------------------------------------------
 */
