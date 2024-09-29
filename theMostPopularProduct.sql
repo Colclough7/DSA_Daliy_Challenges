@@ -23,3 +23,29 @@ The desired output should look like this:
 product_id	product_name	count_orders
 2	Product2	20
 1	Product1	20*/
+
+SELECT 
+    p.id AS product_id,
+    p.product_name,
+    COUNT(o.id) AS count_orders
+FROM 
+    products p
+LEFT JOIN 
+    orders o ON p.id = o.product_id
+GROUP BY 
+    p.id, p.product_name
+HAVING 
+    COUNT(o.id) = (
+        SELECT 
+            MAX(order_count) 
+        FROM (
+            SELECT 
+                COUNT(*) AS order_count
+            FROM 
+                orders
+            GROUP BY 
+                product_id
+        ) AS order_counts
+    )
+ORDER BY 
+    p.id DESC;
