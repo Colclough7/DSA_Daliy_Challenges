@@ -15,3 +15,7 @@ The query must rank each clan by their total_points, you must return each unqiue
 you must sum the total_points for each clan and the total_people within that clan.
 
 ##Note The data is loaded from the live leaderboard, this means values will change but also could cause the kata to time out retreiving the information.*/
+
+
+
+/*SQL*/
