@@ -17,3 +17,11 @@ Where the name is the original string repeated three times (do not add any space
 
 
 /*  SQL  */
+
+
+
+SELECT 
+    CONCAT(name, name, name) AS name,
+    REVERSE(characteristics) AS characteristics
+FROM 
+    monsters;
