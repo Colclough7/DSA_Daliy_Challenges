@@ -16,3 +16,4 @@ characteristics
 Where the name is the original string repeated three times (do not add any spaces), and the characteristics are the original strings in reverse (e.g. 'abc, def, ghi' becomes 'ihg ,fed ,cba').*/
 
 
+/*  SQL  */
