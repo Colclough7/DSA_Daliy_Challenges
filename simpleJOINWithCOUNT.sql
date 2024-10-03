@@ -8,3 +8,6 @@ id
 name
 people_id
 You should return all people fields as well as the toy count as "toy_count".*/
+
+
+/*SQL*/
