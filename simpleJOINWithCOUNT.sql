@@ -11,3 +11,14 @@ You should return all people fields as well as the toy count as "toy_count".*/
 
 
 /*SQL*/
+
+
+SELECT 
+    p.*, 
+    COUNT(t.id) AS toy_count
+FROM 
+    people p
+LEFT JOIN 
+    toys t ON p.id = t.people_id
+GROUP BY 
+    p.id;
