@@ -35,3 +35,8 @@ film_id | film_title         | rental_count | last_rental_date
    32   | Chinatown (G)      | 23           | January 31, 2023
    14   | The Terminator (R) | 17           | March 01, 2023
 ...*/
+
+
+
+
+-- Write your SQL 
