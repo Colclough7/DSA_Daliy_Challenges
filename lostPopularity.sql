@@ -44,3 +44,27 @@ film_id | film_title         | rental_count | last_rental_date
 
 
 /*SQL*/
+
+
+
+
+SELECT 
+    f.film_id,
+    CONCAT(f.title, ' (', f.rating, ')') AS film_title,
+    COUNT(r.rental_id) AS rental_count,
+    TO_CHAR(MAX(r.rental_date), 'FMMonth DD, YYYY') AS last_rental_date
+FROM 
+    film f
+JOIN 
+    inventory i ON f.film_id = i.film_id
+LEFT JOIN 
+    rental r ON i.inventory_id = r.inventory_id
+GROUP BY 
+    f.film_id, f.title, f.rating
+HAVING 
+    COUNT(r.rental_id) >= 10
+    AND MAX(r.rental_date) < CURRENT_DATE - INTERVAL '1 month'
+ORDER BY 
+    rental_count DESC,
+    last_rental_date DESC,
+    f.title;
