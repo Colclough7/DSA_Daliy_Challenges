@@ -18,3 +18,6 @@ For the example above, the desired output should look like this:
 
 state_a	state_b	difference
 NC	SC	570*/
+
+
+/*SQL*/
