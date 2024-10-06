@@ -21,3 +21,17 @@ NC	SC	570*/
 
 
 /*SQL*/
+
+
+SELECT 
+    s1.state AS state_a,
+    s2.state AS state_b,
+    ABS(s1.total_streams - s2.total_streams) AS difference
+FROM 
+    state_streams s1
+JOIN 
+    state_streams s2 ON s1.state < s2.state
+WHERE 
+    ABS(s1.total_streams - s2.total_streams) < 1000
+ORDER BY 
+    state_a, state_b;
