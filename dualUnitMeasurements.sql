@@ -33,3 +33,28 @@ GLHF!*/
 
 
 /*SQL*/
+
+
+
+
+SELECT 
+    dr.record_id, 
+    d.drug_name, 
+    dr.drug_amount, 
+    CASE 
+        WHEN dr.check_unit_id IS NOT NULL THEN 
+            CONCAT(u1.unit_name, '/', u2.unit_name)  -- Combine primary and secondary units
+        ELSE 
+            u1.unit_name  -- Only primary unit if no secondary unit
+    END AS dose_units
+FROM 
+    dose_records dr
+JOIN 
+    drugs d ON dr.drug_id = d.drug_id  -- Join drugs table
+JOIN 
+    units u1 ON dr.drug_unit_id = u1.unit_id  -- Join to get primary unit
+LEFT JOIN 
+    units u2 ON dr.check_unit_id = u2.unit_id  -- Left join to get secondary unit
+ORDER BY 
+    d.drug_name ASC, 
+    dr.record_id ASC;  -- Order by drug_name and record_id
