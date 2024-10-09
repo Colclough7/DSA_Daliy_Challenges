@@ -55,4 +55,12 @@ hidden_code = 68 (D) + 65 (A) + 69 (E) + 66 (B) + 67 (C) = 335*/
 /*SQL*/
 
 
+SELECT SUM(ASCII(SUBSTRING(name FROM '[^ ]+$')) - ASCII('A') + 65) AS hidden_code
+FROM (
+    SELECT name
+    FROM employees
+    WHERE left_date IS NULL
+    ORDER BY joined_date
+    LIMIT 5
+) AS top_employees;
 
