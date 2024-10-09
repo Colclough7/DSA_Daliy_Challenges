@@ -49,3 +49,8 @@ We extract the first letter of each of their last names, and sum the ASCII value
 
 hidden_code = 68 (D) + 65 (A) + 69 (E) + 66 (B) + 67 (C) = 335
 */
+
+
+
+
+/*SQL*/
