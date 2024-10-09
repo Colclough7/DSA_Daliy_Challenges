@@ -1,4 +1,4 @@
-In celebration of ABC Kata Solutions' anniversary, we focus on the pillars of an organization: longest-serving and currently active employees. This SQL challenge involves uncovering a hidden code derived from the first letters of the names of the top 5 longest-tenured employees who are still actively contributing to ABC Kata Solutions.
+/*In celebration of ABC Kata Solutions' anniversary, we focus on the pillars of an organization: longest-serving and currently active employees. This SQL challenge involves uncovering a hidden code derived from the first letters of the names of the top 5 longest-tenured employees who are still actively contributing to ABC Kata Solutions.
 
 Craft an SQL query to discover a hidden code by summing the ASCII values of the first letters of the last names of the top five oldest (longest-tenured) employees who are still actively contributing to ABC Kata Solutions.
 
