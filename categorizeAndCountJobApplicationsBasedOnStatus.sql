@@ -36,3 +36,12 @@ the expected output of the query is following:
 | Approved      | 4              |
 
 */
+
+
+
+
+
+
+
+
+/*SQL*/
