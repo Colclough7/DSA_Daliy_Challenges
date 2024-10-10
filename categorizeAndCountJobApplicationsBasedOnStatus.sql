@@ -45,3 +45,40 @@ the expected output of the query is following:
 
 
 /*SQL*/
+
+
+
+SELECT 
+    CASE 
+        WHEN application_status <= 5 THEN 'Rejected' 
+        ELSE 'Approved' 
+    END AS status_group,
+    COUNT(*) AS application_num
+FROM applications
+GROUP BY 
+    CASE 
+        WHEN application_status <= 5 THEN 'Rejected' 
+        ELSE 'Approved' 
+    END
+
+UNION ALL
+
+SELECT 
+    'Rejected' AS status_group, 
+    0 AS application_num
+WHERE NOT EXISTS (
+    SELECT 1 
+    FROM applications 
+    WHERE application_status <= 5
+)
+
+UNION ALL
+
+SELECT 
+    'Approved' AS status_group, 
+    0 AS application_num
+WHERE NOT EXISTS (
+    SELECT 1 
+    FROM applications 
+    WHERE application_status > 5
+);
