@@ -33,3 +33,9 @@ student_names	subject_name	mark_rate
 {George}	History	98
 {John}	Math	95
 */
+
+
+
+
+
+/*SQL*/
