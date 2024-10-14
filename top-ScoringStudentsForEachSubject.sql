@@ -1,24 +1,35 @@
-/*Centered pentagonal number
-Complete the function that takes an integer and calculates how many dots exist in a pentagonal shape around the center dot on the Nth iteration.
+/*Write a query to produce a result set that lists an array of student names (ordered by their student_id in ascending order) for each subject where these students achieved the highest mark for that subject. Your result should also include the subject name and the highest mark achieved.
 
-In the image below you can see the first iteration is only a single dot. On the second, there are 6 dots. On the third, there are 16 dots, and on the fourth there are 31 dots. The sequence is: 1, 6, 16, 31...
+Table Schema:
 
-pentagons
+students:
 
-If the input is equal to or less than 0, return -1
+student_id (integer) - Unique identifier for each student.
+student_name (varchar) - Name of the student.
+details (varchar) - Additional details related to the student (for this challenge, it may have a static value like 'X').
+subjects:
 
-Examples
-1  -->    1
-2  -->    6
-8  -->  141
-0  -->   -1
+subject_id  (varchar) - Unique identifier for each subject (e.g., 'M' for Math).
+subject_name (varchar) - Name of the subject (e.g., 'Math', 'English').
+marks:
+
+student_id (integer) - Identifier linking to the students table.
+subject_id (varchar) - Identifier linking to the subjects table.
+mark_rate (integer) - The mark or score the student has received for the subject.
+Resultant Dataset Columns:
+
+student_names (varchar[]) - Array of student names who scored the top mark for a subject, ordered by their student ID in ascending order.
+subject_name (varchar) - Name of the subject.
+mark_rate (integer) - The highest mark achieved in the subject.
+The result set should be ordered by the subject_id in ascending order.
+
+GLHF!​
+
+Desired Output
+​The desired output should look like this:​
+
+student_names	subject_name	mark_rate
+{Paul,Lukas}	English	100
+{George}	History	98
+{John}	Math	95
 */
-
-
-
---# write your SQL statement here: 
--- you are given a table 'pentagonal' with column 'n' (the bounds in SQL translation: -1000 <= n <= 10^5)
--- return a table with all this column and your result in a column named 'res'.
-
-
-/*SQL*/
