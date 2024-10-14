@@ -39,3 +39,45 @@ student_names	subject_name	mark_rate
 
 
 /*SQL*/
+
+
+
+
+-- Substitute with your SQL
+
+WITH HighestMarks AS (
+    SELECT 
+        m.subject_id,
+        MAX(m.mark_rate) AS max_mark
+    FROM 
+        marks m
+    GROUP BY 
+        m.subject_id
+),
+TopStudents AS (
+    SELECT 
+        s.student_name,
+        s.student_id,
+        m.subject_id,
+        m.mark_rate
+    FROM 
+        marks m
+    JOIN 
+        students s ON m.student_id = s.student_id
+    JOIN 
+        HighestMarks hm ON m.subject_id = hm.subject_id AND m.mark_rate = hm.max_mark
+)
+SELECT 
+    ARRAY_AGG(ts.student_name ORDER BY ts.student_id) AS student_names,
+    sub.subject_name,
+    hm.max_mark AS mark_rate
+FROM 
+    TopStudents ts
+JOIN 
+    subjects sub ON ts.subject_id = sub.subject_id
+JOIN 
+    HighestMarks hm ON ts.subject_id = hm.subject_id
+GROUP BY 
+    sub.subject_id, sub.subject_name, hm.max_mark
+ORDER BY 
+    sub.subject_id;
