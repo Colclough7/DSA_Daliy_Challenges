@@ -16,4 +16,8 @@ Examples
 
 
 
-/*SQL*/
+--# write your SQL statement here: 
+-- you are given a table 'pentagonal' with column 'n' (the bounds in SQL translation: -1000 <= n <= 10^5)
+-- return a table with all this column and your result in a column named 'res'.
+
+
