@@ -21,3 +21,4 @@ Examples
 -- return a table with all this column and your result in a column named 'res'.
 
 
+/*SQL*/
