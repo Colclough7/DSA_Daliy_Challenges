@@ -1,18 +1,22 @@
-/*You are given a table random\_string that has the following format:
+/*You are given a table named repositories, format as below:
 
-random_string schema
-text
-The text field holds a single row which contains a random string.
+** repositories table schema **
 
-Your task is to take the random string and split it on each vowel (a, e, i, o, u) then the resultant substrings will be contained in the output table, formatted as:
+project
+commits
+contributors
+address
+The table shows project names of major cryptocurrencies, their numbers of commits and contributors and also a random donation address ( not linked in any way :) ).
 
-output table schema
-results
-Note that the vowels should be removed.
+Your job is to split out the letters and numbers from the address provided, and return a table in the following format:
 
-If there are no vowels, there will only be one row returned. Where there are multiple vowels in succession, you will see empty rows. A row should be created on each break, whether there is content in the row or not.
+** output table schema **
 
-Regex is advised but not mandatory.*/
+project
+letters
+numbers
+Case should be maintained.
+*/
 
 
 
