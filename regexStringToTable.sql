@@ -13,3 +13,8 @@ Note that the vowels should be removed.
 If there are no vowels, there will only be one row returned. Where there are multiple vowels in succession, you will see empty rows. A row should be created on each break, whether there is content in the row or not.
 
 Regex is advised but not mandatory.*/
+
+
+
+
+/*  SQL  */
