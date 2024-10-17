@@ -10,3 +10,10 @@ The initial solution passes the sample tests, but fails for larger numbers used 
 Your algorithm should be fast as the acceptance tests will run 10,000 randomly selected numbers.
 
 Are you up to the challenge?*/
+
+
+
+--# write your SQL statement here: 
+-- you are given a table 'pronic' with column 'n'.
+-- return a table with this column and your result in a column named 'res'.
+-- 2000 random tests for SQL
