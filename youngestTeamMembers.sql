@@ -24,7 +24,8 @@ employee_id	full_name	team	birth_date
 54	Dana Smith	frontend	1995-05-03
 */
 
---# write your SQL statement here: 
--- you are given a table 'pronic' with column 'n'.
--- return a table with this column and your result in a column named 'res'.
--- 2000 random tests for SQL
+
+
+
+
+/*SQL*/
