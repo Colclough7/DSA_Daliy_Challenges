@@ -29,3 +29,29 @@ employee_id	full_name	team	birth_date
 
 
 /*SQL*/
+
+
+-- Substitute with your SQL
+
+
+WITH RankedEmployees AS (
+    SELECT 
+        employee_id,
+        full_name,
+        team,
+        birth_date,
+        ROW_NUMBER() OVER (PARTITION BY team ORDER BY birth_date DESC) AS rn
+    FROM 
+        employees
+)
+SELECT 
+    employee_id,
+    full_name,
+    team,
+    birth_date
+FROM 
+    RankedEmployees
+WHERE 
+    rn = 1
+ORDER BY 
+    team ASC;
