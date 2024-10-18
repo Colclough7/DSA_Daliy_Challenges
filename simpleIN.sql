@@ -15,3 +15,7 @@ resultant table schema
 id
 name
 NOTE: sometimes a department will not not contain a sale over $98 so just resubmit.*/
+
+
+
+/*SQL*/
