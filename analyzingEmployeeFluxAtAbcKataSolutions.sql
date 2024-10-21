@@ -47,3 +47,43 @@ GLHF!
 */
 
 /*  SQL  */
+
+
+
+WITH years AS (
+    SELECT generate_series(2014, 2023) AS year
+),
+joined_counts AS (
+    SELECT 
+        EXTRACT(YEAR FROM joined_date) AS year,
+        COUNT(*) AS joined_quantity
+    FROM 
+        employees
+    GROUP BY 
+        year
+),
+left_counts AS (
+    SELECT 
+        EXTRACT(YEAR FROM left_date) AS year,
+        COUNT(*) AS left_quantity
+    FROM 
+        employees
+    WHERE 
+        left_date IS NOT NULL
+    GROUP BY 
+        year
+)
+
+SELECT 
+    y.year,
+    COALESCE(j.joined_quantity, 0) AS joined_quantity,
+    COALESCE(l.left_quantity, 0) AS left_quantity
+FROM 
+    years y
+LEFT JOIN 
+    joined_counts j ON y.year = j.year
+LEFT JOIN 
+    left_counts l ON y.year = l.year
+ORDER BY 
+    y.year;
+
