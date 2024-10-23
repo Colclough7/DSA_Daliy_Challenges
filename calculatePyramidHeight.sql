@@ -26,3 +26,7 @@ Examples
 --   this column and your result in a column named 'res'
 --   ordered ascending by 'n'
 --   distinct results (remove duplicates)
+
+
+
+/*SQL*/
