@@ -30,3 +30,22 @@ Examples
 
 
 /*SQL*/
+
+
+
+
+WITH RECURSIVE PyramidCubes(n, layer, total) AS (
+  -- Initialize with layer 1, which requires 1 cube.
+  SELECT n, 1 AS layer, 1 AS total
+  FROM pyramidheight
+  WHERE n >= 1
+  UNION ALL
+  -- Add the next layer cubes (layer * layer) while total number of cubes does not exceed 'n'
+  SELECT pc.n, pc.layer + 1, pc.total + (pc.layer + 1) * (pc.layer + 1)
+  FROM PyramidCubes pc
+  WHERE pc.total + (pc.layer + 1) * (pc.layer + 1) <= pc.n
+)
+SELECT DISTINCT n, MAX(layer) AS res
+FROM PyramidCubes
+GROUP BY n
+ORDER BY n;
