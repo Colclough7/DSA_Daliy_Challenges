@@ -35,3 +35,28 @@ customer_id  | customer_name | friday_rentals | rental_dates
 
 
 /*SQL*/
+
+
+
+
+
+
+SELECT 
+    c.customer_id,
+    CONCAT(c.first_name, ' ', c.last_name) AS customer_name,
+    COUNT(r.rental_id) AS friday_rentals,
+    STRING_AGG(TO_CHAR(r.rental_date, 'YYYY-MM-DD HH24:MI:SS'), ', ' ORDER BY r.rental_date DESC) AS rental_dates
+FROM 
+    customer c
+JOIN 
+    rental r ON c.customer_id = r.customer_id
+WHERE 
+    EXTRACT(DOW FROM r.rental_date) = 5  -- 5 corresponds to Friday
+    AND EXTRACT(HOUR FROM r.rental_date) >= 18  -- After 6 PM
+    AND EXTRACT(HOUR FROM r.rental_date) < 24  -- Before midnight
+GROUP BY 
+    c.customer_id
+ORDER BY 
+    friday_rentals DESC,
+    c.last_name
+LIMIT 50;
