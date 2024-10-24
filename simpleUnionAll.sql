@@ -16,3 +16,9 @@ price (greater than 50.00)
 card_name
 card_number
 transaction_date*/
+
+
+
+
+
+/*SQL*/
