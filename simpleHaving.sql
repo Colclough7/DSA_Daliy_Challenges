@@ -7,3 +7,7 @@ age
 return table schema
 age
 total_people*/
+
+
+
+/*SQL*/
