@@ -56,3 +56,9 @@ student_id	name	trimesters_avg_scores	consistent_improvement
 19	Lala Bradtke DO	Michaelmas (82.14), Lent (82.43), Summer (83.14)	true
 18	Nolan Feil	Michaelmas (80.86), Lent (85.86), Summer (81.29)	false
 ...*/
+
+
+
+
+
+/*SQL*/
