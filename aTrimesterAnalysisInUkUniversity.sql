@@ -62,3 +62,58 @@ student_id	name	trimesters_avg_scores	consistent_improvement
 
 
 /*SQL*/
+
+
+
+
+WITH trimester_scores AS (
+    SELECT 
+        student_id,
+        CASE 
+            WHEN course_date BETWEEN '2022-10-01' AND '2022-12-31' THEN 'Michaelmas'
+            WHEN course_date BETWEEN '2023-01-01' AND '2023-03-31' THEN 'Lent'
+            WHEN course_date BETWEEN '2023-04-01' AND '2023-06-30' THEN 'Summer'
+        END AS trimester,
+        score
+    FROM 
+        courses
+    WHERE 
+        course_date BETWEEN '2022-10-01' AND '2023-06-30'
+),
+avg_scores AS (
+    SELECT 
+        student_id,
+        trimester,
+        AVG(score) AS avg_score
+    FROM 
+        trimester_scores
+    GROUP BY 
+        student_id, trimester
+),
+final_scores AS (
+    SELECT 
+        s.id AS student_id,
+        s.name,
+        COALESCE(MAX(CASE WHEN t.trimester = 'Michaelmas' THEN t.avg_score END), 0) AS michaelmas_avg,
+        COALESCE(MAX(CASE WHEN t.trimester = 'Lent' THEN t.avg_score END), 0) AS lent_avg,
+        COALESCE(MAX(CASE WHEN t.trimester = 'Summer' THEN t.avg_score END), 0) AS summer_avg
+    FROM 
+        students s
+    LEFT JOIN 
+        avg_scores t ON s.id = t.student_id
+    GROUP BY 
+        s.id, s.name
+)
+SELECT 
+    student_id,
+    name,
+    CONCAT(
+        'Michaelmas (', ROUND(michaelmas_avg, 2), '), ',
+        'Lent (', ROUND(lent_avg, 2), '), ',
+        'Summer (', ROUND(summer_avg, 2), ')'
+    ) AS trimesters_avg_scores,
+    (lent_avg > michaelmas_avg AND summer_avg > lent_avg) AS consistent_improvement
+FROM 
+    final_scores
+ORDER BY 
+    student_id DESC;
