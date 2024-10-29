@@ -20,3 +20,15 @@ employee_id	full_name	team	birth_date
 
 
 /*SQL*/
+
+
+
+SELECT *
+FROM employees e1
+WHERE e1.team = 'backend' 
+  AND (
+        SELECT COUNT(*)
+        FROM employees e2
+        WHERE e2.team = 'backend' 
+          AND e2.birth_date < e1.birth_date
+      ) = 2
