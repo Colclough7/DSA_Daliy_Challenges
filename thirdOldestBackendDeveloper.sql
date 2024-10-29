@@ -16,3 +16,7 @@ The desired output should look like this:
 employee_id	full_name	team	birth_date
 11	Madlyn Lowe	backend	1969-08-15
 */
+
+
+
+/*SQL*/
