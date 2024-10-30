@@ -49,3 +49,30 @@ user_id	bad_kata_count
 
 
 /*SQL*/
+
+
+
+
+SELECT 
+    ka.user_id,
+    COUNT(*) AS bad_kata_count
+FROM 
+    kata_authors ka
+JOIN (
+    SELECT 
+        kv.kata_id
+    FROM 
+        kata_votes kv
+    GROUP BY 
+        kv.kata_id
+    HAVING 
+        COUNT(kv.vote) >= 3 AND 
+        AVG(kv.vote) < 0.7
+) bad_katas ON ka.kata_id = bad_katas.kata_id
+GROUP BY 
+    ka.user_id
+HAVING 
+    COUNT(*) >= 5
+ORDER BY 
+    bad_kata_count DESC, 
+    ka.user_id DESC;
