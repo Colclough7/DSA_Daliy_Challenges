@@ -44,3 +44,8 @@ user_id	bad_kata_count
 23	5
 ...*/
 
+
+
+
+
+/*SQL*/
