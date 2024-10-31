@@ -13,3 +13,6 @@ id
 first_name
 last_name
 manager_id (can be NULL)*/
+
+
+/*SQL*/
