@@ -16,3 +16,45 @@ manager_id (can be NULL)*/
 
 
 /*SQL*/
+
+
+
+WITH RECURSIVE employee_levels AS (
+    -- Base case: Select employees with no manager (level 1)
+    SELECT 
+        1 AS level,
+        id,
+        first_name,
+        last_name,
+        manager_id
+    FROM 
+        employees
+    WHERE 
+        manager_id IS NULL
+
+    UNION ALL
+
+    -- Recursive case: Select employees with a manager and join to the previous level
+    SELECT 
+        el.level + 1 AS level,
+        e.id,
+        e.first_name,
+        e.last_name,
+        e.manager_id
+    FROM 
+        employees e
+    JOIN 
+        employee_levels el ON e.manager_id = el.id
+)
+
+-- Final selection from the CTE
+SELECT 
+    level,
+    id,
+    first_name,
+    last_name,
+    manager_id
+FROM 
+    employee_levels
+ORDER BY 
+    level, id;
