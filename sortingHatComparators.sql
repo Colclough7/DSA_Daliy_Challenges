@@ -22,3 +22,24 @@ Return the id, name, quality1 and quality2 of all the students who'll be accepte
 But don't judge on what you see,
 I'll eat myself if you can find
 A smarter hat than me. */
+
+
+
+
+
+SELECT id, name, quality1, quality2
+FROM students
+WHERE quality1 = 'evil' AND quality2 = 'cunning' -- Slytherin
+UNION
+SELECT id, name, quality1, quality2
+FROM students
+WHERE quality1 = 'brave' AND quality2 != 'evil' -- Gryffindor
+UNION
+SELECT id, name, quality1, quality2
+FROM students
+WHERE quality1 = 'studious' OR quality2 = 'intelligent' -- Ravenclaw
+UNION
+SELECT id, name, quality1, quality2
+FROM students
+WHERE quality1 = 'hufflepuff' OR quality2 = 'hufflepuff' -- Hufflepuff
+ORDER BY id ASC;
