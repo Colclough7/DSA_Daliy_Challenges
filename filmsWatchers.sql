@@ -40,3 +40,11 @@ customer_id  | full_name     | total_rentals |
    14        | Hosea Jacobi  | 19            |
 ...
 */
+
+
+
+
+
+
+
+/*SQL*/
