@@ -48,3 +48,19 @@ customer_id  | full_name     | total_rentals |
 
 
 /*SQL*/
+
+
+
+
+
+SELECT c.customer_id,
+       CONCAT(c.first_name, ' ', c.last_name) AS full_name,
+       COUNT(r.rental_id) AS total_rentals
+FROM customer c
+JOIN rental r ON c.customer_id = r.customer_id
+JOIN inventory i ON r.inventory_id = i.inventory_id
+JOIN film f ON i.film_id = f.film_id
+GROUP BY c.customer_id, c.first_name, c.last_name
+HAVING SUM(CASE WHEN f.rating = 'NC-17' THEN 1 ELSE 0 END) = 0
+ORDER BY total_rentals DESC, c.last_name
+LIMIT 5;
