@@ -60,3 +60,7 @@ the desired output is the following:
 | 2024-04-11 12:00:00 |   1        | 10.99 |       5       |
 
 */
+
+
+
+/*SQL*/
