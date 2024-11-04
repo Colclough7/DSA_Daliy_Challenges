@@ -64,3 +64,31 @@ the desired output is the following:
 
 
 /*SQL*/
+
+
+
+
+SELECT 
+    s.sale_time::text AS sale_time,
+    s.product_id,
+    pp.price,
+    cr.review_rating
+FROM 
+    sales s
+JOIN 
+    product_prices pp ON s.product_id = pp.product_id 
+    AND pp.price_time = (
+        SELECT MAX(price_time)
+        FROM product_prices
+        WHERE product_id = s.product_id AND price_time <= s.sale_time
+    )
+LEFT JOIN 
+    customer_reviews cr ON s.product_id = cr.product_id 
+    AND cr.review_time = (
+        SELECT MAX(review_time)
+        FROM customer_reviews
+        WHERE product_id = s.product_id AND review_time <= s.sale_time
+    )
+ORDER BY 
+    s.sale_time DESC, 
+    s.id DESC;
