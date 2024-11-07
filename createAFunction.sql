@@ -13,3 +13,12 @@ age
 
 
 /*SQL*/
+
+
+
+CREATE FUNCTION agecalculator(birthdate DATE) 
+RETURNS INTEGER AS $$
+BEGIN
+    RETURN EXTRACT(YEAR FROM AGE(birthdate));
+END;
+$$ LANGUAGE plpgsql;
