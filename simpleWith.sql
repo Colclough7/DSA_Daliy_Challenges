@@ -20,3 +20,18 @@ name
 
 
 /*SQL*/
+
+
+
+
+WITH special_sales AS (
+    SELECT department_id
+    FROM sales
+    WHERE price > 90.00
+)
+SELECT d.id, d.name
+FROM departments d
+WHERE d.id IN (
+    SELECT department_id
+    FROM special_sales
+)
