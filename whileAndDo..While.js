@@ -54,3 +54,18 @@ Finally, return the padded string.*/
 
 
 //JS
+
+
+
+function padIt(str, n) {
+  var i = 0;
+  while (i < n) {
+    if (i % 2 === 0) {
+      str = '*' + str;  // Add '*' to the left side if i is even
+    } else {
+      str = str + '*';  // Add '*' to the right side if i is odd
+    }
+    i++;  // Increment i
+  }
+  return str;  // Return the padded string
+}
