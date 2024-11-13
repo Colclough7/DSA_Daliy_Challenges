@@ -26,3 +26,33 @@ Depending on the cumulative score of the team, return the appropriate sentiment:
 /*JS*/
 
 
+function boredom(staff){
+  const departmentScores = {
+    'accounts': 1,
+    'finance': 2,
+    'canteen': 10,
+    'regulation': 3,
+    'trading': 6,
+    'change': 6,
+    'IS': 8,
+    'retail': 5,
+    'cleaning': 4,
+    'pissing about': 25
+  };
+
+  // Calculate the total boredom score
+  let totalScore = 0;
+  for (const person in staff) {
+    const department = staff[person];
+    totalScore += departmentScores[department];
+  }
+
+  // Determine the sentiment based on the total score
+  if (totalScore <= 80) {
+    return 'kill me now';
+  } else if (totalScore < 100) {
+    return 'i can handle this';
+  } else {
+    return 'party time!!';
+  }
+}
