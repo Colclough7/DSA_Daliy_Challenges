@@ -6,3 +6,10 @@ To make this challange harder and to promp the challenger to read up about coerc
 
 
 /*JS*/
+
+
+
+function add(a, b){
+	// code here
+  return +a === +b
+}
