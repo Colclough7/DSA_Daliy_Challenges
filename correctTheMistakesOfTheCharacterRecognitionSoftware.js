@@ -14,3 +14,15 @@ The test cases contain numbers only by mistake.*/
 
 
 /*JS*/
+
+
+
+
+function correct(text) {
+    // Replace the misinterpreted characters
+    let correctedText = text.replace(/5/g, 'S'); // Replace '5' with 'S'
+    correctedText = correctedText.replace(/0/g, 'O'); // Replace '0' with 'O'
+    correctedText = correctedText.replace(/1/g, 'I'); // Replace '1' with 'I'
+    
+    return correctedText;
+}
