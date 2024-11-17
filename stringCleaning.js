@@ -13,3 +13,11 @@ Your program will take in a string and clean out all numeric characters, and ret
 
 
 /*JS*/
+
+
+
+
+function stringClean(s){
+  // Function will return the cleaned string
+    return s.replace(/\d+/g, '');
+}
