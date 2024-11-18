@@ -4,3 +4,16 @@ Unfortunately for you, your drive is very bumpy! Given a string showing either f
 
 
 /*JS*/
+
+
+
+function bump(x){
+let arr = x.split("")
+let counter = 0
+for(let i = 0;i < arr.length;i++){
+  if(arr[i] === "n"){
+    counter++
+  }
+}
+  return counter <= 15?"Woohoo!":"Car Dead"
+}
