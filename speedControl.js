@@ -21,3 +21,29 @@ With floats it can happen that results depends on the operations order. To calcu
 
 
 /*JS*/
+
+
+function gps(s, x) {
+    // your code
+   // If there are fewer than two points, no movement occurred
+    if (x.length <= 1) {
+        return 0;
+    }
+
+    let maxSpeed = 0;
+
+    // Loop through each consecutive pair of distances
+    for (let i = 1; i < x.length; i++) {
+        // Calculate the change in distance (delta_distance)
+        let deltaDistance = x[i] - x[i - 1];
+        
+        // Calculate the speed in distance per hour (arbitrary units)
+        let speed = (3600 * deltaDistance) / s;
+
+        // Update the max speed if this speed is greater
+        maxSpeed = Math.max(maxSpeed, speed);
+    }
+
+    // Return the floor of the maximum speed as an integer
+    return Math.floor(maxSpeed);
+}
