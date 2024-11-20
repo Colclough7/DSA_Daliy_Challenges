@@ -13,3 +13,10 @@ Examples:
 
 
 /*JS*/
+
+
+
+
+function hello(name) {
+  return !name? `not given`: `Hello,${name[0].toUpperCase()}${name.slice(1)}!`
+}
