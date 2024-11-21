@@ -18,3 +18,15 @@ If null value given then return -1
 
 
 /*JS*/
+
+
+
+function excludingVatPrice(price){
+  // your code
+  if (price === null) {
+        return -1;
+    }
+    // Reverse the VAT calculation
+    return Math.round((price / 1.15) * 100) / 100;
+ 
+}
