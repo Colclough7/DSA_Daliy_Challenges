@@ -13,3 +13,4 @@ Return false for invalid numbers too (e.g volume or side is less than or equal t
 Note: side will be an integer*/
 
 
+/*JS*/
