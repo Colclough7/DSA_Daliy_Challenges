@@ -14,3 +14,15 @@ Note: side will be an integer*/
 
 
 /*JS*/
+
+
+
+function cubeChecker(volume, side){
+    // Check for invalid input
+  if (volume <= 0 || side <= 0) {
+    return false;
+  }
+  
+  // Check if side^3 equals volume
+  return side * side * side === volume;
+};
