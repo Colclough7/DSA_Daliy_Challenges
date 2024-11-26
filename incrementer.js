@@ -16,3 +16,22 @@ Examples:
 
 
 /*JS*/
+
+
+
+function incrementer(nums) { 
+  // code goes here
+  let myArr = []
+  let counter = 1
+for(let i = 0;i < nums.length;i++){
+  let answer = nums[i] + counter
+  let answerToString = answer.toString()
+  if(answerToString.length > 1){
+    myArr.push(+answerToString[1])
+  }else{
+     myArr.push(+answerToString)
+  }
+  counter++
+}
+  return myArr 
+}
