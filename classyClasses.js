@@ -10,3 +10,18 @@ complete the get Info property and getInfo method/Info getter which should retur
 
 
 /*JS*/
+
+
+
+class Person {
+
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  
+  get info() {
+    return `${this.name}s age is ${this.age}`;
+  }
+  
+}
