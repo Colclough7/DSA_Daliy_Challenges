@@ -12,3 +12,17 @@ good luck :)*/
 
 
 /*JS*/
+
+
+
+function evil(n) {
+    // Convert the number to binary and count the number of '1's
+    let onesCount = n.toString(2).split('1').length - 1;
+    
+    // Check if the count of '1's is even or odd
+    if (onesCount % 2 === 0) {
+        return "It's Evil!";
+    } else {
+        return "It's Odious!";
+    }
+}
