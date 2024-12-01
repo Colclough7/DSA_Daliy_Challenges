@@ -5,3 +5,4 @@ You should also account for '!', '?' and ' ' that are represented by '27', '28' 
 All inputs will be valid.*/
 
 
+/*JS*/
