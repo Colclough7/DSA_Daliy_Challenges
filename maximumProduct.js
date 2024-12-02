@@ -32,3 +32,20 @@ Examples
 
 
 /*JS*/
+
+
+
+
+
+function adjacentElementsProduct(arr) {
+   // Initialize the max product to a very small number
+    let maxProduct = -Infinity;
+    
+    // Loop through the array and calculate the product of adjacent elements
+    for (let i = 0; i < arr.length - 1; i++) {
+        const product = arr[i] * arr[i + 1];
+        maxProduct = Math.max(maxProduct, product);
+    }
+    
+    return maxProduct;
+}
