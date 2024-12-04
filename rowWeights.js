@@ -40,3 +40,22 @@ Examples
 
 
 /*JS*/
+
+
+
+
+function rowWeights(weights){
+  
+  let team1Weight = 0;
+    let team2Weight = 0;
+    
+    for (let i = 0; i < weights.length; i++) {
+        if (i % 2 === 0) {  // even index, team 1
+            team1Weight += weights[i];
+        } else {             // odd index, team 2
+            team2Weight += weights[i];
+        }
+    }
+    
+    return [team1Weight, team2Weight];
+}
