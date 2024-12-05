@@ -13,3 +13,17 @@ first(arr, 0) //=> [];*/
 
 
 /*JS*/
+
+
+
+
+function first(arr, n = 1) {
+  // return arr;
+     // If n is 0, return an empty array
+    if (n === 0) {
+        return [];
+    }
+    
+    // Return the first n elements of the array
+    return arr.slice(0, n);
+}
