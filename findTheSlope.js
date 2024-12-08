@@ -14,3 +14,16 @@ Assume that [a,b,c,d] and the answer are all integers (no floating numbers!). Sl
 
 
 /*JS*/
+
+
+
+
+function slope(points){
+//..
+   const [a, b, c, d] = points;
+    if (a === c) {
+        return "undefined";
+    } else {
+        return String((d - b) / (c - a)); // Return the slope as a string
+    }
+}
