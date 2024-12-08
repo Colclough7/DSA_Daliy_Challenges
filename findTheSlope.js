@@ -8,3 +8,9 @@ For an undefined slope (division by 0), return undefined . Note that the "undefi
    c:x2
    d:y2
 Assume that [a,b,c,d] and the answer are all integers (no floating numbers!). Slope: m = y2 - y1 / x2 - x1 */
+
+
+
+
+
+/*JS*/
