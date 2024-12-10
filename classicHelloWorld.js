@@ -15,3 +15,12 @@ If you still don't get it probably you can define main as an attribute of the So
 
 
 /*JS*/
+
+
+
+// Print "Hello World!" to the screen
+class Solution{
+static main(param1, param2) {
+        console.log("Hello World!");
+    }
+}
