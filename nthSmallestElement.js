@@ -17,3 +17,13 @@ arr=[2,1,3,3,1,2],     n=3    ==> return 2 */
 
 
 /*JS*/
+
+
+
+function nthSmallest(arr, n) {
+    // Sort the array in ascending order
+    arr.sort((a, b) => a - b);
+
+    // Return the Nth smallest element (accounting for zero indexing)
+    return arr[n - 1];
+}
