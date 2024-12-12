@@ -14,3 +14,9 @@ Note that you can receive floats as well.*/
 
 
 /*JS*/
+
+
+
+function toNumberArray(stringarray){
+  return stringarray.map(Number)
+}
