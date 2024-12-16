@@ -9,3 +9,11 @@ solution(5) // should return "Value is 00005"*/
 
 
 /*JS*/
+
+
+
+
+function solution(value){
+  //...
+  return `Value is ${String(value).padStart(5, '0')}`;
+}
