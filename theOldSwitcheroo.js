@@ -14,3 +14,27 @@ Your function should be case insensitive to the vowels.*/
 
 
 /*JS*/
+
+
+
+function vowel2index(str) {
+   //code me
+  
+   const vowels = 'aeiouAEIOU';  // List of vowels (case insensitive)
+    let result = [];  // Array to store the new characters
+    
+    // Iterate through the string
+    for (let i = 0; i < str.length; i++) {
+        const char = str[i];
+        
+        // Check if the character is a vowel
+        if (vowels.includes(char.toLowerCase())) {
+            result.push(i + 1);  // Append the position (1-based index)
+        } else {
+            result.push(char);  // Append the non-vowel character
+        }
+    }
+    
+    // Join the array into a string and return
+    return result.join('');
+}
