@@ -13,3 +13,12 @@ Note2: the input data can be: boolean array, array of objects, array of string a
 
 
 /*JS*/
+
+
+
+function printArray(array){
+  //show me the code!
+    // Convert all elements to strings and join them with commas
+  const result = array.map(item => String(item)).join(',');
+  return result
+}
