@@ -10,3 +10,16 @@ You need to find out if the cat can catch the mouse from its current position. T
 
 
 /*JS*/
+
+
+
+function catMouse(x){
+  const catPos = x.indexOf('C'); // Position of the cat
+  const mousePos = x.indexOf('m'); // Position of the mouse
+  
+  // Calculate the number of characters between the cat and the mouse
+  const distance = mousePos - catPos - 1;
+
+  // If the distance is greater than 3, the mouse escapes; otherwise, it gets caught
+  return distance > 3 ? "Escaped!" : "Caught!";
+}
