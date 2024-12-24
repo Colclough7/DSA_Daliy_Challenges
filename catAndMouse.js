@@ -7,3 +7,6 @@ You need to find out if the cat can catch the mouse from its current position. T
 "C...m" returns "Caught!" <-- as there are three characters between the two, the cat can jump.*/
 
 
+
+
+/*JS*/
