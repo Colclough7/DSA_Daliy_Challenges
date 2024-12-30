@@ -11,3 +11,9 @@ Example:
 "abcde" -> 1
 "zzbaabcd" -> 4
 "" -> 0*/
+
+
+
+
+
+/*JS*/
