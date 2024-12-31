@@ -23,3 +23,25 @@ If there are no numbers of this kind in the range
 
 
 /*JS*/
+
+
+
+function sumDigPow(a, b) {
+  // Your code here
+   let result = [];
+  
+  // Iterate through all numbers in the range [a, b]
+  for (let num = a; num <= b; num++) {
+    let digits = num.toString().split('').map(Number); // Convert the number to an array of digits
+    let sumOfPowers = digits.reduce((sum, digit, index) => {
+      return sum + Math.pow(digit, index + 1); // Raise digit to the power of its 1-based index
+    }, 0);
+    
+    // If the sum of the powers equals the number, add it to the result
+    if (sumOfPowers === num) {
+      result.push(num);
+    }
+  }
+  
+  return result;
+}
