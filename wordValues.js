@@ -14,3 +14,18 @@ Good luck!*/
 
 
 /*JS*/
+
+
+
+function wordValue(a) {
+    return a.map((str, index) => {
+    // Calculate the sum of alphabet positions for each string
+    const stringValue = str
+      .replace(/\s/g, '') // Remove spaces
+      .split('')
+      .reduce((sum, char) => sum + (char.charCodeAt(0) - 96), 0); // Calculate character value
+
+    // Multiply the string value by its position in the array (1-based index)
+    return stringValue * (index + 1);
+  });
+}
