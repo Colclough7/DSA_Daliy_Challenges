@@ -14,3 +14,11 @@ Floats with decimal part non equal to zero are considered UNeven for this kata.*
 
 
 /*JS*/
+
+
+
+
+function testEven(n) {
+    //Your awesome code here!
+  return Number.isInteger(n) && n % 2 === 0;
+}
