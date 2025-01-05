@@ -27,3 +27,21 @@ max_rot(38458215) should return 85821534*/
 
 
 /*JS*/
+
+
+
+
+function maxRot(n) {
+  // your code
+   let strNum = n.toString(); // Convert the number to a string
+  let maxNum = n; // Initialize maxNum to the original number
+
+  for (let i = 0; i < strNum.length - 1; i++) {
+    // Rotate the digits from the current position
+    strNum = strNum.slice(0, i) + strNum.slice(i + 1) + strNum[i];
+    // Convert back to number and update maxNum if it's larger
+    maxNum = Math.max(maxNum, parseInt(strNum, 10));
+  }
+
+  return maxNum;
+}
