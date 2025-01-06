@@ -10,3 +10,11 @@
 
 
 /*JS*/
+
+
+
+function multiply(number){
+  //your code here
+   const numDigits = Math.abs(number).toString().length; // Calculate the number of digits
+  return number * Math.pow(5, numDigits); // Multiply by 5 raised to the number of digits
+}
