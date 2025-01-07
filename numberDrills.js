@@ -14,3 +14,18 @@ guessBlue() should return the probability of drawing a blue marble, expressed as
 
 
 /*JS*/
+
+
+
+function guessBlue(blueStart, redStart, bluePulled, redPulled) {
+  // Your code here.
+    // Calculate remaining blue and red marbles
+  const remainingBlue = blueStart - bluePulled;
+  const remainingRed = redStart - redPulled;
+
+  // Calculate the total number of remaining marbles
+  const totalRemaining = remainingBlue + remainingRed;
+
+  // Return the probability of drawing a blue marble
+  return remainingBlue / totalRemaining;
+}
