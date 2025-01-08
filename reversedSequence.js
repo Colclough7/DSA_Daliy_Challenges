@@ -6,3 +6,12 @@ Example : n=5 --> [5,4,3,2,1]*/
 
 
 /*JS*/
+
+
+
+
+
+const reverseSeq = n => {
+ return Array.from({ length: n }, (_, i) => n - i);
+  
+};
