@@ -20,3 +20,22 @@ The minimum sum obtained from summing each two integers product ,  9*0 + 8*2 +7*
 
 
 /*JS*/
+
+
+
+function minSum(arr) {
+  // your code here
+    // Step 1: Sort the array in ascending order
+  arr.sort((a, b) => a - b);
+  
+  // Step 2: Initialize the variable to store the sum
+  let sum = 0;
+  
+  // Step 3: Pair the smallest with the largest, and calculate the sum of products
+  const n = arr.length / 2;
+  for (let i = 0; i < n; i++) {
+    sum += arr[i] * arr[arr.length - 1 - i];
+  }
+  
+  return sum;
+}
