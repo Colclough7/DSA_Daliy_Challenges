@@ -14,3 +14,9 @@ The minimum sum obtained from summing each two integers product ,  26*3 + 24*6 +
 minSum({9,2,8,7,5,4,0,6}) ==> return (74)
 Explanation:
 The minimum sum obtained from summing each two integers product ,  9*0 + 8*2 +7*4 +6*5 = 74*/
+
+
+
+
+
+/*JS*/
