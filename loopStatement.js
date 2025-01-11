@@ -36,3 +36,9 @@ When the bag has three element, bag is full. You should use break jump out the l
 Return the bag after for loop finished.
 
 You should use for, break and continue in your code. otherwise, your solution may not pass this kata.*/
+
+
+
+
+
+/*JS*/
