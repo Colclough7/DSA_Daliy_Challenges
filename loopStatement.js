@@ -41,4 +41,27 @@ You should use for, break and continue in your code. otherwise, your solution ma
 
 
 
+
+
+function grabDoll(dolls){
+ var bag = [];
+
+  // Traverse the dolls array
+  for (var i = 0; i < dolls.length; i++) {
+    // Check if the doll is either "Hello Kitty" or "Barbie doll"
+    if (dolls[i] === "Hello Kitty" || dolls[i] === "Barbie doll") {
+      bag.push(dolls[i]); // Add the doll to the bag
+    } else {
+      continue; // Skip this iteration if the doll is not "Hello Kitty" or "Barbie doll"
+    }
+
+    // If the bag has 3 dolls, stop the loop
+    if (bag.length === 3) {
+      break;
+    }
+  }
+
+
+
+
 /*JS*/
