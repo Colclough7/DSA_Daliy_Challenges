@@ -8,3 +8,15 @@ If your name would be Jeong-Ho Aristotelis, ad would cost £600. 20 letters * 30
 
 
 /*JS*/
+
+
+
+
+function billboard(name, price = 30){
+    let cost = 0;
+    // Loop through each character in the name and increment the cost by the price.
+    for (let i = 0; i < name.length; i++) {
+        cost += price;
+    }
+    return cost;
+} 
