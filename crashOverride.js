@@ -20,3 +20,25 @@ aliasGen('123abc', 'Petrovic') === 'Your name must start with a letter from A - 
 
 
 /*JS*/
+
+
+
+
+function aliasGen(first,last){
+    // Code Here
+  // Normalize the names to uppercase to ensure case insensitivity
+    first = first.trim();
+    last = last.trim();
+    
+    // Check if the first character of both names is a letter from A-Z
+    if (!first || !last || !/[A-Za-z]/.test(first[0]) || !/[A-Za-z]/.test(last[0])) {
+        return "Your name must start with a letter from A - Z.";
+    }
+
+    // Get the first letters of the names, converted to uppercase
+    const firstLetter = first[0].toUpperCase();
+    const lastLetter = last[0].toUpperCase();
+
+    // Generate the alias based on the first letters
+    return `${firstName[firstLetter]} ${surname[lastLetter]}`;
+}
