@@ -12,3 +12,23 @@ Also, if somebody is giving you a negative distance, it's clearly bogus and you 
 
 
 /*JS*/
+
+
+
+
+function foldTo(distance) {
+      if (distance < 0) {
+        return null; // Return null for negative distances
+    }
+
+    let thickness = 0.0001; // Initial thickness of the paper in meters
+    let folds = 0; // Start with 0 folds
+    
+    // While the paper's thickness is less than the target distance
+    while (thickness < distance) {
+        thickness *= 2; // Fold the paper, doubling its thickness
+        folds++; // Increment the fold count
+    }
+    
+    return folds;
+}
