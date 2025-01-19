@@ -6,3 +6,9 @@ Notes
 If the array is null/nil/None or empty you should return empty array ([]).
 The rotten fruit name will be in this camelcase (rottenFruit).
 The returned array should be in lowercase.*/
+
+
+
+
+
+/*JS*/
