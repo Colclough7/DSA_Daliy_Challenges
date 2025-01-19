@@ -12,3 +12,23 @@ The returned array should be in lowercase.*/
 
 
 /*JS*/
+
+
+
+function removeRotten(bagOfFruits){
+  // ...
+   // If the array is null or empty, return an empty array
+  if (!bagOfFruits) {
+    return [];
+  }
+  
+  // Create a new array with the updated fruits
+  return bagOfFruits.map(fruit => {
+    // If the fruit starts with "rotten", remove the "rotten" prefix and convert to lowercase
+    if (fruit.startsWith("rotten")) {
+      return fruit.slice(6).toLowerCase();  // Remove "rotten" (6 characters) and convert to lowercase
+    }
+    // Otherwise, just convert the fruit to lowercase
+    return fruit.toLowerCase();
+  });
+}
