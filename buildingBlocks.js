@@ -32,3 +32,40 @@ Examples
 
 
 /*JS*/
+
+
+
+
+
+
+class Block {
+  constructor(data) {
+    // Destructure the input array to get width, length, and height
+    [this.width, this.length, this.height] = data;
+  }
+
+  // Method to return the width of the block
+  getWidth() {
+    return this.width;
+  }
+
+  // Method to return the length of the block
+  getLength() {
+    return this.length;
+  }
+
+  // Method to return the height of the block
+  getHeight() {
+    return this.height;
+  }
+
+  // Method to return the volume of the block (width * length * height)
+  getVolume() {
+    return this.width * this.length * this.height;
+  }
+
+  // Method to return the surface area of the block (2 * (width*length + width*height + length*height))
+  getSurfaceArea() {
+    return 2 * (this.width * this.length + this.width * this.height + this.length * this.height);
+  }
+}
