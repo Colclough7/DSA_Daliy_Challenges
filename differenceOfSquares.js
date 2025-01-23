@@ -12,3 +12,9 @@ The sum of the squares of the numbers is:
 
 1² + 2² + 3² + 4² + 5² + 6² + 7² + 8² + 9² + 10² = 385
 Hence the difference between square of the sum of the first ten natural numbers and the sum of the squares of those numbers is: 3025 - 385 = 2640*/
+
+
+
+
+
+/*JS*/
