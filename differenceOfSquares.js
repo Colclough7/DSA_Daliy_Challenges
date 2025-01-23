@@ -18,3 +18,19 @@ Hence the difference between square of the sum of the first ten natural numbers 
 
 
 /*JS*/
+
+
+
+function differenceOfSquares(n) {
+    // Calculate the sum of the first n numbers
+  const sum = n * (n + 1) / 2;
+  
+  // Square the sum
+  const squareOfSum = sum * sum;
+  
+  // Calculate the sum of the squares of the first n numbers
+  const sumOfSquares = n * (n + 1) * (2 * n + 1) / 6;
+  
+  // Return the difference
+  return squareOfSum - sumOfSquares;
+}
