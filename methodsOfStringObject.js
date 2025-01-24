@@ -75,3 +75,19 @@ firstToLast("ababc","d") should return -1*/
 
 
 /*JS*/
+
+
+
+
+
+function firstToLast(str,c){
+  //coding here..
+    const firstIndex = str.indexOf(c);  // First occurrence
+  const lastIndex = str.lastIndexOf(c); // Last occurrence
+  
+  if (firstIndex === -1) {
+    return -1;  // Character not found
+  }
+  
+  return lastIndex - firstIndex;  // Gap between first and last occurrence
+}
