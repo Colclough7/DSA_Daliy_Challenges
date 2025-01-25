@@ -39,3 +39,22 @@ specialNumber(709) ==> return "NOT!!"*/
 
 
 /*JS*/
+
+
+
+
+
+function specialNumber(n) {
+  // Convert the number to a string to easily access each digit
+  let str = n.toString();
+  
+  // Check if every character in the string is one of the valid digits
+  for (let char of str) {
+    if (!['0', '1', '2', '3', '4', '5'].includes(char)) {
+      return "NOT!!";  // Return "NOT!!" if any digit is not in the allowed range
+    }
+  }
+  
+  return "Special!!";  // All digits are valid, return "Special!!"
+}
+
