@@ -13,3 +13,8 @@ The rating is case insensitive (so "great" = "GREAT"). If an unrecognised rating
 ...or null in Java
 ...or -1 in C#
 Because you're a nice person, you always round up the tip, regardless of the service.*/
+
+
+
+
+/*JS*/
