@@ -22,3 +22,28 @@ and for any array arr: contain_all_rots("", arr) --> true*/
 
 
 /*JS*/
+
+
+
+
+function containAllRots(strng, arr) {
+    // your code
+      if (strng === "") return true; // Edge case for empty string
+    
+    const rotations = [];
+    const n = strng.length;
+    
+    // Generate all rotations of the string
+    for (let i = 0; i < n; i++) {
+        rotations.push(strng.slice(i) + strng.slice(0, i)); // Create rotation by slicing the string
+    }
+    
+    // Check if all rotations are present in the array
+    for (let rotation of rotations) {
+        if (!arr.includes(rotation)) {
+            return false; // If any rotation is missing, return false
+        }
+    }
+    
+    return true; // All rotations are found, return true
+}
