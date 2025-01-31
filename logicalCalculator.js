@@ -19,3 +19,8 @@ an array of Boolean values (1 <= array_length <= 50)
 a string specifying a logical operator: "AND", "OR", "XOR"
 Output
 A Boolean value (True or False).*/
+
+
+
+
+/*JS*/
