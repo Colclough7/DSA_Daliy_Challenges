@@ -24,3 +24,25 @@ A Boolean value (True or False).*/
 
 
 /*JS*/
+
+
+
+
+function logicalCalc(array, op){
+  //your code here
+  // Start with the first element as the initial result
+  let result = array[0];
+
+  // Apply the operator to each subsequent element
+  for (let i = 1; i < array.length; i++) {
+    if (op === "AND") {
+      result = result && array[i]; // Apply AND
+    } else if (op === "OR") {
+      result = result || array[i]; // Apply OR
+    } else if (op === "XOR") {
+      result = result !== array[i]; // Apply XOR
+    }
+  }
+
+  return result;
+}
