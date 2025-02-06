@@ -19,3 +19,18 @@ text after  = "zzz"*/
 
 
 /*JS*/
+
+
+
+
+function contamination(text, char){
+  // Code here ;)
+  
+    // If the text is empty or char is empty, return an empty string
+  if (text === "" || char === "") {
+    return "";
+  }
+
+  // Return a string with the same length as `text`, consisting of the character `char`
+  return char.repeat(text.length);
+}
