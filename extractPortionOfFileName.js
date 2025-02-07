@@ -21,3 +21,9 @@ Acceptable characters for random tests:
 abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_-0123456789
 
 The recommended way to solve it is using RegEx and specifically groups.*/
+
+
+
+
+
+/*JS*/
