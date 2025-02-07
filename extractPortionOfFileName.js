@@ -27,3 +27,14 @@ The recommended way to solve it is using RegEx and specifically groups.*/
 
 
 /*JS*/
+
+
+
+
+class FileNameExtractor {
+    static extractFileName(dirtyFileName) {
+        const regex = /^\d+_([a-zA-Z0-9_-]+(?:\.[a-zA-Z0-9]+))/;
+        const match = dirtyFileName.match(regex);
+        return match ? match[1] : null;
+    }
+}
