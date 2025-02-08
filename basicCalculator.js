@@ -11,3 +11,25 @@ Keep in mind, you cannot divide by zero. If an attempt to divide by zero is made
 
 
 /*JS*/
+
+
+
+
+function calculate(num1, operation, num2) {
+ //TODO: make a basic calculator. 
+  
+     if (operation === "+") {
+        return num1 + num2;
+    } else if (operation === "-") {
+        return num1 - num2;
+    } else if (operation === "*") {
+        return num1 * num2;
+    } else if (operation === "/") {
+        if (num2 === 0) {
+            return null;  // Cannot divide by zero
+        }
+        return num1 / num2;
+    } else {
+        return null;  // Invalid operation
+    }
+}
