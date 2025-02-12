@@ -16,3 +16,37 @@ The push()/Push() and buildOneTwoThree()/BuildOneTwoThree() functions do not nee
 
 
 /*JS*/
+
+
+
+
+function Node(data) {
+  this.data = data;
+  this.next = null;
+}
+
+function length(head) {
+  let current = head;
+  let count = 0;
+
+  while (current !== null) {
+    count++;
+    current = current.next;
+  }
+
+  return count;
+}
+
+function count(head, data) {
+  let current = head;
+  let count = 0;
+
+  while (current !== null) {
+    if (current.data === data) {
+      count++;
+    }
+    current = current.next;
+  }
+
+  return count;
+}
