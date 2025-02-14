@@ -20,3 +20,17 @@ Examples
 
 
 /*JS*/
+
+
+
+
+function integrate(coefficient, exponent) {
+  // Add 1 to the exponent
+  const newExponent = exponent + 1;
+  
+  // Divide the coefficient by the new exponent
+  const newCoefficient = coefficient / newExponent;
+  
+  // Return the result as a string in the format "coefficientx^exponent"
+  return `${newCoefficient}x^${newExponent}`;
+}
