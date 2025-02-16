@@ -8,3 +8,9 @@ Note: only positive integers will be tested.*/
 
 
 /*JS*/
+
+
+
+function otherAngle(a, b) {
+  return 180 - (a + b);
+}
