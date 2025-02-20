@@ -5,3 +5,9 @@ In this kata, you will be given an array. Each value represents a meeting room. 
 'X' --> busy
 'O' --> empty
 If all rooms are busy, return "None available!"*/
+
+
+
+
+
+/*JS*/
