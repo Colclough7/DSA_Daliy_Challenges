@@ -11,3 +11,19 @@ If all rooms are busy, return "None available!"*/
 
 
 /*JS*/
+
+
+
+
+function meeting(x){
+ // Iterate through the array
+    for (let i = 0; i < x.length; i++) {
+        // Check if the room is empty
+        if (x[i] === 'O') {
+            return i;  // Return the index of the first empty room
+        }
+    }
+    
+    // If no empty room is found
+    return "None available!";
+}
