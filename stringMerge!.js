@@ -6,3 +6,9 @@ Examples
 ("coding", "anywhere", "n")   ==>  "codinywhere"
 ("jason", "samson", "s")      ==>  "jasamson"
 ("wonderful", "people", "e")  ==>  "wondeople"*/
+
+
+
+
+
+/*JS*/
