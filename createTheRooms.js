@@ -3,3 +3,7 @@ You are creating an "Escape the room" game. The first step is to create a hash t
 There should be at least 3 rooms inside it, each room being a hash table with at least 3 properties (e.g. name, description, completed).*/
 
 
+
+
+
+/*JS*/
