@@ -10,3 +10,16 @@ Strings will only contain letters and spaces, with exactly 1 space between words
 
 
 /*JS*/
+
+
+function makeString(s){
+  // ...
+  // Split the string into words
+  const words = s.split(' ');
+  
+  // Map over the words, taking the first character of each word
+  const firstLetters = words.map(word => word[0]);
+  
+  // Join the first letters into a single string and return it
+  return firstLetters.join('');
+}
