@@ -17,3 +17,16 @@ The exponent will never be 1, and neither number will ever be 0*/
 
 
 /*JS*/
+
+
+
+function derive(coefficient,exponent) {
+   // Multiply coefficient and exponent
+  let newCoefficient = coefficient * exponent;
+  
+  // Subtract 1 from the exponent
+  let newExponent = exponent - 1;
+  
+  // Return the result in the required format
+  return `${newCoefficient}x^${newExponent}`;
+}
