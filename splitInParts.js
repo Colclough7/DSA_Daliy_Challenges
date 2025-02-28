@@ -19,3 +19,16 @@ Size is always positive*/
 
 
 /*JS*/
+
+
+
+var splitInParts = function(s, partLength) {
+  // Use a regular expression to split the string into parts of size partLength
+  let result = [];
+  
+  for (let i = 0; i < s.length; i += partLength) {
+    result.push(s.slice(i, i + partLength)); // Slice the string into parts
+  }
+
+  return result.join(' '); // Join the parts with a space
+};
