@@ -6,10 +6,14 @@
 
 /*JS*/
 
-
 function parseF(s) {
   // Check if the input is null or undefined
   if (s === null || s === undefined) {
+    return null;
+  }
+
+  // If the input is a boolean, return null
+  if (typeof s === 'boolean') {
     return null;
   }
 
