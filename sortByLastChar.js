@@ -11,3 +11,15 @@ All inputs will be valid.*/
 
 
 /*JS*/
+
+
+
+
+
+function last(x) {
+  return x.split(' ').sort((a, b) => {
+    let lastA = a[a.length - 1]; // Get last character of word a
+    let lastB = b[b.length - 1]; // Get last character of word b
+    return lastA.localeCompare(lastB); // Compare last characters
+  });
+}
