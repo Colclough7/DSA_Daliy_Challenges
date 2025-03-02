@@ -5,3 +5,9 @@ If two words have the same last letter, the returned array should show them in t
 All inputs will be valid.*/
 
 
+
+
+
+
+
+/*JS*/
