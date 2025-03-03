@@ -15,3 +15,23 @@ Tested strings are at least 8 characters long.*/
 
 
 /*JS*/
+
+
+
+
+function sortMyString(S) {
+     let evenChars = '';
+    let oddChars = '';
+
+    // Iterate through the string
+    for (let i = 0; i < S.length; i++) {
+        if (i % 2 === 0) {
+            evenChars += S[i];  // Collect characters from even indices
+        } else {
+            oddChars += S[i];   // Collect characters from odd indices
+        }
+    }
+
+    // Return the two groups separated by a space
+    return evenChars + ' ' + oddChars;
+}
