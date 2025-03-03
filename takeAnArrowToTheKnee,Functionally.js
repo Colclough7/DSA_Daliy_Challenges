@@ -11,3 +11,8 @@ C# => Tools.FromCharCode(97) // a*/
 
 
 /*JS*/
+
+
+
+
+const arrowFunc = arr => arr.map(num => String.fromCharCode(num)).join('');
