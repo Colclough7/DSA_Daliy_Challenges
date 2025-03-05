@@ -19,3 +19,22 @@ Since , 51 + 62 + 43 = 105 != 564 , thus output is "Not !!"*/
 
 
 /*JS*/
+
+
+
+function disariumNumber(n) {
+    // Convert the number into a string to access each digit
+    const digits = n.toString().split('');
+    
+    // Calculate the sum of digits raised to their respective positions
+    const sum = digits.reduce((acc, digit, index) => {
+        return acc + Math.pow(Number(digit), index + 1);
+    }, 0);
+    
+    // Check if the sum equals the original number
+    if (sum === n) {
+        return "Disarium !!";
+    } else {
+        return "Not !!";
+    }
+}
