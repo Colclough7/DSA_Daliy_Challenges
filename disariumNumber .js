@@ -18,3 +18,4 @@ Explanation:
 Since , 51 + 62 + 43 = 105 != 564 , thus output is "Not !!"*/
 
 
+/*JS*/
