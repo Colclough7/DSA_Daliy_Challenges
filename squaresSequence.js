@@ -6,3 +6,22 @@ Examples
 
 
 /*JS*/
+
+
+
+
+function squares(x, n) {
+  // If n is less than or equal to 0, return an empty array
+  if (n <= 0) return [];
+
+  let result = [];
+  let current = x;
+
+  // Generate the sequence
+  for (let i = 0; i < n; i++) {
+    result.push(current);
+    current = current * current; // Square the current number
+  }
+
+  return result;
+}
