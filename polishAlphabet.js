@@ -16,3 +16,8 @@ and print out the string without the use of the Polish letters.
 For example:
 
 "Jędrzej Błądziński"  -->  "Jedrzej Bladzinski"*/
+
+
+
+
+/*JS*/
