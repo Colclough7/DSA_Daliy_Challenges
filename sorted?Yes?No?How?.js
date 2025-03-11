@@ -9,3 +9,16 @@ You can assume the array will always be valid, and there will always be one corr
 
 
 /*JS*/
+
+
+
+
+function isSortedAndHow(array) {
+  if (array.every((val, i, arr) => i === 0 || arr[i - 1] <= val)) {
+    return "yes, ascending";
+  }
+  if (array.every((val, i, arr) => i === 0 || arr[i - 1] >= val)) {
+    return "yes, descending";
+  }
+  return "no";
+}
