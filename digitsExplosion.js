@@ -8,3 +8,17 @@ Examples
 
 
 /*JS*/
+
+
+
+
+
+
+function explode(s) {
+   let result = '';
+  for (let i = 0; i < s.length; i++) {
+    let digit = s[i];
+    result += digit.repeat(Number(digit)); // Repeat the digit according to its value
+  }
+  return result;
+}
