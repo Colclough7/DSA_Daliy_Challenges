@@ -72,3 +72,12 @@ Let's see some cases:
 
 ([4, 2], [12, 2], [6, 10]) ------> [7.3333, 4.6667]
 Enjoy it and happy coding!!*/
+
+
+
+
+
+
+
+
+/*JS*/
