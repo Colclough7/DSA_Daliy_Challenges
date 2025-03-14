@@ -81,3 +81,21 @@ Enjoy it and happy coding!!*/
 
 
 /*JS*/
+
+
+
+
+
+function barTriang(p1, p2, p3) {
+  // Extract the coordinates of the vertices
+  const xA = p1[0], yA = p1[1];
+  const xB = p2[0], yB = p2[1];
+  const xC = p3[0], yC = p3[1];
+  
+  // Calculate the centroid coordinates
+  const xO = (xA + xB + xC) / 3;
+  const yO = (yA + yB + yC) / 3;
+  
+  // Return the result rounded to 4 decimal places
+  return [parseFloat(xO.toFixed(4)), parseFloat(yO.toFixed(4))];
+}
