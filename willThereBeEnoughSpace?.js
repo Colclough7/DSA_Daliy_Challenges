@@ -17,4 +17,19 @@ cap = 100, on = 60, wait = 50 --> 10 # He can't fit 10 of the 50 waiting*/
 
 
 
+function enough(cap, on, wait) {
+    // Calculate the available space on the bus
+    const availableSpace = cap - on;
+    
+    // If there is enough space for all waiting passengers, return 0
+    if (availableSpace >= wait) {
+        return 0;
+    }
+    
+    // If there isn't enough space, return the number of passengers that can't fit
+    return wait - availableSpace;
+}
+
+
+
 /*JS*/
