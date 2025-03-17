@@ -12,3 +12,26 @@ You should use for..in in your code, otherwise your solution may not pass this k
 
 
 /*JS*/
+
+
+
+
+
+function giveMeFive(obj) {
+  let result = [];
+  
+  // Loop through each key in the object
+  for (let key in obj) {
+    // Check if the length of the key is 5
+    if (key.length === 5) {
+      result.push(key);
+    }
+    
+    // Check if the length of the value is 5 (assuming the value is a string)
+    if (obj[key].length === 5) {
+      result.push(obj[key]);
+    }
+  }
+  
+  return result;
+}
