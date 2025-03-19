@@ -3,3 +3,9 @@
 snoopy.bark(); // return "Woof"
 scoobydoo.bark(); // undefined
 Use method prototypes to enable all Dogs to bark.*/
+
+
+
+
+
+/*JS*/
