@@ -17,3 +17,9 @@ You should floor all your answers so that an integer is given instead of a float
 age = 27   =>   20-40
 age = 5    =>   4-5
 age = 17   =>   15-20*/
+
+
+
+
+
+/*JS*/
