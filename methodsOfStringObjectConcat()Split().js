@@ -14,3 +14,14 @@ splitAndMerge("Hello World!", ",")     ==  "H,e,l,l,o W,o,r,l,d,!"*/
 
 
 /*JS*/
+
+
+
+function splitAndMerge(string, separator) {
+  // Step 1: Split the string into words
+  return string.split(" ")
+    // Step 2: For each word, split into characters and join with the separator
+    .map(word => word.split("").join(separator))
+    // Step 3: Join all the words back into a sentence with spaces
+    .join(" ");
+}
