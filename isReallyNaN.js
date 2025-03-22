@@ -9,3 +9,9 @@ Any solution is acceptable!*/
 
 
 /*JS*/
+
+
+
+const isReallyNaN = (val) => {
+  return Number.isNaN(val);
+};
