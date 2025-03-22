@@ -9,3 +9,8 @@ splitAndMerge("My name is John", " ")  ==  "M y n a m e i s J o h n"
 splitAndMerge("My name is John", "-")  ==  "M-y n-a-m-e i-s J-o-h-n"
 splitAndMerge("Hello World!", ".")     ==  "H.e.l.l.o W.o.r.l.d.!"
 splitAndMerge("Hello World!", ",")     ==  "H,e,l,l,o W,o,r,l,d,!"*/
+
+
+
+
+/*JS*/
