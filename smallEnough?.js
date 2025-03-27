@@ -4,3 +4,11 @@ You can assume all values in the array are numbers.*/
 
 
 /*JS*/
+
+
+
+
+function smallEnough(a, limit) {
+  // Check if all elements in array a are less than or equal to the limit
+  return a.every(num => num <= limit);
+}
