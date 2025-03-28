@@ -10,3 +10,9 @@ Go to work!*/
 
 
 /*JS*/
+
+
+
+function fireFight(s) {
+  return s.replace(/Fire/g, '~~');
+}
