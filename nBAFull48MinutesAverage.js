@@ -17,3 +17,18 @@ Follow your dreams!*/
 
 
 /*JS*/
+
+
+
+function pointsPer48(ppg, mpg) {
+    // If mpg is 0, return 0 since no points can be scored without playing
+    if (mpg === 0) return 0;
+    
+    // Extrapolate points per 48 minutes
+    const ppg48 = (ppg / mpg) * 48;
+    
+    // Round to the nearest tenth
+    const rounded = Math.round(ppg48 * 10) / 10;
+    
+    return rounded;
+}
