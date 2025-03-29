@@ -13,3 +13,11 @@ Examples:
 
 
 /*JS*/
+
+
+
+function getMissingElement(superImportantArray) {
+  const totalSum = 45;  // sum of numbers from 0 to 9
+  const arraySum = superImportantArray.reduce((acc, num) => acc + num, 0);  // sum of elements in the array
+  return totalSum - arraySum;  // the missing element
+}
