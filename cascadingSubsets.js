@@ -7,3 +7,8 @@ each_cons([1,2,3,4], 3)
   #=> [[1,2,3],[2,3,4]]
   
 As you can see, the lists are cascading; ie, they overlap, but never out of order.*/
+
+
+
+
+/*JS*/
