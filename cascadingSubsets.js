@@ -12,3 +12,12 @@ As you can see, the lists are cascading; ie, they overlap, but never out of orde
 
 
 /*JS*/
+
+
+function eachCons(array, n) {
+  let result = [];
+  for (let i = 0; i <= array.length - n; i++) {
+    result.push(array.slice(i, i + n));
+  }
+  return result;
+}
