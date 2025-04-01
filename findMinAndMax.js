@@ -2,3 +2,11 @@
 
 
 /*JS*/
+
+
+
+
+function getMinMax(arr) {
+  if (!arr || arr.length === 0) return null; // Handle empty or invalid input
+  return [Math.min(...arr), Math.max(...arr)];
+}
