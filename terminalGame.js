@@ -14,3 +14,15 @@ experience	0
 
 
 /*JS*/
+
+
+
+
+function Hero(name = 'Hero') {
+  // Initialize the attributes
+  this.name = name;
+  this.position = '00';
+  this.health = 100;
+  this.damage = 5;
+  this.experience = 0;
+}
