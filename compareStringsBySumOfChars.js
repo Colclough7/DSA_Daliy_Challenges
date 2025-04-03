@@ -14,3 +14,7 @@ Examples:
 "kl", "lz"  -> not equal
 null, ""    -> equal*/
 
+
+
+
+/*JS*/
