@@ -13,3 +13,17 @@ Examples:
 
 
 /*JS*/
+
+
+
+
+function twoHighest(arr) {
+  // Remove duplicates by converting to a Set, then convert back to array
+  let uniqueArr = [...new Set(arr)];
+  
+  // Sort the array in descending order
+  uniqueArr.sort((a, b) => b - a);
+  
+  // Return the top two highest values, or fewer if there aren't enough
+  return uniqueArr.slice(0, 2);
+}
