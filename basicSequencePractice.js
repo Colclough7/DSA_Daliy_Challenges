@@ -17,3 +17,22 @@ Examples
 
 
 /*JS*/
+
+
+
+
+function sumOfN(n) {
+  let result = [];
+  
+  // Determine whether we need a positive or negative sequence.
+  let sign = n < 0 ? -1 : 1;
+  n = Math.abs(n); // Work with the absolute value of n to simplify the calculation
+
+  let currentSum = 0;
+  for (let i = 0; i <= n; i++) {
+    currentSum += i; // Sum of numbers from 0 to i
+    result.push(currentSum * sign); // Multiply by sign to create the correct sequence
+  }
+
+  return result;
+}
