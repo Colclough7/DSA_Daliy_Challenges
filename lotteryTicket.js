@@ -17,3 +17,31 @@ All inputs will be in the correct format. Strings on tickets are not always the 
 
 
 /*JS*/
+
+
+
+function bingo(ticket, win) {
+  let miniWins = 0;
+
+  // Loop through each subarray in the ticket
+  for (let i = 0; i < ticket.length; i++) {
+    const [str, num] = ticket[i];
+
+    // Check each character in the string
+    let foundMiniWin = false;
+    for (let char of str) {
+      if (char.charCodeAt(0) === num) {
+        foundMiniWin = true;
+        break;
+      }
+    }
+
+    // If a mini-win is found in this subarray, increment miniWins
+    if (foundMiniWin) {
+      miniWins++;
+    }
+  }
+
+  // Compare the number of mini-wins to the required 'win' count
+  return miniWins >= win ? 'Winner!' : 'Loser!';
+}
