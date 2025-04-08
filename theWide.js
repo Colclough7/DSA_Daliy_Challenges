@@ -11,3 +11,9 @@ If this one is an alligator (case-insensitive) return small otherwise return wid
 
 
 /*JS*/
+
+
+
+function mouthSize(animal) {
+  return animal.toLowerCase() === 'alligator' ? 'small' : 'wide';
+}
