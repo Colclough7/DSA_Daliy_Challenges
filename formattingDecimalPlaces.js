@@ -15,3 +15,11 @@ Incorrect examples (e.g. if you round the numbers):
 
 
 /*JS*/
+
+
+
+
+function twoDecimalPlaces(number) {
+  // Multiply by 100, truncate the number, then divide by 100
+  return Math.trunc(number * 100) / 100;
+}
