@@ -13,3 +13,10 @@ Notes
 the function is decomp(n) and should return the decomposition of n! into its prime factors in increasing order of the primes, as a string.
 factorial can be a very big number (4000! has 12674 digits, n can go from 300 to 4000).
 In Fortran - as in any other language - the returned string is not permitted to contain any redundant trailing whitespace: you can use dynamically allocated character strings.*/
+
+
+
+
+
+
+/*JS*/
