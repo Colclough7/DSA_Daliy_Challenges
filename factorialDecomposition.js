@@ -20,3 +20,40 @@ In Fortran - as in any other language - the returned string is not permitted to 
 
 
 /*JS*/
+
+
+
+
+function decomp(n) {
+  // Helper function to find all primes up to n using Sieve of Eratosthenes
+  function getPrimes(limit) {
+    let sieve = Array(limit + 1).fill(true);
+    sieve[0] = sieve[1] = false;
+    for (let i = 2; i * i <= limit; i++) {
+      if (sieve[i]) {
+        for (let j = i * i; j <= limit; j += i) {
+          sieve[j] = false;
+        }
+      }
+    }
+    return sieve.map((isPrime, idx) => isPrime ? idx : null).filter(p => p);
+  }
+
+  // Function to compute exponent of prime p in n!
+  function primeExponent(p, n) {
+    let exp = 0;
+    while (n >= p) {
+      n = Math.floor(n / p);
+      exp += n;
+    }
+    return exp;
+  }
+
+  const primes = getPrimes(n);
+  const factors = primes.map(p => {
+    const exp = primeExponent(p, n);
+    return exp === 1 ? `${p}` : `${p}^${exp}`;
+  });
+
+  return factors.join(" * ");
+}
