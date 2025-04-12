@@ -16,3 +16,10 @@ all donations and new average are numbers (integers or floats), array of donatio
 See examples below and "Sample Tests" to see which return is to be done.
 array: [14, 30, 5, 7, 9, 11, 15], new average: 92 -> result: 645
 array: [14, 30, 5, 7, 9, 11, 15], new average: 2  -> result: variable, see "Sample Tests" */
+
+
+
+
+
+
+/*JS*/
