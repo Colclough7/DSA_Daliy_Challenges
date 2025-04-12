@@ -23,3 +23,17 @@ array: [14, 30, 5, 7, 9, 11, 15], new average: 2  -> result: variable, see "Samp
 
 
 /*JS*/
+
+
+
+
+function newAvg(arr, newavg) {
+    const sum = arr.reduce((a, b) => a + b, 0);
+    const x = Math.ceil(newavg * (arr.length + 1) - sum);
+
+    if (x <= 0) {
+        throw new Error("Expected New Average is too low");
+    }
+
+    return x;
+}
