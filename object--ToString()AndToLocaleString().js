@@ -50,3 +50,16 @@ That's all of your work. My work is print your color code on your screen.*/
 
 
 /*JS*/
+
+
+
+
+
+function colorOf(r, g, b) {
+  // Convert each value to a 2-digit hex string
+  const toHex = (n) => n.toString(16).padStart(2, '0');
+
+  return "#" + toHex(r) + toHex(g) + toHex(b);
+}
+
+
