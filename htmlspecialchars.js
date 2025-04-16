@@ -17,3 +17,13 @@ Your mission is to implement a function that converts the following potentially 
 
 
 /*JS*/
+
+
+
+function htmlspecialchars(formData) {
+  return formData
+    .replace(/&/g, '&amp;')   // Must be first!
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
