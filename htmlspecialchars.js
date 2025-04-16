@@ -11,3 +11,9 @@ Your mission is to implement a function that converts the following potentially 
 > --> &gt;
 " --> &quot;
 & --> &amp;*/
+
+
+
+
+
+/*JS*/
