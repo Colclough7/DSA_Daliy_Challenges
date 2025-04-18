@@ -8,3 +8,11 @@ The array will never be empty.*/
 
 
 /*JS*/
+
+
+
+
+function average(scores) {
+    const sum = scores.reduce((acc, val) => acc + val, 0);
+    return Math.round(sum / scores.length);
+}
