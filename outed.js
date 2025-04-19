@@ -11,3 +11,24 @@ Note that your boss is in the room ( boss ). Their score is worth double its fac
 
 
 /*JS*/
+
+
+
+
+function outed(meet, boss) {
+  let total = 0;
+  let count = 0;
+
+  for (let person in meet) {
+    if (person === boss) {
+      total += meet[person] * 2; // Boss's opinion counts double
+    } else {
+      total += meet[person];
+    }
+    count++;
+  }
+
+  const average = total / count;
+
+  return average <= 5 ? 'Get Out Now!' : 'Nice Work Champ!';
+}
