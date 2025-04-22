@@ -13,3 +13,20 @@ Place all people in alphabetical order where Mothers are followed by their child
 
 
 /*JS*/
+
+
+
+
+
+
+function findChildren(dancingBrigade) {
+  return dancingBrigade
+    .split('')
+    .sort((a, b) => {
+      let aLower = a.toLowerCase();
+      let bLower = b.toLowerCase();
+      if (aLower === bLower) return a < b ? -1 : 1; // Uppercase comes first
+      return aLower < bLower ? -1 : 1;
+    })
+    .join('');
+}
