@@ -4,3 +4,10 @@ Examples
 numberToPower(3, 2)  // -> 9 ( = 3 * 3 )
 numberToPower(2, 3)  // -> 8 ( = 2 * 2 * 2 )
 numberToPower(10, 6) // -> 1000000*/
+
+
+
+
+
+
+/*JS*/
