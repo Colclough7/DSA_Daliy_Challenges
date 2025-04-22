@@ -11,3 +11,14 @@ numberToPower(10, 6) // -> 1000000*/
 
 
 /*JS*/
+
+
+
+
+function numberToPower(number, power) {
+  let result = 1;
+  for (let i = 0; i < power; i++) {
+    result *= number;
+  }
+  return result;
+}
