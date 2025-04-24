@@ -11,3 +11,15 @@ For example (Input --> Output)
 
 
 /*JS*/
+
+
+
+
+
+function ensureQuestion(s) {
+  if (s.endsWith("?")) {
+    return s;
+  } else {
+    return s + "?";
+  }
+}
