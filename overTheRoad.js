@@ -22,3 +22,9 @@ To solve this, you need to think of a way to do the kata without making massive 
 
 
 /*JS*/
+
+
+
+function overTheRoad(address, n) {
+  return 2 * n + 1 - address;
+}
