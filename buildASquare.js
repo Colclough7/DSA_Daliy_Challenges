@@ -13,3 +13,13 @@ n = 3, so I expect a 3x3 square back just like below as a string:
 
 
 /*JS*/
+
+
+
+
+function generateShape(integer) {
+  // Create one row of '+' characters
+  const row = '+'.repeat(integer);
+  // Repeat the row 'integer' times and join with newline characters
+  return Array(integer).fill(row).join('\n');
+}
