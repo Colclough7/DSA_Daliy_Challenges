@@ -34,3 +34,11 @@ The questions array is already defined for you and is not the same as the one in
 
 
 /*JS*/
+
+
+
+
+
+for (var i = 0; i < questions.length; i++) {
+    questions[i].usersAnswer = null;
+}
