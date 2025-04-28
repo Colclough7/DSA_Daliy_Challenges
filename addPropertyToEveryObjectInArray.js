@@ -25,3 +25,12 @@ var questions = [{
     usersAnswer: null
 }];
 The questions array is already defined for you and is not the same as the one in the example.*/
+
+
+
+
+
+
+
+
+/*JS*/
