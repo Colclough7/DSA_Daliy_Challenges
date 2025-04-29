@@ -8,3 +8,9 @@ combined into one word (WITHOUT "The" in front), like this:
 "alaska" -> "Alaskalaska"
 
 Complete the function that takes a noun as a string, and returns her preferred band name written as a string.*/
+
+
+
+
+
+/*JS*/
