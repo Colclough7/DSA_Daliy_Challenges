@@ -14,3 +14,16 @@ Complete the function that takes a noun as a string, and returns her preferred b
 
 
 /*JS*/
+
+
+
+function bandNameGenerator(str) {
+  if (str[0] === str[str.length - 1]) {
+    // Capitalize the first letter, and combine the noun without repeating the shared character
+    const capitalized = str[0].toUpperCase() + str.slice(1);
+    return capitalized + str.slice(1);
+  } else {
+    // Just return "The" + capitalized noun
+    return "The " + str[0].toUpperCase() + str.slice(1);
+  }
+}
