@@ -27,3 +27,16 @@ Explanation: Digits {2, 3, 3, 5} are in non-decreasing order (3 = 3).*/
 
 
 /*JS*/
+
+
+
+
+function tidyNumber(n) {
+  const digits = n.toString().split('');
+  for (let i = 0; i < digits.length - 1; i++) {
+    if (digits[i] > digits[i + 1]) {
+      return false;
+    }
+  }
+  return true;
+}
