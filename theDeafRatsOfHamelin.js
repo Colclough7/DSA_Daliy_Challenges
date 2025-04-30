@@ -21,3 +21,39 @@ ex3 ~O~O~O~OP~O~OO~ has 2 deaf rats*/
 
 
 /*JS*/
+
+
+
+
+var countDeafRats = function(town) {
+  // Remove whitespace
+  town = town.replace(/\s/g, "");
+
+  // Find the index of the Pied Piper
+  let pIndex = town.indexOf("P");
+
+  let deafRats = 0;
+
+  // Process the string in chunks of 2 characters (rat representations)
+  for (let i = 0; i < town.length; i += 2) {
+    // Skip the Piper character
+    if (town[i] === "P") {
+      i--;
+      continue;
+    }
+
+    let rat = town.slice(i, i + 2);
+
+    // Before the Piper, correct rats face right (~O)
+    if (i < pIndex) {
+      if (rat !== "~O") deafRats++;
+    }
+
+    // After the Piper, correct rats face left (O~)
+    if (i > pIndex) {
+      if (rat !== "O~") deafRats++;
+    }
+  }
+
+  return deafRats;
+};
