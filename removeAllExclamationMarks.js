@@ -14,3 +14,13 @@ Examples
 
 
 /*JS*/
+
+
+
+
+function remove(string) {
+  // Remove all exclamation marks
+  let cleaned = string.replace(/!/g, '');
+  // Add a single exclamation mark at the end
+  return cleaned + '!';
+}
