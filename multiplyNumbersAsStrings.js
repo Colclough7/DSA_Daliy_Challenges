@@ -8,3 +8,7 @@ The returned "number" should not start with zeros e.g. 0123 is invalid
 Note: 100 randomly generated tests!
 
 Usage of BigInt is disallowed and will be checked in the full test suite.*/
+
+
+
+/*JS*/
