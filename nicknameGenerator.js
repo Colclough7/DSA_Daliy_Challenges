@@ -25,3 +25,20 @@ The input can be modified*/
 
 
 /*JS*/
+
+
+
+function nicknameGenerator(name) {
+  if (name.length < 4) {
+    return "Error: Name too short";
+  }
+
+  const vowels = "aeiou";
+  const thirdLetter = name[2].toLowerCase();
+
+  if (vowels.includes(thirdLetter)) {
+    return name.slice(0, 4);
+  } else {
+    return name.slice(0, 3);
+  }
+}
