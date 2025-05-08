@@ -8,3 +8,9 @@ arr.numberOfOccurrences(0) === 1;
 arr.numberOfOccurrences(4) === 0;
 arr.numberOfOccurrences(2) === 2;
 arr.numberOfOccurrences(3) === 1;*/
+
+
+
+
+
+/*JS*/
