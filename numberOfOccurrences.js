@@ -14,3 +14,12 @@ arr.numberOfOccurrences(3) === 1;*/
 
 
 /*JS*/
+
+
+
+
+Object.defineProperty(Array.prototype, 'numberOfOccurrences', { 
+  value: function(element) {
+    return this.filter(item => item === element).length;
+  }
+});
