@@ -20,3 +20,8 @@ Vowels are "aeiou", so discount the letter "y".
 Input will always be a string.
 Input will always have the first letter capitalised and the rest lowercase (e.g. Sam).
 The input can be modified*/
+
+
+
+
+/*JS*/
