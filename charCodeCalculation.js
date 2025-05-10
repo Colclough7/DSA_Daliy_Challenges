@@ -20,3 +20,22 @@ Then return the difference between the sum of the digits in total1 and total2:
 
 
 /*JS*/
+
+
+
+function calc(x) {
+  // Step 1: Convert characters to ASCII codes and join them into a string
+  let total1 = x.split('').map(char => char.charCodeAt(0)).join('');
+  
+  // Step 2: Replace all 7s with 1s
+  let total2 = total1.replace(/7/g, '1');
+  
+  // Step 3: Calculate the sum of digits for total1 and total2
+  const sumDigits = str => str.split('').reduce((sum, digit) => sum + Number(digit), 0);
+  
+  let sum1 = sumDigits(total1);
+  let sum2 = sumDigits(total2);
+  
+  // Step 4: Return the difference
+  return sum1 - sum2;
+}
