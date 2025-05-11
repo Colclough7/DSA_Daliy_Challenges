@@ -14,3 +14,15 @@ The Stanton measure of [1, 4, 1, 2, 11, 2, 3, 1] is 1, because 1 occurs 3 times 
 
 
 /*JS*/
+
+
+function stantonMeasure(a) {
+  // Step 1: Count the number of 1s in the array
+  const n = a.filter(x => x === 1).length;
+  
+  // Step 2: Count how many times n appears in the array
+  const measure = a.filter(x => x === n).length;
+
+  return measure;
+}
+
