@@ -7,3 +7,9 @@ Write a script that will check to see if the player has achieved at least 100 po
 In that case, we return, "Well done! You have advanced to the qualifying stage. Win 2 out of your next 3 games to rank up.".
 
 Otherwise return, False/false (according to the language in use).*/
+
+
+
+
+
+/*JS*/
