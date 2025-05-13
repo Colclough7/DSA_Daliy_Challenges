@@ -7,3 +7,8 @@ Example:
 greet("Niks") === "hello Niks!";
 greet("") === null; // Return null if input is empty string
 greet(null) === null; // Return null if input is null*/
+
+
+
+
+/*JS*/
