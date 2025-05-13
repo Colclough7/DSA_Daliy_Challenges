@@ -12,3 +12,12 @@ greet(null) === null; // Return null if input is null*/
 
 
 /*JS*/
+
+
+
+function greet(name) {
+  if (!name) {
+    return null;
+  }
+  return `hello ${name}!`;
+}
