@@ -11,3 +11,13 @@ the returned string should only contain lowercase letters*/
 
 
 /*JS*/
+
+
+
+const kebabize = str => {
+  return str
+    .replace(/[^a-zA-Z]/g, '')          // Remove all non-letter characters
+    .replace(/([A-Z])/g, '-$1')         // Add hyphen before uppercase letters
+    .toLowerCase()                      // Convert the whole string to lowercase
+    .replace(/^-/, '');                 // Remove leading hyphen, if any
+};
