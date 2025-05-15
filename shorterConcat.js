@@ -12,3 +12,28 @@ If a and b have the same length treat a as the longer producing b+reverse(a)+b*/
 
 
 /*JS*/
+
+
+
+
+function shorterReverseLonger(a, b) {
+  // Treat null as empty string
+  a = a || "";
+  b = b || "";
+
+  let shorter, longer;
+
+  if (a.length < b.length) {
+    shorter = a;
+    longer = b;
+  } else {
+    shorter = b;
+    longer = a;
+  }
+
+  // Reverse the longer string
+  const reversed = longer.split('').reverse().join('');
+
+  // Return the desired format
+  return shorter + reversed + shorter;
+}
