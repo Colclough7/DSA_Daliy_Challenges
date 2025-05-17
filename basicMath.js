@@ -10,3 +10,16 @@ Examples
 
 
 /*JS*/
+
+
+
+function calculate(str) {
+  // Replace 'plus' with '+' and 'minus' with '-'
+  let expression = str.replace(/plus/g, '+').replace(/minus/g, '-');
+
+  // Use eval to calculate the result (safe here because input is limited to numbers, plus, and minus)
+  let result = eval(expression);
+
+  // Return the result as a string
+  return result.toString();
+}
