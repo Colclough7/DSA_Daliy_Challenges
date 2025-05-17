@@ -21,3 +21,10 @@ function should be case insensitive to pass the tests*/
 
 
 /*JS*/
+
+
+
+function validateHello(greetings) {
+  const regex = /hello|ciao|salut|hallo|hola|ahoj|czesc/i;
+  return regex.test(greetings);
+}
