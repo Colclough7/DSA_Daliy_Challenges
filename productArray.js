@@ -42,3 +42,14 @@ Finally ,The Fifth element 900 is the product of all array's elements except the
 
 
 /*JS*/
+
+
+
+
+function productArray(numbers) {
+  // Calculate the total product of all elements
+  const totalProduct = numbers.reduce((acc, val) => acc * val, 1);
+  
+  // Return a new array where each element is totalProduct divided by the current element
+  return numbers.map(num => totalProduct / num);
+}
