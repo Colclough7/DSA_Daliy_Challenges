@@ -11,3 +11,21 @@ Examples
 
 
 /*JS*/
+
+
+
+
+function checkThreeAndTwo(array) {
+  const counts = {};
+
+  // Count occurrences
+  for (let char of array) {
+    counts[char] = (counts[char] || 0) + 1;
+  }
+
+  // Get values of counts
+  const values = Object.values(counts);
+
+  // Check if one value is 3 and one is 2
+  return values.includes(3) && values.includes(2);
+}
