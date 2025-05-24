@@ -24,3 +24,29 @@ returns 'Clean'
 
 
 /*JS*/
+
+
+
+function crap(x, bags, cap) {
+    // Step 1: Check for the dog
+    for (let row of x) {
+        if (row.includes('D')) return 'Dog!!';
+    }
+
+    // Step 2: Count all '@' (cr@p)
+    let totalCrap = 0;
+    for (let row of x) {
+        for (let cell of row) {
+            if (cell === '@') totalCrap++;
+        }
+    }
+
+    // Step 3: If there's no cr@p, the garden is clean regardless of bags
+    if (totalCrap === 0) return 'Clean';
+
+    // Step 4: If no bags but there is cr@p
+    if (bags === 0) return 'Cr@p';
+
+    // Step 5: Check if total capacity is enough
+    return (bags * cap >= totalCrap) ? 'Clean' : 'Cr@p';
+}
