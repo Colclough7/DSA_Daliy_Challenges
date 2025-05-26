@@ -14,3 +14,9 @@ Example:
 
 
 /*JS*/
+
+
+
+function countLettersAndDigits(input) {
+  return (input.match(/[a-zA-Z0-9]/g) || []).length;
+}
