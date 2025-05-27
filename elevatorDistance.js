@@ -11,3 +11,9 @@ Given an array representing a series of floors you must reach by elevator, retur
 //distance travelled between them is 0
 [3,3] => 0
 Array will always contain at least 2 floors. Random tests will contain 2-20 elements in array, and floor values between 0 and 30.*/
+
+
+
+
+
+/*JS*/
