@@ -17,3 +17,14 @@ Array will always contain at least 2 floors. Random tests will contain 2-20 elem
 
 
 /*JS*/
+
+
+
+
+function elevatorDistance(array) {
+  let distance = 0;
+  for (let i = 1; i < array.length; i++) {
+    distance += Math.abs(array[i] - array[i - 1]);
+  }
+  return distance;
+}
