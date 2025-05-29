@@ -42,3 +42,23 @@ Adjacent digits differ by 1*/
 
 
 /*JS*/
+
+
+
+
+function jumpingNumber(n) {
+  const str = n.toString();
+  
+  // Single digit numbers are always "Jumping"
+  if (str.length === 1) return "Jumping!!";
+
+  for (let i = 1; i < str.length; i++) {
+    const prevDigit = parseInt(str[i - 1], 10);
+    const currDigit = parseInt(str[i], 10);
+    if (Math.abs(prevDigit - currDigit) !== 1) {
+      return "Not!!";
+    }
+  }
+
+  return "Jumping!!";
+}
