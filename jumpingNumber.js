@@ -37,3 +37,8 @@ Adjacent digits don't differ by 1
 jumpingNumber(32) ==> return "Jumping!!"
 Explanation:
 Adjacent digits differ by 1*/                         
+
+
+
+
+/*JS*/
