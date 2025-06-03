@@ -20,3 +20,6 @@ Shell
 
 Shell tests only variance.
 In "function "variance" $1 is "data", $2 is "town".*/
+
+
+/*JS*/
