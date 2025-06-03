@@ -23,3 +23,32 @@ In "function "variance" $1 is "data", $2 is "town".*/
 
 
 /*JS*/
+
+
+
+function mean(town, strng) {
+    const townData = strng.split('\n').find(line => line.startsWith(town + ":"));
+    if (!townData) return -1;
+
+    const numbers = townData
+        .split(":")[1]
+        .split(",")
+        .map(entry => parseFloat(entry.split(" ")[1]));
+
+    const total = numbers.reduce((sum, val) => sum + val, 0);
+    return total / numbers.length;
+}
+
+function variance(town, strng) {
+    const avg = mean(town, strng);
+    if (avg === -1) return -1;
+
+    const townData = strng.split('\n').find(line => line.startsWith(town + ":"));
+    const numbers = townData
+        .split(":")[1]
+        .split(",")
+        .map(entry => parseFloat(entry.split(" ")[1]));
+
+    const variance = numbers.reduce((sum, val) => sum + Math.pow(val - avg, 2), 0) / numbers.length;
+    return variance;
+}
