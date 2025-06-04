@@ -100,3 +100,15 @@ cutIt(["codewars","javascript","java"]) should return ["code","java","java"]*/
 
 
 /*JS*/
+
+
+
+
+function cutIt(arr) {
+  // Step 1: Find the minimum length
+  let minLength = Math.min(...arr.map(str => str.length));
+  
+  // Step 2: Cut each string to minLength using slice
+  return arr.map(str => str.slice(0, minLength));
+}
+
