@@ -12,3 +12,21 @@ Examples
 
 
 /*JS*/
+
+
+
+function initializeNames(name) {
+  const parts = name.split(' ');
+
+  // If the name has 2 or fewer parts, return it as is
+  if (parts.length <= 2) {
+    return name;
+  }
+
+  // Initialize middle names
+  const first = parts[0];
+  const last = parts[parts.length - 1];
+  const middleInitials = parts.slice(1, -1).map(n => n[0] + '.').join(' ');
+
+  return `${first} ${middleInitials} ${last}`;
+}
