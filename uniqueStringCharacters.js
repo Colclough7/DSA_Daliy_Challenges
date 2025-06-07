@@ -10,3 +10,7 @@ Notice also that you return the characters from the first string concatenated wi
 More examples in the tests cases.
 
 Good luck!*/
+
+
+
+/*JS*/
