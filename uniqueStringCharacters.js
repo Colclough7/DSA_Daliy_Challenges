@@ -14,3 +14,25 @@ Good luck!*/
 
 
 /*JS*/
+
+
+
+function solve(a, b) {
+  let result = '';
+
+  // Characters in `a` but not in `b`
+  for (let char of a) {
+    if (!b.includes(char)) {
+      result += char;
+    }
+  }
+
+  // Characters in `b` but not in `a`
+  for (let char of b) {
+    if (!a.includes(char)) {
+      result += char;
+    }
+  }
+
+  return result;
+}
