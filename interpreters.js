@@ -25,3 +25,38 @@ For everything else, don't return anything (return null in C#, None in Rust, and
 
 
 /*JS*/
+
+
+
+function HQ9(code) {
+  if (code === 'H') {
+    return 'Hello World!';
+  }
+
+  if (code === 'Q') {
+    return code;
+  }
+
+  if (code === '9') {
+    let lyrics = '';
+    for (let i = 99; i > 0; i--) {
+      let next = i - 1;
+      let bottleWord = (n) => n === 1 ? 'bottle' : 'bottles';
+
+      lyrics += `${i} ${bottleWord(i)} of beer on the wall, ${i} ${bottleWord(i)} of beer.\n`;
+      if (next > 0) {
+        lyrics += `Take one down and pass it around, ${next} ${bottleWord(next)} of beer on the wall.\n`;
+      } else {
+        lyrics += `Take one down and pass it around, no more bottles of beer on the wall.\n`;
+      }
+    }
+    lyrics += `No more bottles of beer on the wall, no more bottles of beer.\n`;
+    lyrics += `Go to the store and buy some more, 99 bottles of beer on the wall.`;
+
+    return lyrics;
+  }
+
+  // No return for invalid input: returns undefined by default
+}
+
+
