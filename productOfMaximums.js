@@ -38,3 +38,17 @@ Since the size (k) equal 3 , then the subsequence of size 3 whose gives product 
 
 
 /*JS*/
+
+function maxProduct(numbers, size) {
+  // Step 1: Sort the numbers in descending order
+  const sorted = numbers.sort((a, b) => b - a);
+
+  // Step 2: Take the first `size` elements from the sorted array
+  const topK = sorted.slice(0, size);
+
+  // Step 3: Multiply them together
+  return topK.reduce((product, num) => product * num, 1);
+}
+
+
+
