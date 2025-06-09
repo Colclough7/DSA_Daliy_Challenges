@@ -9,3 +9,12 @@ Calculate the distance between the first and the last pillar in centimeters (wit
 
 
 /*JS*/
+
+
+
+function pillars(numPill, dist, width) {
+  if (numPill === 1) return 0;
+  const gaps = (numPill - 1) * dist * 100;
+  const innerPillarWidths = (numPill - 2) * width;
+  return gaps + innerPillarWidths;
+}
