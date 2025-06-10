@@ -6,3 +6,8 @@ The order is: uppercase letters, lowercase letters, numbers and special characte
 More examples in the test cases.
 
 Good luck!*/
+
+
+
+
+/*JS*/
