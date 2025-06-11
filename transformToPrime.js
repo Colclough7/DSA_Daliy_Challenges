@@ -22,3 +22,8 @@ We need to add 5 to make the sum 37 (a prime)
 Explanation: The sum is 189
 The closest prime greater than or equal to 189 is 191
 We need to add 2 to make the sum 191 (a prime)*/
+
+
+
+
+/*JS*/
