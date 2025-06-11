@@ -27,3 +27,28 @@ We need to add 2 to make the sum 191 (a prime)*/
 
 
 /*JS*/
+
+
+
+
+function minimumNumber(numbers) {
+  // Helper function to check if a number is prime
+  function isPrime(n) {
+    if (n < 2) return false;
+    for (let i = 2, sqrt = Math.sqrt(n); i <= sqrt; i++) {
+      if (n % i === 0) return false;
+    }
+    return true;
+  }
+
+  // Calculate the sum of the input numbers
+  let sum = numbers.reduce((acc, val) => acc + val, 0);
+
+  // Find the minimum number to add to make the sum prime
+  let add = 0;
+  while (!isPrime(sum + add)) {
+    add++;
+  }
+
+  return add;
+}
