@@ -17,3 +17,13 @@ Switch the boolean value on the same element as the flick itself.*/
 
 
 /*JS*/
+
+
+
+function flickSwitch(arr) {
+  let current = true; // Start with true
+  return arr.map(item => {
+    if (item === 'flick') current = !current; // Flip the switch
+    return current;
+  });
+}
