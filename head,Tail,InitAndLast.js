@@ -12,3 +12,9 @@ Here's how I expect the functions to be called in your language:
 
 head([1,2,3,4,5]); => 1
 tail([1,2,3,4,5]); => [2,3,4,5]*/
+
+
+
+
+
+/*JS*/
