@@ -18,3 +18,21 @@ tail([1,2,3,4,5]); => [2,3,4,5]*/
 
 
 /*JS*/
+
+
+
+function head(arr) {
+  return arr[0];
+}
+
+function tail(arr) {
+  return arr.slice(1); // returns a new array from index 1 to end
+}
+
+function init(arr) {
+  return arr.slice(0, -1); // returns a new array from start to second-to-last
+}
+
+function last(arr) {
+  return arr[arr.length - 1];
+}
