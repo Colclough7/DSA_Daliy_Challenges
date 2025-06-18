@@ -14,3 +14,13 @@ arithmetic_sequence_elements(1, 2, 5) == "1, 3, 5, 7, 9"*/
 
 
 /*JS*/
+
+
+
+function arithmeticSequenceElements(a, d, n) {
+    let result = [];
+    for (let i = 0; i < n; i++) {
+        result.push(a + i * d);
+    }
+    return result.join(', ');
+}
