@@ -1,4 +1,4 @@
-This lesson we learn two methods of array: concat() and join(). We have seen concat() in the stringObject method, but the method of the arrayObject is different from the stringObject method, so we need to learn again. When studying the stringObject method split(), we have simply learned the join() method. This time we will review and explain it in detail.
+/*This lesson we learn two methods of array: concat() and join(). We have seen concat() in the stringObject method, but the method of the arrayObject is different from the stringObject method, so we need to learn again. When studying the stringObject method split(), we have simply learned the join() method. This time we will review and explain it in detail.
 
 Their definitions and syntax please refer to:
 
@@ -87,4 +87,4 @@ Some example:
 
 bigToSmall([[1,2],[3,4],[5,6]]) should return "6>5>4>3>2>1"
 bigToSmall([[1,3,5],[2,4,6]]) should return "6>5>4>3>2>1"
-bigToSmall([[1,1],[1],[1,1]]) should return "1>1>1>1>1"   
+bigToSmall([[1,1],[1],[1,1]]) should return "1>1>1>1>1"   */
