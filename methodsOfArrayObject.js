@@ -95,3 +95,14 @@ bigToSmall([[1,1],[1],[1,1]]) should return "1>1>1>1>1"   */
 
 
 /*JS*/
+
+
+
+
+
+
+function bigToSmall(arr) {
+  return [].concat(...arr)        // Step 1: Flatten
+           .sort((a, b) => b - a) // Step 2: Sort descending
+           .join(">");            // Step 3: Join with ">"
+}
