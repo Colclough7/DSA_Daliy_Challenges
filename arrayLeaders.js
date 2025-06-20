@@ -48,3 +48,20 @@ Note : The last element 2 is greater than the sum of its right elements (abstrac
 
 
 /*JS*/
+
+
+
+
+function arrayLeaders(numbers) {
+  const leaders = [];
+  let rightSum = 0;
+
+  for (let i = numbers.length - 1; i >= 0; i--) {
+    if (numbers[i] > rightSum) {
+      leaders.push(numbers[i]);
+    }
+    rightSum += numbers[i];
+  }
+
+  return leaders.reverse();
+}
