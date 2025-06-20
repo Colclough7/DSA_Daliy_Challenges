@@ -28,3 +28,43 @@ The menu items are fairly simple, there is no overlap in the names of the items:
 
 
 /*JS*/
+
+
+
+
+function getOrder(input) {
+  const menu = [
+    "Burger",
+    "Fries",
+    "Chicken",
+    "Pizza",
+    "Sandwich",
+    "Onionrings",
+    "Milkshake",
+    "Coke"
+  ];
+
+  const count = {};
+
+  // Lowercase version of menu to match against input
+  const lowerMenu = menu.map(item => item.toLowerCase());
+
+  // Count each item in the input
+  for (let item of lowerMenu) {
+    let regex = new RegExp(item, 'g');
+    const matches = input.match(regex);
+    count[item] = matches ? matches.length : 0;
+  }
+
+  // Build output based on the menu order
+  const output = [];
+  for (let i = 0; i < menu.length; i++) {
+    const word = menu[i];
+    const lowerWord = word.toLowerCase();
+    for (let j = 0; j < count[lowerWord]; j++) {
+      output.push(word);
+    }
+  }
+
+  return output.join(" ");
+}
