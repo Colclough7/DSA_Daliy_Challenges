@@ -31,3 +31,25 @@ You can see a few addresses and zipcodes in the test cases.*/
 
 
 /*JS*/
+
+
+
+function travel(r, zipcode) {
+    if (zipcode === "") return ":/";
+
+    const addresses = r.split(",");
+    const matchedStreets = [];
+    const matchedNumbers = [];
+
+    for (const address of addresses) {
+        if (address.endsWith(zipcode)) {
+            const match = address.match(/^(\d+)\s(.+)\s\w{2}\s\d{5}$/);
+            if (match) {
+                matchedNumbers.push(match[1]);
+                matchedStreets.push(match[2]);
+            }
+        }
+    }
+
+    return `${zipcode}:${matchedStreets.join(',')}/${matchedNumbers.join(',')}`;
+}
