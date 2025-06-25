@@ -7,3 +7,9 @@ The function should return true if the callback / block returns false for all of
 
 
 /*JS*/
+
+
+
+function none(arr, fun) {
+  return arr.every(item => !fun(item));
+}
