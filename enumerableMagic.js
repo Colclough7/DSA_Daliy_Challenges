@@ -3,3 +3,7 @@
 The function should return true if the callback / block returns false for all of the items in the array, or if the array is empty; otherwise return false.*/
 
 
+
+
+
+/*JS*/
