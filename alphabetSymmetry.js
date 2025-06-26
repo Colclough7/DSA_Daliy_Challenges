@@ -15,3 +15,17 @@ Good luck!*/
 
 
 /*JS*/
+
+
+
+
+
+function solve(arr) {
+  return arr.map(word => {
+    return word
+      .toLowerCase()
+      .split('')
+      .filter((char, index) => char.charCodeAt(0) - 97 === index)
+      .length;
+  });
+}
