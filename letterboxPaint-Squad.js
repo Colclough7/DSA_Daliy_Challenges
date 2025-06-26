@@ -39,4 +39,22 @@ In C, the returned value will be free'd.*/
 
 
 
+
+
+var paintLetterboxes = function(start, end) {
+  const counts = Array(10).fill(0); // Initialize an array of 10 zeros
+
+  for (let num = start; num <= end; num++) {
+    const digits = num.toString();
+    for (let ch of digits) {
+      counts[parseInt(ch)]++;
+    }
+  }
+
+  return counts;
+};
+
+
+
+
 /*JS*/
