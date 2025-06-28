@@ -12,3 +12,7 @@ Note: in case you don't get why this kata is about English beggars, then you are
 Note 2: do not modify the input array.*/
 
 
+
+
+
+/*JS*/
