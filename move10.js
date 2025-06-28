@@ -9,3 +9,15 @@ Input will be a string with length > 0.*/
 
 
 /*JS*/
+
+
+
+
+function moveTen(s) {
+    return s.split('').map(char => {
+        // Get character code and shift by 10, wrap around if needed
+        let code = char.charCodeAt(0);
+        let newCode = ((code - 97 + 10) % 26) + 97;
+        return String.fromCharCode(newCode);
+    }).join('');
+}
