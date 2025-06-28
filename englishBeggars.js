@@ -16,3 +16,19 @@ Note 2: do not modify the input array.*/
 
 
 /*JS*/
+
+
+
+
+function beggars(values, n) {
+  // Initialize an array with `n` zeros for each beggar
+  const result = Array(n).fill(0);
+
+  // Loop through the values array
+  for (let i = 0; i < values.length; i++) {
+    // Determine which beggar this value belongs to using modulo
+    result[i % n] += values[i];
+  }
+
+  return result;
+}
