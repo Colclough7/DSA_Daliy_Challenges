@@ -15,3 +15,18 @@ Because -2, -3, -4 need to be added to have [-5, -4, -3, -2, -1]
 
 
 /*JS*/
+
+
+
+function consecutive(array) {
+  if (array.length === 0) return 0;
+
+  const min = Math.min(...array);
+  const max = Math.max(...array);
+
+  // Total numbers in a consecutive sequence from min to max
+  const totalConsecutive = max - min + 1;
+
+  // Subtract the number of existing unique elements
+  return totalConsecutive - array.length;
+}
