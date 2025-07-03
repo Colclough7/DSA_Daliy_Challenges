@@ -30,3 +30,8 @@ mnop            eeffgghh
                 mmnnoopp
 Task:
 Write function scale(strng, k, v) k and v will be positive integers. If strng == "" return "".*/
+
+
+
+
+/*JS*/
