@@ -35,3 +35,24 @@ Write function scale(strng, k, v) k and v will be positive integers. If strng ==
 
 
 /*JS*/
+
+
+
+
+function scale(strng, k, v) {
+    if (strng === "") return "";
+
+    // Split the string into lines
+    const lines = strng.split('\n');
+
+    // Perform horizontal scaling: replicate each character `k` times
+    const hScaled = lines.map(line =>
+        line.split('').map(char => char.repeat(k)).join('')
+    );
+
+    // Perform vertical scaling: replicate each horizontally scaled line `v` times
+    const vScaled = hScaled.flatMap(line => Array(v).fill(line));
+
+    // Join all lines with newline character
+    return vScaled.join('\n');
+}
