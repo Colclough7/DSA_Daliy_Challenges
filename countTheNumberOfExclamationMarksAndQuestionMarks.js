@@ -17,3 +17,18 @@ Examples
 
 
 /*JS*/
+
+
+
+
+function product(string) {
+  let exclamations = 0;
+  let questions = 0;
+
+  for (let char of string) {
+    if (char === '!') exclamations++;
+    if (char === '?') questions++;
+  }
+
+  return exclamations * questions;
+}
