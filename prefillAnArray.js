@@ -27,3 +27,23 @@ Code Examples
 
 
 /*JS*/
+
+
+
+function prefill(n, v) {
+  // Convert n to a number if it's a string representation of a number
+  const num = Number(n);
+
+  // Validate n
+  if (
+    typeof n === 'boolean' ||         // rule out booleans
+    Number.isNaN(num) ||              // rule out non-numeric strings
+    !Number.isInteger(num) ||         // must be an integer
+    num < 0                           // must be non-negative
+  ) {
+    throw new TypeError(`${n} is invalid`);
+  }
+
+  // If v is omitted, it will be undefined automatically
+  return Array(num).fill(v);
+}
