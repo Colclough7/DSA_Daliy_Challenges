@@ -14,3 +14,10 @@ Invalid arrays
 [] is invalid because it is empty
 [1, -9] is invalid because -9 is not a non-negative integer
 [1, 2, 33] is invalid because 33 is not a single-digit integer*/
+
+
+
+
+
+
+/*JS*/
