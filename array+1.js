@@ -21,3 +21,28 @@ Invalid arrays
 
 
 /*JS*/
+
+
+
+
+function upArray(arr) {
+  // Validate the input
+  if (
+    arr.length === 0 ||
+    arr.some(num => num < 0 || num > 9 || !Number.isInteger(num))
+  ) {
+    return null;
+  }
+
+  // Start from the last digit and add 1
+  for (let i = arr.length - 1; i >= 0; i--) {
+    if (arr[i] < 9) {
+      arr[i] += 1;
+      return arr;
+    }
+    arr[i] = 0;
+  }
+
+  // If we made it here, all digits were 9
+  return [1, ...arr];
+}
