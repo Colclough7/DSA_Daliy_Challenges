@@ -11,3 +11,10 @@ The expected result is a boolean, indicating whether you have any good arrows le
 
 
 /*JS*/
+
+
+
+
+function anyArrows(arrows) {
+  return arrows.some(arrow => !arrow.damaged);
+}
