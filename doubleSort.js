@@ -9,3 +9,14 @@ Note that numbers written as strings are strings and must be sorted with the oth
 
 
 /*JS*/
+
+
+
+function dbSort(a) {
+  // Separate numbers and strings
+  const numbers = a.filter(item => typeof item === 'number').sort((x, y) => x - y);
+  const strings = a.filter(item => typeof item === 'string').sort();
+
+  // Concatenate sorted numbers and sorted strings
+  return numbers.concat(strings);
+}
