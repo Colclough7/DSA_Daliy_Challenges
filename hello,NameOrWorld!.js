@@ -13,3 +13,15 @@ Examples:
 
 
 /*JS*/
+
+
+
+
+function hello(name) {
+  if (!name || name.trim() === "") {
+    return "Hello, World!";
+  }
+  // Normalize the name: first letter uppercase, rest lowercase
+  const formattedName = name[0].toUpperCase() + name.slice(1).toLowerCase();
+  return `Hello, ${formattedName}!`;
+}
