@@ -13,3 +13,11 @@ The name attribute is accessible in the class with this.name.*/
 
 
 /*JS*/
+
+
+
+class Cat extends Animal {
+  speak() {
+    return `${this.name} meows.`;
+  }
+}
