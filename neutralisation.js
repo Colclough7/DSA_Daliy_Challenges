@@ -18,3 +18,8 @@ Examples
 ("-++-", "-+-+") ➞ "-+00"
 Notes
 The two strings will be the same length.*/
+
+
+
+
+/*JS*/
