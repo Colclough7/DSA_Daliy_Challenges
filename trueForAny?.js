@@ -3,3 +3,8 @@
 The function should return true if the callback function / block returns true for any item in the array, otherwise return false.
 
 The function should return false if the array is empty.*/
+
+
+
+
+/*JS*/
