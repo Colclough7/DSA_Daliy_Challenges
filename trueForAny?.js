@@ -8,3 +8,18 @@ The function should return false if the array is empty.*/
 
 
 /*JS*/
+
+
+
+
+function any(arr, fun) {
+  if (arr.length === 0) return false;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (fun(arr[i])) {
+      return true;
+    }
+  }
+
+  return false;
+}
