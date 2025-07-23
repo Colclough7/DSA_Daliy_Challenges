@@ -47,3 +47,8 @@ What you need to think about is how to judge it correctly and effectively and do
 
 Series
 ( ↑↑↑ Click the link above can get my newest kata list, Please add it to your favorites)*/
+
+
+
+
+/*JS*/
