@@ -10,3 +10,20 @@ Math.floor()*/
 
 
 /*JS*/
+
+
+
+Math.round = function(number) {
+  var intPart = number | 0;
+  var fraction = number - intPart;
+  return (fraction >= 0.5) ? intPart + 1 : intPart;
+};
+
+Math.ceil = function(number) {
+  var intPart = number | 0;
+  return (number > intPart) ? intPart + 1 : intPart;
+};
+
+Math.floor = function(number) {
+  return number | 0;
+};
