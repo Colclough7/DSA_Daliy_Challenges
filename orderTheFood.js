@@ -34,3 +34,14 @@ Other approaches to solving the katas are of course possible.*/
 
 
 /*JS*/
+
+
+
+
+function orderFood(list) {
+  return list.reduce((acc, dev) => {
+    const meal = dev.meal;
+    acc[meal] = (acc[meal] || 0) + 1;
+    return acc;
+  }, {});
+}
