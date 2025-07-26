@@ -46,3 +46,13 @@ You do not need to round anything. Answers will be tested for correctness within
 
 
 /*JS*/
+
+
+
+
+function heron(a, b, c) {
+  const s = (a + b + c) / 2;
+  const area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+  return area;
+}
+
