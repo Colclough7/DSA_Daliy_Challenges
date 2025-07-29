@@ -55,3 +55,26 @@ thirt(321) calculates 48, 48 and returns 48*/
 
 
 /*JS*/
+
+
+
+
+
+
+function thirt(n) {
+  const pattern = [1, 10, 9, 12, 3, 4];
+  let sum = n;
+
+  while (true) {
+    const digits = sum.toString().split('').reverse();
+    const nextSum = digits.reduce((acc, digit, index) => {
+      return acc + digit * pattern[index % pattern.length];
+    }, 0);
+
+    if (nextSum === sum) break;
+    sum = nextSum;
+  }
+
+  return sum;
+}
+
