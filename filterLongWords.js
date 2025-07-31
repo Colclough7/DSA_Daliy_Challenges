@@ -8,3 +8,15 @@ Example:
 
 
 /*JS*/
+
+
+
+function filterLongWords(sentence, n) {
+  // Split the sentence into words
+  const words = sentence.split(' ');
+
+  // Filter the words that are longer than n
+  const longWords = words.filter(word => word.length > n);
+
+  return longWords;
+}
