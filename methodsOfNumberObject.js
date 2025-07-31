@@ -75,3 +75,14 @@ howManySmaller([3.1288,3.1212,3.1205],3.1212) should return 2*/
 
 
 /*JS*/
+
+
+
+
+
+function howManySmaller(arr, n) {
+  return arr
+    .map(num => +num.toFixed(2))  // keep two decimal places, convert back to number
+    .filter(num => num < n)       // filter values smaller than n
+    .length;                      // count them
+}
