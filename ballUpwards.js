@@ -18,3 +18,12 @@ The maximum height recorded by the device is not necessarily the maximum height 
 
 
 /*JS*/
+
+
+
+function maxBall(v0) {
+    const v0_mps = v0 / 3.6;   // Convert km/h to m/s
+    const g = 9.81;
+    const t = v0_mps / g;      // Time (in seconds) when max height occurs
+    return Math.round(t * 10); // Convert to tenths of a second (and round)
+}
