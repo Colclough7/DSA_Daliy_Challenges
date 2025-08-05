@@ -10,3 +10,9 @@ A class/static method greetExtraTerrestrials/GreetExtraTerrestrials that accepts
 You may use any valid syntax you like; however, it is highly recommended that you complete this Kata using ES6 syntax and features.
 
 Have fun! :D*/
+
+
+
+
+
+/*JS*/
