@@ -3,3 +3,4 @@ Throw away any leading or trailing whitespace, while ensuring there is exactly o
 Punctuation marks should be treated as if they are a part of the word in this kata.*/
 
 
+/*JS*/
