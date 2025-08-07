@@ -4,3 +4,15 @@ Punctuation marks should be treated as if they are a part of the word in this ka
 
 
 /*JS*/
+
+
+
+function reverse(str) {
+  return str
+    .trim()                      // Remove leading/trailing whitespace
+    .split(/\s+/)                // Split on one or more spaces
+    .map((word, i) =>
+      i % 2 === 1 ? word.split('').reverse().join('') : word
+    )
+    .join(' ');                  // Join with single space
+}
