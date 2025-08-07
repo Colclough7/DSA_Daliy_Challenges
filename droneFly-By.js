@@ -11,3 +11,14 @@ Return the resulting lamps string. See example tests for more clarity.*/
 
 
 /*JS*/
+
+
+
+
+function flyBy(lamps, drone) {
+  const flown = drone.length;
+  return lamps
+    .split('')
+    .map((lamp, index) => index < flown ? 'o' : lamp)
+    .join('');
+}
