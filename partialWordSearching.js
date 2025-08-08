@@ -12,3 +12,12 @@ If the string to search for is "me", and the array to search is ["home", "milk",
 
 
 /*JS*/
+
+
+
+
+function wordSearch(query, seq) {
+  const lowerQuery = query.toLowerCase();
+  const result = seq.filter(word => word.toLowerCase().includes(lowerQuery));
+  return result.length ? result : ["Empty"];
+}
