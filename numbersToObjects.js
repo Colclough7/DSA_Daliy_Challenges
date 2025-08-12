@@ -10,3 +10,12 @@ All inputs will be arrays of numbers. All character codes are valid lower case l
 
 
 /*JS*/
+
+
+
+
+function numObj(s) {
+  return s.map(num => {
+    return { [String(num)]: String.fromCharCode(num) };
+  });
+}
