@@ -35,3 +35,18 @@ Happy Coding ^_^*/
 
 
 /*JS*/
+
+
+
+
+
+function isValid(formula) {
+  const has = (n) => formula.includes(n);
+
+  if (has(1) && has(2)) return false;
+  if (has(3) && has(4)) return false;
+  if (has(5) !== has(6)) return false;
+  if (!has(7) && !has(8)) return false;
+
+  return true;
+}
