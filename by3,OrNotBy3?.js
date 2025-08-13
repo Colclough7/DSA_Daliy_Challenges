@@ -11,3 +11,8 @@ Example:
 "33333333" -> true
 "7"        -> false
 Try to avoid using the % (modulo) operator.*/
+
+
+
+
+/*JS*/
