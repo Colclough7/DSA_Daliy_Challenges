@@ -16,3 +16,23 @@ Try to avoid using the % (modulo) operator.*/
 
 
 /*JS*/
+
+
+
+
+
+function divisibleByThree(str) {
+    // Step 1: Convert each character to a digit and sum them
+    let sum = 0;
+    for (let char of str) {
+        sum += Number(char);
+    }
+
+    // Step 2: Check if the sum is divisible by 3 without using %
+    while (sum >= 3) {
+        sum -= 3;
+    }
+
+    // Step 3: If the result is 0, it's divisible by 3
+    return sum === 0;
+}
