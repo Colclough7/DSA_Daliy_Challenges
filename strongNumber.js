@@ -15,3 +15,27 @@ Examples
 
 
 /*JS*/
+
+
+
+function strong(n) {
+  // Helper function to calculate factorial
+  function factorial(x) {
+    if (x === 0 || x === 1) return 1;
+    let result = 1;
+    for (let i = 2; i <= x; i++) {
+      result *= i;
+    }
+    return result;
+  }
+
+  // Sum the factorial of each digit
+  let sum = n
+    .toString()
+    .split('')
+    .map(Number)
+    .reduce((acc, digit) => acc + factorial(digit), 0);
+
+  // Check if the sum equals the original number
+  return sum === n ? "STRONG!!!!" : "Not Strong !!";
+}
