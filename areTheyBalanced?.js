@@ -12,3 +12,24 @@ Examples
 
 
 /*JS*/
+
+
+
+function balance(left, right) {
+  // Helper function to calculate weight of a string
+  const getWeight = (str) => {
+    let weight = 0;
+    for (let char of str) {
+      if (char === '!') weight += 2;
+      else if (char === '?') weight += 3;
+    }
+    return weight;
+  };
+
+  const leftWeight = getWeight(left);
+  const rightWeight = getWeight(right);
+
+  if (leftWeight > rightWeight) return 'Left';
+  if (rightWeight > leftWeight) return 'Right';
+  return 'Balance';
+}
