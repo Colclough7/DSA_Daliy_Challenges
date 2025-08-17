@@ -7,3 +7,11 @@ Example (s, sep --> Output)
 "^^^**$"     , "x" --> "3x3x3x2x2x1"*/
 
 /*JS*/
+
+
+function freqSeq(str, sep) {
+  return str
+    .split("")
+    .map(ch => str.split(ch).length - 1) // count frequency of each char
+    .join(sep);
+}
