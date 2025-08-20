@@ -6,3 +6,10 @@ Example
 unscrambleEggs("Beggegeggineggneggeregg")  =>  "Beginner"
 //             "B---eg---in---n---er---"
 Kata is supposed to be for beginners to practice reggular eggspressions, so commenting would be appreciated.*/
+
+
+
+
+
+
+/*JS*/
