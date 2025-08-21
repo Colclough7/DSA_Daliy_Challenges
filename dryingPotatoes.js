@@ -27,3 +27,11 @@ potatoes(99, 100, 98) --> 50*/
 
 
 /*JS*/
+
+
+
+function potatoes(p0, w0, p1) {
+    const dryMatter = w0 * (100 - p0) / 100;
+    const w1 = dryMatter / ((100 - p1) / 100);
+    return Math.floor(w1); // TRUNCATE, don't round
+}
