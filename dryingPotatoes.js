@@ -22,3 +22,8 @@ potatoesshould return the final weight coming out of the oven w1 truncated as an
 
 Example:
 potatoes(99, 100, 98) --> 50*/
+
+
+
+
+/*JS*/
