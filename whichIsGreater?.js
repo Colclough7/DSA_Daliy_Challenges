@@ -7,3 +7,7 @@ If the sum of odd numbers is greater than the sum of even numbers return: "Odd i
 If the total of both even and odd numbers are identical return: "Even and Odd are the same"*/
 
 
+
+
+
+/*JS*/
