@@ -13,3 +13,17 @@ Complete the function which tests if a positive integer n is Harshad number, and
 
 
 /*JS*/
+
+
+
+
+function numberJoy(n) {
+    const sumDigits = n
+        .toString()
+        .split('')
+        .reduce((sum, digit) => sum + parseInt(digit), 0);
+
+    const reversedSum = parseInt(sumDigits.toString().split('').reverse().join(''));
+
+    return sumDigits * reversedSum === n;
+}
