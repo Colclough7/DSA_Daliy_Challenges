@@ -11,3 +11,28 @@ If the total of both even and odd numbers are identical return: "Even and Odd ar
 
 
 /*JS*/
+
+
+
+function evenOrOdd(str) {
+    let evenSum = 0;
+    let oddSum = 0;
+
+    for (let char of str) {
+        let digit = parseInt(char);
+
+        if (digit % 2 === 0) {
+            evenSum += digit;
+        } else {
+            oddSum += digit;
+        }
+    }
+
+    if (evenSum > oddSum) {
+        return "Even is greater than Odd";
+    } else if (oddSum > evenSum) {
+        return "Odd is greater than Even";
+    } else {
+        return "Even and Odd are the same";
+    }
+}
