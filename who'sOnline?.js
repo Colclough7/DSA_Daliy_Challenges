@@ -37,3 +37,9 @@ If for example, no users are online the output should look as follows:
 username will always be a string, status will always be either 'online' or 'offline' (UserStatus enum in C#) and lastActivity will always be number >= 0.
 
 Finally, if you have no friends in your chat application, the input will be an empty array []. In this case you should return an empty object {} (empty Dictionary in C#).*/
+
+
+
+
+
+  /*JS*/
