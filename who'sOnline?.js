@@ -43,3 +43,39 @@ Finally, if you have no friends in your chat application, the input will be an e
 
 
   /*JS*/
+
+
+
+
+
+  const whosOnline = (friends) => {
+  if (!friends.length) return {};
+
+  const result = {
+    online: [],
+    offline: [],
+    away: []
+  };
+
+  for (const friend of friends) {
+    const { username, status, lastActivity } = friend;
+
+    if (status === 'offline') {
+      result.offline.push(username);
+    } else if (status === 'online' && lastActivity > 10) {
+      result.away.push(username);
+    } else {
+      result.online.push(username);
+    }
+  }
+
+  // Remove empty arrays from result
+  for (const key in result) {
+    if (result[key].length === 0) {
+      delete result[key];
+    }
+  }
+
+  return result;
+};
+
