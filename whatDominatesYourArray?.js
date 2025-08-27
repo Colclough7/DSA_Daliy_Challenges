@@ -6,3 +6,19 @@ Write a function dominator(arr) that, given a zero-indexed array arr consisting 
 
 
 /*JS*/
+
+
+
+function dominator(arr) {
+    const countMap = {};
+    const threshold = Math.floor(arr.length / 2);
+
+    for (let num of arr) {
+        countMap[num] = (countMap[num] || 0) + 1;
+        if (countMap[num] > threshold) {
+            return parseInt(num);
+        }
+    }
+
+    return -1;
+}
