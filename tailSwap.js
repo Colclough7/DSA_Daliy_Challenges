@@ -11,3 +11,14 @@ Examples
 
 
 /*JS*/
+
+
+
+function tailSwap(arr) {
+  // Split each string into [beforeColon, afterColon]
+  let [a1, a2] = arr[0].split(":");
+  let [b1, b2] = arr[1].split(":");
+
+  // Swap the tails (a2 and b2)
+  return [`${a1}:${b2}`, `${b1}:${a2}`];
+}
