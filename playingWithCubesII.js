@@ -10,3 +10,20 @@ The constructor taking no arguments should assign 0 to Cube's Side property.*/
 
 
 /*JS*/
+
+
+
+
+class Cube {
+  constructor(side = 0) {
+    this.side = Math.abs(side);
+  }
+
+  getSide() {
+    return this.side;
+  }
+
+  setSide(n) {
+    this.side = Math.abs(n);
+  }
+}
