@@ -5,3 +5,8 @@ In the previous kata, you have implemented a Cube class, but now we need your he
 Also we got a problem with negative values. Correct the code so negative values will be switched to positive ones!
 
 The constructor taking no arguments should assign 0 to Cube's Side property.*/
+
+
+
+
+/*JS*/
