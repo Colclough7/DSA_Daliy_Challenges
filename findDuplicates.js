@@ -10,3 +10,24 @@ Examples
 
 
 /*JS*/
+
+
+
+function duplicates(arr) {
+  const seen = new Set();
+  const duplicates = new Set();
+  const result = [];
+
+  for (const item of arr) {
+    if (seen.has(item)) {
+      if (!duplicates.has(item)) {
+        duplicates.add(item);
+        result.push(item);
+      }
+    } else {
+      seen.add(item);
+    }
+  }
+
+  return result;
+}
