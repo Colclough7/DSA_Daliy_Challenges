@@ -6,3 +6,16 @@ For example, running this function on the array ['i', 'have','no','space'] would
 
 
 /*JS*/
+
+
+function spacey(array) {
+  let result = [];
+  let current = '';
+
+  for (let word of array) {
+    current += word;
+    result.push(current);
+  }
+
+  return result;
+}
