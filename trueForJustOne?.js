@@ -9,3 +9,8 @@ Example
 one([1, 3, 5, 6, 99, 1, 3], bigger_than_ten) -> true
 one([1, 3, 5, 6, 99, 88, 3], bigger_than_ten) -> false
 one([1, 3, 5, 6, 5, 1, 3], bigger_than_ten) -> false*/
+
+
+
+
+/*JS*/
