@@ -5,3 +5,6 @@ When the item isn't present or nothing follows it, the function should return ni
 nextItem([1, 2, 3, 4, 5, 6, 7], 3) # 4
 nextItem("testing", "t") # "e"*/
 
+
+
+/*JS*/
