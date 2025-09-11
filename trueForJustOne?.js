@@ -14,3 +14,16 @@ one([1, 3, 5, 6, 5, 1, 3], bigger_than_ten) -> false*/
 
 
 /*JS*/
+
+
+
+function one(arr, func) {
+  let count = 0;
+  for (let item of arr) {
+    if (func(item)) {
+      count++;
+      if (count > 1) return false;
+    }
+  }
+  return count === 1;
+}
