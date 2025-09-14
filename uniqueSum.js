@@ -15,3 +15,19 @@ Good Luck!*/
 
 
 /*JS*/
+
+
+
+
+function uniqueSum(lst) {
+  if (lst.length === 0) return null;
+  
+  const uniqueValues = new Set(lst);
+  let sum = 0;
+  
+  for (let value of uniqueValues) {
+    sum += value;
+  }
+  
+  return sum;
+}
