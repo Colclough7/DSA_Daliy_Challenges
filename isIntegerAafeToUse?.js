@@ -9,3 +9,9 @@ SafeInteger(9007199254740992) //false
 
 
 /*JS*/
+
+
+
+function SafeInteger(n) {
+  return Number.isSafeInteger(n);
+}
