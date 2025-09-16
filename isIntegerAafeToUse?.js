@@ -4,3 +4,8 @@ SafeInteger(9007199254740990) //true
 SafeInteger(-90) //true
 SafeInteger(9007199254740992) //false
 */
+
+
+
+
+/*JS*?
