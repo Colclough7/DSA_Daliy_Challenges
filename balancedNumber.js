@@ -36,3 +36,33 @@ sum of all digits to the right of the middle digit(s) -> 20
 
 
 /*JS*/
+
+
+
+
+
+
+function balancedNum(number) {
+    const digits = number.toString().split('').map(Number);
+    const len = digits.length;
+    
+    let leftSum = 0, rightSum = 0;
+
+    if (len <= 2) return "Balanced";
+
+    if (len % 2 === 1) {
+        // Odd length: one middle digit
+        const mid = Math.floor(len / 2);
+        leftSum = digits.slice(0, mid).reduce((a, b) => a + b, 0);
+        rightSum = digits.slice(mid + 1).reduce((a, b) => a + b, 0);
+    } else {
+        // Even length: two middle digits
+        const mid1 = len / 2 - 1;
+        const mid2 = len / 2;
+        leftSum = digits.slice(0, mid1).reduce((a, b) => a + b, 0);
+        rightSum = digits.slice(mid2 + 1).reduce((a, b) => a + b, 0);
+    }
+
+    return leftSum === rightSum ? "Balanced" : "Not Balanced";
+}
+
