@@ -14,3 +14,8 @@ scrollingText("codewars") should return:
   "RSCODEWA",
   "SCODEWAR" ]
 Good luck! */
+
+
+
+
+/*JS*/
