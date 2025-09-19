@@ -19,3 +19,18 @@ Good luck! */
 
 
 /*JS*/
+
+
+
+
+function scrollingText(text) {
+  text = text.toUpperCase();
+  let result = [];
+
+  for (let i = 0; i < text.length; i++) {
+    let rotation = text.slice(i) + text.slice(0, i);
+    result.push(rotation);
+  }
+
+  return result;
+}
