@@ -12,3 +12,8 @@ function mult(num) {
 }
 
 chain(2, [add, mult]);*/
+
+
+
+
+/*JS*/
