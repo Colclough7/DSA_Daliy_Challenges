@@ -8,3 +8,4 @@ P.S. You have to create a new list and add a new item to that. (This Kata is ori
 even though the parameter is passed by value, but the value is poining to the reference of list and any change on parameter will be seen by caller)*/
 
 
+/*JS*/
