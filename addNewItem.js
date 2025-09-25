@@ -9,3 +9,11 @@ even though the parameter is passed by value, but the value is poining to the re
 
 
 /*JS*/
+
+
+
+
+function addExtra(listOfNumbers) {
+    // Create a new copy of the list using spread syntax and add an extra item (e.g., 13)
+    return [...listOfNumbers, 13];
+}
