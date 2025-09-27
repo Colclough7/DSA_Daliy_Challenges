@@ -40,3 +40,59 @@ mix(s1, s2) --> "1:mmmmmm/E:nnnnnn/1:aaaa/1:hhh/2:yyy/2:dd/2:ff/2:ii/2:rr/E:ee/E
 
 
 /*JS*/
+
+
+
+
+
+function mix(s1, s2) {
+    function getCounts(str) {
+        const counts = {};
+        for (let ch of str) {
+            if (ch >= 'a' && ch <= 'z') {
+                counts[ch] = (counts[ch] || 0) + 1;
+            }
+        }
+        return counts;
+    }
+
+    const c1 = getCounts(s1);
+    const c2 = getCounts(s2);
+    const parts = [];
+
+    for (let i = 0; i < 26; i++) {
+        const ch = String.fromCharCode(97 + i);
+        const n1 = c1[ch] || 0;
+        const n2 = c2[ch] || 0;
+        const max = Math.max(n1, n2);
+
+        if (max > 1) {
+            let prefix = '';
+            if (n1 > n2) prefix = '1';
+            else if (n2 > n1) prefix = '2';
+            else prefix = '=';
+
+            parts.push({
+                str: `${prefix}:${ch.repeat(max)}`,
+                len: max,
+                prefix,
+                letter: ch
+            });
+        }
+    }
+
+    parts.sort((a, b) => {
+        if (b.len !== a.len) return b.len - a.len;
+
+        const rank = p => p.prefix === '1' ? 1 : p.prefix === '2' ? 2 : 3;
+
+        const r1 = rank(a);
+        const r2 = rank(b);
+
+        if (r1 !== r2) return r1 - r2;
+
+        return a.letter.localeCompare(b.letter);
+    });
+
+    return parts.map(p => p.str).join('/');
+}
