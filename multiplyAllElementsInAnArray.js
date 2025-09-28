@@ -12,3 +12,11 @@ You must not mutate the original array.*/
 
 
 /*JS*/
+
+
+
+function multiplyAll(arr) {
+  return function (n) {
+    return arr.map(x => x * n);
+  };
+}
