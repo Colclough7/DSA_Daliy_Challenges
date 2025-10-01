@@ -9,3 +9,9 @@ it should output
 
 [ [ "bar_", "bar@bar.com" ] ]
 You have to use the filter-method which returns each element of the array for which the filter-method returns true.*/
+
+
+
+
+
+/*JS*/
