@@ -15,3 +15,12 @@ You have to use the filter-method which returns each element of the array for wh
 
 
 /*JS*/
+
+
+
+
+function searchNames(logins) {
+  return logins.filter(function(pair) {
+    return pair[0].endsWith("_");
+  });
+}
