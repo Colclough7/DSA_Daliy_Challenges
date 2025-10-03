@@ -10,3 +10,15 @@ Obviously the words should be Caps, Every word should end with '!!!!', Any lette
 
 
 /*JS*/
+
+
+
+function gordon(a) {
+  return a
+    .toUpperCase()                          // Convert all to uppercase
+    .replace(/A/g, '@')                     // Replace 'A' with '@'
+    .replace(/[EIOU]/g, '*')                // Replace other vowels with '*'
+    .split(' ')                             // Split into words
+    .map(word => word + '!!!!')             // Add '!!!!' to each word
+    .join(' ');                             // Join words back into a string
+}
