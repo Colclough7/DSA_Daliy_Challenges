@@ -9,3 +9,8 @@ You are using a library (Game.Logic in C#) that already has the functions below.
 - printStatus
 - rollDice
 - move*/
+
+
+
+
+/*JS*/
