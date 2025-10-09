@@ -33,3 +33,26 @@ Very often xk will be n-1.*/
 
 
 /*JS*/
+
+
+
+
+function decompose(n) {
+    function backtrack(target, max) {
+        if (target === 0) return [];
+
+        for (let i = max; i > 0; i--) {
+            const remainder = target - i * i;
+            if (remainder < 0) continue;
+
+            const result = backtrack(remainder, i - 1);
+            if (result !== null) {
+                return [...result, i]; // Append `i` at the end to build increasing list
+            }
+        }
+
+        return null;
+    }
+
+    return backtrack(n * n, n - 1);
+}
