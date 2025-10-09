@@ -8,3 +8,4 @@ The sub arrays may not be the same length.
 The solution should be case insensitive (ie good, GOOD and gOOd all count as a good idea). All inputs may not be strings.*/
 
 
+/*JS*/
