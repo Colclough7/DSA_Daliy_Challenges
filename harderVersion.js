@@ -9,3 +9,22 @@ The solution should be case insensitive (ie good, GOOD and gOOd all count as a g
 
 
 /*JS*/
+
+
+
+
+function well(x) {
+  let count = 0;
+
+  for (let row of x) {
+    for (let item of row) {
+      if (typeof item === 'string' && item.toLowerCase() === 'good') {
+        count++;
+      }
+    }
+  }
+
+  if (count === 0) return 'Fail!';
+  if (count <= 2) return 'Publish!';
+  return 'I smell a series!';
+}
