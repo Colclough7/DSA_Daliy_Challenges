@@ -25,3 +25,14 @@ The input array and first names will always be valid and formatted as in the exa
 
 
 /*JS*/
+
+
+
+function findOddNames(list) {
+  return list.filter(dev => {
+    const asciiSum = dev.firstName
+      .split('')
+      .reduce((sum, char) => sum + char.charCodeAt(0), 0);
+    return asciiSum % 2 !== 0;
+  });
+}
