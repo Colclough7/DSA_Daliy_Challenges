@@ -14,3 +14,22 @@ full_text = "aaabbbcccc", search_text = "bbb"
 
 
 /*JS*/
+
+
+
+
+function solution(fullText, search) {
+  let count = 0;
+  let i = 0;
+
+  while (i <= fullText.length - search.length) {
+    if (fullText.substring(i, i + search.length) === search) {
+      count++;
+      i += search.length; // Move past this match to avoid overlap
+    } else {
+      i++;
+    }
+  }
+
+  return count;
+}
