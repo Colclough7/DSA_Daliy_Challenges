@@ -21,3 +21,7 @@ var group = {
 
 splitTheBill(group) // returns {A: 5, B: 0, C: -5}
 Good Luck and Happy Eats!*/
+
+
+
+/*JS*/
