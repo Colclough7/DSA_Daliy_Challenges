@@ -25,3 +25,19 @@ Good Luck and Happy Eats!*/
 
 
 /*JS*/
+
+
+
+
+function splitTheBill(group) {
+    const total = Object.values(group).reduce((sum, amount) => sum + amount, 0);
+    const average = total / Object.keys(group).length;
+
+    const result = {};
+    for (let person in group) {
+        // Calculate difference from average, rounded to two decimal places
+        result[person] = Math.round((group[person] - average) * 100) / 100;
+    }
+
+    return result;
+}
