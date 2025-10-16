@@ -8,3 +8,9 @@ Examples
 "!Hi!" --> "!Hi"
 "Hi! Hi!" --> "Hi Hi"
 "!!!Hi !!hi!!! !hi" --> "!!!Hi !!hi !hi"*/
+
+
+
+
+
+/*JS*/
