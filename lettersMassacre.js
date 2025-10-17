@@ -30,3 +30,39 @@ Example (Input --> Output)
 
 
 /*JS*/
+
+
+
+
+function alphabetWar(fight) {
+  const leftPower = { w: 4, p: 3, b: 2, s: 1 };
+  const rightPower = { m: 4, q: 3, d: 2, z: 1 };
+
+  const chars = fight.split('');
+  const length = chars.length;
+  const surviving = new Array(length).fill(true);
+
+  // Mark letters to be destroyed by bombs
+  for (let i = 0; i < length; i++) {
+    if (chars[i] === '*') {
+      if (i > 0) surviving[i - 1] = false;
+      surviving[i] = false;
+      if (i < length - 1) surviving[i + 1] = false;
+    }
+  }
+
+  // Calculate scores
+  let leftScore = 0;
+  let rightScore = 0;
+
+  for (let i = 0; i < length; i++) {
+    if (!surviving[i]) continue;
+    const letter = chars[i];
+    if (leftPower[letter]) leftScore += leftPower[letter];
+    else if (rightPower[letter]) rightScore += rightPower[letter];
+  }
+
+  if (leftScore > rightScore) return 'Left side wins!';
+  if (rightScore > leftScore) return 'Right side wins!';
+  return "Let's fight again!";
+}
