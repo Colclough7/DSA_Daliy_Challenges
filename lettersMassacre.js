@@ -26,3 +26,7 @@ Example (Input --> Output)
 "*zd*qm*wp*bs*"  --> "Let's fight again!"
 "zzzz*s*"        --> "Right side wins!"
 "www*www****z"   --> "Left side wins!"*/
+
+
+
+/*JS*/
