@@ -15,3 +15,7 @@ Examples
 "1 3 2 5"  ==>  return 4, because 4 is missing from the sequence
 
 "1 5"      ==>  return 2, because the sequence is missing 2, 3, 4 and 2 is the lowest*/
+
+
+
+/*JS*/
