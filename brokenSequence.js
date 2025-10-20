@@ -19,3 +19,31 @@ Examples
 
 
 /*JS*/
+
+
+
+function findMissingNumber(sequence) {
+  if (!sequence) return 0;
+
+  const elements = sequence.split(" ");
+
+  // Check for non-numeric values
+  for (let el of elements) {
+    if (!/^\d+$/.test(el)) return 1;
+  }
+
+  // Convert strings to numbers
+  const nums = elements.map(Number);
+  const numSet = new Set(nums);
+  const max = Math.max(...nums);
+
+  // Find missing number
+  for (let i = 1; i <= max; i++) {
+    if (!numSet.has(i)) {
+      return i;
+    }
+  }
+
+  // Sequence is complete
+  return 0;
+}
