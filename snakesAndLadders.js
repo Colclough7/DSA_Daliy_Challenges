@@ -35,3 +35,59 @@ Good luck and enjoy!*/
 
 
 /*JS*/
+
+
+
+
+function SnakesLadders() {
+  this.playerPositions = [0, 0]; // Player 1 and Player 2 positions
+  this.currentPlayer = 0; // 0 for Player 1, 1 for Player 2
+  this.gameOver = false;
+
+  this.snakesLaddersMap = {
+    // ladders
+    2: 38, 7: 14, 8: 31, 15: 26, 21: 42, 28: 84, 36: 44,
+    51: 67, 71: 91, 78: 98, 87: 94,
+    // snakes
+    16: 6, 46: 25, 49: 11, 62: 19, 64: 60, 74: 53,
+    89: 68, 92: 88, 95: 75, 99: 80
+  };
+}
+
+SnakesLadders.prototype.play = function(die1, die2) {
+  if (this.gameOver) {
+    return "Game over!";
+  }
+
+  const player = this.currentPlayer;
+  let position = this.playerPositions[player];
+  let move = die1 + die2;
+
+  // Move player
+  position += move;
+
+  // Bounce back if overshoot
+  if (position > 100) {
+    position = 100 - (position - 100);
+  }
+
+  // Apply snakes or ladders
+  if (this.snakesLaddersMap[position]) {
+    position = this.snakesLaddersMap[position];
+  }
+
+  this.playerPositions[player] = position;
+
+  // Check win condition
+  if (position === 100) {
+    this.gameOver = true;
+    return `Player ${player + 1} Wins!`;
+  }
+
+  // If not a double, switch player
+  if (die1 !== die2) {
+    this.currentPlayer = 1 - this.currentPlayer;
+  }
+
+  return `Player ${player + 1} is on square ${position}`;
+};
