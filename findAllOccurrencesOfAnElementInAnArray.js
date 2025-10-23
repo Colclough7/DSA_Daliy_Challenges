@@ -12,3 +12,16 @@ findAll([6, 9, 3, 4, 3, 82, 11], 3) => [2, 4]*/
 
 
 /*JS*/
+
+
+
+
+function findAll(array, n) {
+  let indices = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === n) {
+      indices.push(i);
+    }
+  }
+  return indices;
+}
