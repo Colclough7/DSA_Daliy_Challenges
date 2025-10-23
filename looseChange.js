@@ -18,3 +18,36 @@ Examples
 
 
 /*JS*/
+
+
+
+
+function looseChange(cents) {
+  // Round down to the nearest whole number
+  cents = Math.floor(cents);
+
+  // Initialize result object
+  const coins = {
+    'Quarters': 0,
+    'Dimes': 0,
+    'Nickels': 0,
+    'Pennies': 0
+  };
+
+  // Return zeroed object if non-positive
+  if (cents <= 0) return coins;
+
+  // Calculate the number of each coin type
+  coins['Quarters'] = Math.floor(cents / 25);
+  cents %= 25;
+
+  coins['Dimes'] = Math.floor(cents / 10);
+  cents %= 10;
+
+  coins['Nickels'] = Math.floor(cents / 5);
+  cents %= 5;
+
+  coins['Pennies'] = cents;
+
+  return coins;
+}
