@@ -11,3 +11,18 @@ Function will return true for lucky numbers and false for others.*/
 
 
 /*JS*/
+
+
+
+
+
+function isLucky(n) {
+  // Convert number to string and sum its digits
+  let sum = 0;
+  for (let digit of n.toString()) {
+    sum += parseInt(digit);
+  }
+
+  // Check if sum is 0 or divisible by 9
+  return sum === 0 || sum % 9 === 0;
+}
