@@ -12,3 +12,31 @@ or it can happen that the number num is not in the phone book, in that case retu
 
 
 /*JS*/
+
+
+
+function phone(strng, num) {
+  const lines = strng.split('\n').filter(Boolean);
+  const matches = lines.filter(line => line.includes(num));
+
+  if (matches.length === 0) return `Error => Not found: ${num}`;
+  if (matches.length > 1) return `Error => Too many people: ${num}`;
+
+  const line = matches[0];
+
+  // Extract name
+  const nameMatch = line.match(/<([^>]+)>/);
+  const name = nameMatch ? nameMatch[1] : "";
+
+  // Clean address
+  let address = line
+    .replace(nameMatch[0], "")     // remove name
+    .replace("+" + num, "")        // remove phone number with plus
+    .replace(num, "")              // remove phone number without plus
+    .replace(/[^a-zA-Z0-9\.\-\s_]/g, " ") // remove special chars
+    .replace(/_/g, " ")            // replace underscores with spaces
+    .replace(/\s+/g, " ")          // collapse spaces
+    .trim();
+
+  return `Phone => ${num}, Name => ${name}, Address => ${address}`;
+}
