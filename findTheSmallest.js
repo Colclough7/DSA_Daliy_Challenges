@@ -20,3 +20,8 @@ index `i` in [29917, 0, 1].
 smallest(1000000) --> [1, 0, 6] or ...
 Note
 Have a look at "Sample Tests" to see the input and output in each language*/
+
+
+
+
+/*JS*/
