@@ -25,3 +25,35 @@ Have a look at "Sample Tests" to see the input and output in each language*/
 
 
 /*JS*/
+
+
+
+function smallest(n) {
+  const s = n.toString();
+  let minNum = n;
+  let from = 0;
+  let to = 0;
+
+  for (let i = 0; i < s.length; i++) {
+    // remove digit at index i
+    const removed = s[i];
+    const rest = s.slice(0, i) + s.slice(i + 1);
+
+    for (let j = 0; j <= rest.length; j++) {
+      // insert removed digit at position j
+      const candidate = rest.slice(0, j) + removed + rest.slice(j);
+      const num = Number(candidate);
+
+      if (
+        num < minNum ||
+        (num === minNum && (i < from || (i === from && j < to)))
+      ) {
+        minNum = num;
+        from = i;
+        to = j;
+      }
+    }
+  }
+
+  return [minNum, from, to];
+}
