@@ -7,3 +7,8 @@ phone(s, "1-541-754-3010") should return "Phone => 1-541-754-3010, Name => J Ste
 It can happen that there are many people for a phone number num, then return : "Error => Too many people: num"
 
 or it can happen that the number num is not in the phone book, in that case return: "Error => Not found: num"*/
+
+
+
+
+/*JS*/
