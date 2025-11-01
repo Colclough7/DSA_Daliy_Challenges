@@ -36,3 +36,45 @@ Good luck, and stay safe!*/
 
 
 /*JS*/
+
+
+
+function mazeRunner(maze, directions) {
+  // Find starting position (the cell with value 2)
+  let row, col;
+  for (let i = 0; i < maze.length; i++) {
+    for (let j = 0; j < maze[i].length; j++) {
+      if (maze[i][j] === 2) {
+        row = i;
+        col = j;
+      }
+    }
+  }
+
+  // Define direction movements
+  const moves = {
+    N: [-1, 0],
+    S: [1, 0],
+    E: [0, 1],
+    W: [0, -1]
+  };
+
+  // Follow directions
+  for (let dir of directions) {
+    row += moves[dir][0];
+    col += moves[dir][1];
+
+    // Check if outside maze
+    if (row < 0 || row >= maze.length || col < 0 || col >= maze.length) {
+      return "Dead";
+    }
+
+    // Check the cell value
+    const cell = maze[row][col];
+    if (cell === 1) return "Dead";   // Hit wall
+    if (cell === 3) return "Finish"; // Reached end
+  }
+
+  // If still inside maze after all moves
+  return "Lost";
+}
