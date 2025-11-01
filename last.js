@@ -13,3 +13,21 @@ last([[1, 2], [3, 4]])  ==>  [3, 4]*/
 
 
 /*JS*/
+
+
+
+function last(...args) {
+  // If there's only one argument
+  if (args.length === 1) {
+    const arg = args[0];
+    // If it's an array or string, return its last element
+    if (Array.isArray(arg) || typeof arg === 'string') {
+      return arg[arg.length - 1];
+    }
+    // Otherwise, return the argument itself
+    return arg;
+  }
+  
+  // If multiple arguments, return the last one
+  return args[args.length - 1];
+}
