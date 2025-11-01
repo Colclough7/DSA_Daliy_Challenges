@@ -32,3 +32,7 @@ Rules
 
 6. If you find yourself still in the maze after using all the moves, you should return Lost.
 Good luck, and stay safe!*/
+
+
+
+/*JS*/
