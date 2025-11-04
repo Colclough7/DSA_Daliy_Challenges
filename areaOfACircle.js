@@ -15,3 +15,13 @@ circleArea(-1);          // throws Error*/
 
 
 /*JS*/
+
+
+
+function circleArea(radius) {
+  if (radius <= 0) {
+    throw new Error("Radius must be positive");
+  }
+  const area = Math.PI * radius * radius;
+  return parseFloat(area.toFixed(3)); // rounds to 3 decimal places
+}
