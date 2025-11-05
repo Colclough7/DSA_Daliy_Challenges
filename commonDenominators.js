@@ -34,3 +34,39 @@ input is a string, e.g "2,4,2,6,2,8" output is then "6 12 4 12 3 12"*/
 
 
 /*JS*/
+
+
+
+
+// Greatest Common Divisor
+function gcd(a, b) {
+  return b ? gcd(b, a % b) : a;
+}
+
+// Least Common Multiple
+function lcm(a, b) {
+  return (a * b) / gcd(a, b);
+}
+
+// Main function
+function convertFrac(lst) {
+  if (!lst.length) return "";
+
+  // Step 1: Simplify fractions (optional but safer)
+  lst = lst.map(([num, den]) => {
+    let g = gcd(num, den);
+    return [num / g, den / g];
+  });
+
+  // Step 2: Find Least Common Denominator
+  let denominators = lst.map(fr => fr[1]);
+  let lcd = denominators.reduce((acc, d) => lcm(acc, d));
+
+  // Step 3: Convert and format result as string
+  return lst
+    .map(([num, den]) => {
+      let factor = lcd / den;
+      return `(${num * factor},${lcd})`;
+    })
+    .join('');
+}
