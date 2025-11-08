@@ -11,3 +11,8 @@ capital(country_capitals)[0]  // returns "The capital of Spain is Madrid"
 
 mixed_capitals: [{"state" : 'Maine', capital: 'Augusta'}, {country: 'Spain', "capital" : "Madrid"}]
 capital(mixed_capitals)[1] // returns "The capital of Spain is Madrid"*/
+
+
+
+
+/*JS*/
