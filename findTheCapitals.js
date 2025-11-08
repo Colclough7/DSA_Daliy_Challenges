@@ -16,3 +16,14 @@ capital(mixed_capitals)[1] // returns "The capital of Spain is Madrid"*/
 
 
 /*JS*/
+
+
+
+function capital(capitals) {
+  return capitals.map(obj => {
+    // find the key that is either 'state' or 'country' (can be symbol or string)
+    const place = obj.state || obj.country || obj['state'] || obj['country'];
+    const capital = obj.capital || obj['capital'];
+    return `The capital of ${place} is ${capital}`;
+  });
+}
