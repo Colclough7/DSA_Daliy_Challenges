@@ -18,3 +18,12 @@ n.name //Expected: John Doe*/
 
 
 /*JS*/
+
+
+
+
+function NameMe(first, last) {
+    this.firstName = first;
+    this.lastName = last;
+    this.name = first + ' ' + last;
+}
