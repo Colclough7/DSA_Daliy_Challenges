@@ -32,3 +32,13 @@ In JavaScript this includes methods like: forEach, filter, map, reduce, some, ev
 
 
 /*JS*/
+
+
+
+
+function findAdmin(list, lang) {
+  // Filter the list for developers who match the language
+  // and are GitHub admins ('yes')
+  return list.filter(dev => dev.language === lang && dev.githubAdmin === 'yes');
+}
+
