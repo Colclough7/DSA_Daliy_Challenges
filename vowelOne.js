@@ -13,3 +13,14 @@ vowelOne( "aeiou, abc" ) // "1111100100"*/
 
 
 /*JS*/
+
+
+
+function vowelOne(s) {
+  // Convert the string to lowercase, then map each character to '1' or '0'
+  return s
+    .toLowerCase()
+    .split('')
+    .map(ch => 'aeiou'.includes(ch) ? '1' : '0')
+    .join('');
+}
