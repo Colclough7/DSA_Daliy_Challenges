@@ -8,3 +8,8 @@ Examples:
 vowelOne( "abceios" ) // "1001110"
 
 vowelOne( "aeiou, abc" ) // "1111100100"*/
+
+
+
+
+/*JS*/
