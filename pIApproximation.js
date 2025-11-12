@@ -25,3 +25,21 @@ Unfortunately, this series converges too slowly to be useful, as it takes over 3
 
 
 /*JS*/
+
+
+
+
+function iterPi(epsilon) {
+  let piApprox = 0;
+  let n = 0;
+  let sign = 1;
+
+  while (true) {
+    piApprox += sign * (4 / (2 * n + 1));
+    if (Math.abs(piApprox - Math.PI) < epsilon) break;
+    sign *= -1; // alternate signs
+    n++;
+  }
+
+  return [n + 1, +piApprox.toFixed(10)];
+}
