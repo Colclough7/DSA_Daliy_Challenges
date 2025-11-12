@@ -20,3 +20,8 @@ Given epsilon = 0.001 your function gets an approximation of 3.140592653839794 f
 iter_pi(0.001) --> [1000, 3.1405926538]
 Notes :
 Unfortunately, this series converges too slowly to be useful, as it takes over 300 terms to obtain a 2 decimal place precision. To obtain 100 decimal places of PI, it was calculated that one would need to use at least 10^50 terms of this expansion!*/
+
+
+
+
+/*JS*/
