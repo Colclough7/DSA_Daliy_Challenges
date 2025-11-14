@@ -29,3 +29,8 @@ P.
 Your task is to create a function that returns true if the given number is a Wilson prime and false otherwise.*/
 
 
+
+
+/*JS*/
+
+
