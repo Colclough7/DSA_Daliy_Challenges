@@ -12,3 +12,7 @@ push(chained, 8) === 8 -> 1 -> 2 -> 3 -> null
 The push function accepts head and data parameters, where head is either a node object or null/None/nil. Your push implementation should be able to create a new linked list/node when head is null/None/nil.
 
 The buildOneTwoThree function should create and return a linked list with three nodes: 1 -> 2 -> 3 -> null*/
+
+
+
+/*JS*/
