@@ -39,3 +39,41 @@ For Go: nil slice is expected when there are no step between m and n. Example: s
 
 
 /*JS*/
+
+
+
+
+
+
+function isPrime(num) {
+    if (num < 2) return false;
+    if (num === 2) return true;
+    if (num % 2 === 0) return false;
+    for (let i = 3; i * i <= num; i += 2) {
+        if (num % i === 0) return false;
+    }
+    return true;
+}
+
+function step(g, m, n) {
+    const primes = [];
+
+    // Collect primes
+    for (let i = m; i <= n; i++) {
+        if (isPrime(i)) primes.push(i);
+    }
+
+    // Compare every earlier prime with later ones
+    for (let i = 0; i < primes.length; i++) {
+        for (let j = i + 1; j < primes.length; j++) {
+            if (primes[j] - primes[i] === g) {
+                return [primes[i], primes[j]];
+            }
+            // If the gap is larger than g, no need to continue inner loop
+            if (primes[j] - primes[i] > g) break;
+        }
+    }
+
+    return null; // nothing found
+}
+
