@@ -34,3 +34,8 @@ The idea of "step" is close to that of "gap" but it is not exactly the same. For
 A "gap" is more restrictive: there must be no primes in between (101-107 is a "step" but not a "gap". Next kata will be about "gaps":-).
 
 For Go: nil slice is expected when there are no step between m and n. Example: step(2,4900,4919) --> nil*/
+
+
+
+
+/*JS*/
