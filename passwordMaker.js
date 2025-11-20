@@ -8,3 +8,8 @@ instead of including s or S put the number 5 in the password.
 Examples:
 "Give me liberty or give me death"  --> "Gml0gmd"
 "Keep Calm and Carry On"            --> "KCaC0"*/
+
+
+
+
+/*JS*/
