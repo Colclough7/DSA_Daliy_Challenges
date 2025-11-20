@@ -13,3 +13,22 @@ Examples:
 
 
 /*JS*/
+
+
+
+function makePassword(phrase) {
+  // Split the phrase into words
+  const words = phrase.split(' ');
+
+  // Take first letter of each word and apply replacements
+  return words.map(word => {
+    let ch = word[0];
+
+    // Apply number substitutions
+    if (/[iI]/.test(ch)) ch = '1';
+    else if (/[oO]/.test(ch)) ch = '0';
+    else if (/[sS]/.test(ch)) ch = '5';
+
+    return ch;
+  }).join('');
+}
