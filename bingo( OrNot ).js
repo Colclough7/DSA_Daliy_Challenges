@@ -7,3 +7,12 @@ They do not need to be in the right order in the input array. Otherwise you will
 
 
 /*JS*/
+
+
+
+
+function bingo(a) {
+  const needed = [2, 9, 14, 7, 15]; // B I N G O
+  
+  return needed.every(num => a.includes(num)) ? "WIN" : "LOSE";
+}
