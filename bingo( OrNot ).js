@@ -4,3 +4,6 @@ Each number corresponds to their alphabetical order letter (e.g. 1 = A. 2 = B, e
 They do not need to be in the right order in the input array. Otherwise you will lose. Your outputs should be "WIN" or "LOSE" respectively.*/
 
 
+
+
+/*JS*/
