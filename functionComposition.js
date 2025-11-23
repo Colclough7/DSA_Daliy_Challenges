@@ -14,3 +14,11 @@ This kata is not available in haskell; that would be too easy!*/
 
 
 /*JS*/
+
+
+
+function compose(f, g) {
+  return function (...args) {   // accept multiple arguments
+    return f(g(...args));       // apply g first, then f
+  };
+}
