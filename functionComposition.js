@@ -9,3 +9,8 @@ Remember that the resulting composed function may be passed multiple arguments!
 compose(f , g)(x)
 => f( g( x ) )
 This kata is not available in haskell; that would be too easy!*/
+
+
+
+
+/*JS*/
