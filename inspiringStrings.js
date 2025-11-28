@@ -4,3 +4,7 @@ If there are multiple longest words, return the rightmost longest word.
 Examples
 "red white blue"  =>  "white"
 "red blue gold"   =>  "gold"*/
+
+
+
+/*JS*/
