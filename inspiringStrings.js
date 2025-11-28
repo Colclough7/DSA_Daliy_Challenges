@@ -8,3 +8,13 @@ Examples
 
 
 /*JS*/
+
+
+
+function longestWord(stringOfWords) {
+  return stringOfWords
+    .split(' ')
+    .reduce((longest, current) =>
+      current.length >= longest.length ? current : longest
+    );
+}
