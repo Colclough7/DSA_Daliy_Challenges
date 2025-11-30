@@ -26,3 +26,41 @@ Make sure not to modify the input of your function in-place, it is a bad practic
 
 
 /*JS*/
+
+
+
+
+function mixedFraction(s) {
+  let [x, y] = s.split('/').map(Number);
+
+  if (y === 0) throw new Error("Division by zero");
+
+  // Determine the sign of the result
+  const sign = (x * y) < 0 ? "-" : "";
+
+  // Work with absolute values for calculation
+  x = Math.abs(x);
+  y = Math.abs(y);
+
+  const integerPart = Math.floor(x / y);
+  let numerator = x % y;
+
+  // If no fractional part
+  if (numerator === 0) {
+    return sign + integerPart;
+  }
+
+  // Reduce the fraction numerator/y
+  const gcd = (a, b) => b === 0 ? a : gcd(b, a % b);
+  const g = gcd(numerator, y);
+  numerator /= g;
+  const denominator = y / g;
+
+  // If integer part is zero → return only proper fraction
+  if (integerPart === 0) {
+    return sign + numerator + "/" + denominator;
+  }
+
+  // Otherwise mixed number: "a b/c"
+  return sign + integerPart + " " + numerator + "/" + denominator;
+}
