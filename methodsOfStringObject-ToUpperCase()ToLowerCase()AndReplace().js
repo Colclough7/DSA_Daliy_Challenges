@@ -93,3 +93,16 @@ A small hint: The first conversion of the entire string will make the code easie
 
 
 /*JS*/
+
+
+
+
+
+function alienLanguage(str){
+  let words = str.toUpperCase().split(" ");
+  for (let i = 0; i < words.length; i++){
+    let w = words[i];
+    words[i] = w.slice(0, -1) + w.slice(-1).toLowerCase();
+  }
+  return words.join(" ");
+}
