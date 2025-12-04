@@ -36,3 +36,25 @@ Do not make any AM or PM assumptions for the HH:MM result. They are indistinguis
 
 
 /*JS*/
+
+
+
+
+
+var whatTimeIsIt = function(angle) {
+  // total minutes past 12:00
+  let totalMinutes = Math.floor(angle / 0.5);
+
+  let hours = Math.floor(totalMinutes / 60);
+  let minutes = totalMinutes % 60;
+
+  // Convert 0 to 12
+  if (hours === 0) hours = 12;
+
+  // Format HH:MM
+  let hh = hours.toString().padStart(2, '0');
+  let mm = minutes.toString().padStart(2, '0');
+
+  return `${hh}:${mm}`;
+};
+
