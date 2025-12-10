@@ -10,3 +10,14 @@ Here is an example of your return
 
 
 /*JS*/
+
+
+
+function mean(lst) {
+  const nums = lst.filter(x => !isNaN(x)).map(Number);   // extract numbers
+  const chars = lst.filter(x => isNaN(x));               // extract characters
+
+  const avg = nums.reduce((a, b) => a + b, 0) / nums.length;
+
+  return [avg, chars.join('')];
+}
