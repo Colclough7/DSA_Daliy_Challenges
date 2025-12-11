@@ -11,3 +11,9 @@ Examples:
 
 
 /*JS*/
+
+
+
+
+const arrCheck = value => 
+  Array.isArray(value) && value.every(Array.isArray);
