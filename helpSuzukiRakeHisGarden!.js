@@ -13,3 +13,7 @@ garden = 'slug spider rock gravel gravel gravel gravel gravel gravel gravel'
 Returns a string with all items except a rock or gravel replaced with gravel:
 
 garden = 'gravel gravel rock gravel gravel gravel gravel gravel gravel gravel'*/
+
+
+
+/*JS*/
