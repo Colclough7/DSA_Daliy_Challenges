@@ -17,3 +17,12 @@ garden = 'gravel gravel rock gravel gravel gravel gravel gravel gravel gravel'*/
 
 
 /*JS*/
+
+
+
+function rakeGarden(garden) {
+  return garden
+    .split(' ')
+    .map(item => (item === 'rock' || item === 'gravel') ? item : 'gravel')
+    .join(' ');
+}
