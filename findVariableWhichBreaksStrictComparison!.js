@@ -8,3 +8,10 @@ Write a function which will return value for which strict comparison will give f
 
 
 /*JS*/
+
+
+
+
+function findStrangeValue() {
+  return NaN;
+}
