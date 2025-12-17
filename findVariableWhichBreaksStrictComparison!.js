@@ -3,3 +3,8 @@
 var x = something;
 x === x // returns false!
 Write a function which will return value for which strict comparison will give false!*/
+
+
+
+
+/*JS*/
