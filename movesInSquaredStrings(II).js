@@ -47,3 +47,31 @@ The input strings are separated by , instead of \n. The ouput strings should be 
 
 
 /*JS*/
+
+
+
+
+function rot(strng) {
+    return strng
+        .split('\n')
+        .reverse()
+        .map(line => line.split('').reverse().join(''))
+        .join('\n');
+}
+
+function selfieAndRot(strng) {
+    const lines = strng.split('\n');
+    const n = lines[0].length;
+    const dots = '.'.repeat(n);
+
+    const selfie = lines.map(line => line + dots);
+    const rotated = rot(strng)
+        .split('\n')
+        .map(line => dots + line);
+
+    return selfie.concat(rotated).join('\n');
+}
+
+function oper(fct, s) {
+    return fct(s);
+}
