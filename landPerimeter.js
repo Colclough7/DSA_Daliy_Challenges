@@ -22,3 +22,4 @@ which represents:
 should return: "Total land perimeter: 18"*/
 
 
+/*JS*/
