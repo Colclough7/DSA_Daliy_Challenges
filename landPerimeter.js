@@ -23,3 +23,28 @@ should return: "Total land perimeter: 18"*/
 
 
 /*JS*/
+
+
+
+function landPerimeter(arr) {
+  let perimeter = 0;
+  const rows = arr.length;
+  const cols = arr[0].length;
+
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < cols; c++) {
+      if (arr[r][c] === 'X') {
+        // each land tile contributes 4 sides initially
+        perimeter += 4;
+
+        // check neighbors and subtract shared edges
+        if (r > 0 && arr[r - 1][c] === 'X') perimeter--;
+        if (r < rows - 1 && arr[r + 1][c] === 'X') perimeter--;
+        if (c > 0 && arr[r][c - 1] === 'X') perimeter--;
+        if (c < cols - 1 && arr[r][c + 1] === 'X') perimeter--;
+      }
+    }
+  }
+
+  return `Total land perimeter: ${perimeter}`;
+}
