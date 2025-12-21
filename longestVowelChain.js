@@ -7,3 +7,8 @@ If you like substring Katas, please try:
 Non-even substrings
 
 Vowel-consonant lexicon*/
+
+
+
+
+/*JS*/
