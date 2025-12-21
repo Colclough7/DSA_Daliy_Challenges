@@ -12,3 +12,22 @@ Vowel-consonant lexicon*/
 
 
 /*JS*/
+
+
+
+function solve(s) {
+  const vowels = new Set(['a', 'e', 'i', 'o', 'u']);
+  let maxLen = 0;
+  let currentLen = 0;
+
+  for (const char of s) {
+    if (vowels.has(char)) {
+      currentLen++;
+      maxLen = Math.max(maxLen, currentLen);
+    } else {
+      currentLen = 0;
+    }
+  }
+
+  return maxLen;
+}
