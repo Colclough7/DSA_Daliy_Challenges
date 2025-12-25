@@ -30,3 +30,23 @@ numbers = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight
 
 
 /*JS*/
+
+
+
+function wallpaper(l, w, h) {
+    if (l === 0 || w === 0 || h === 0) return "zero";
+
+    const numbers = [
+        "zero", "one", "two", "three", "four", "five", "six",
+        "seven", "eight", "nine", "ten", "eleven", "twelve",
+        "thirteen", "fourteen", "fifteen", "sixteen",
+        "seventeen", "eighteen", "nineteen", "twenty"
+    ];
+
+    const area = 2 * h * (l + w);
+    const lengthNeeded = area / 0.52;
+    const withExtra = lengthNeeded * 1.15;
+    const rolls = Math.ceil(withExtra / 10);
+
+    return numbers[rolls];
+}
