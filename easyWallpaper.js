@@ -25,3 +25,8 @@ FORTH: the number of rolls will be a positive or null integer (not a plain Engli
 In Coffeescript, Javascript, Python, Ruby and Scala the English numbers are preloaded and can be accessed as:
 
 numbers = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve","thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"]*/
+
+
+
+
+/*JS*/
