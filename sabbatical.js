@@ -13,3 +13,7 @@ The numbers of letters from 'sabbatical' that are present in string s.
 Note that if s contains three instances of the letter 'l', that still scores three points, even though there is only one in the word sabbatical.
 
 If the sum of the three parameters (as described above) is > 22, return 'Sabbatical! Boom!', else return 'Back to your desk, boy.'.*/
+
+
+
+/*JS*/
