@@ -17,3 +17,18 @@ If the sum of the three parameters (as described above) is > 22, return 'Sabbati
 
 
 /*JS*/
+
+
+
+function sabb(s, val, happiness) {
+  const letters = "sabbatical";
+  const count = s
+    .toLowerCase()
+    .split("")
+    .filter(char => letters.includes(char))
+    .length;
+
+  return (count + val + happiness) > 22
+    ? "Sabbatical! Boom!"
+    : "Back to your desk, boy.";
+}
