@@ -12,3 +12,20 @@ The answer should be rounded to the nearest 2 decimal places.*/
 
 
 /*JS*/
+
+
+
+function howMuchWater(water, load, clothes) {
+  if (clothes > load * 2) {
+    return 'Too much clothes';
+  }
+  
+  if (clothes < load) {
+    return 'Not enough clothes';
+  }
+  
+  const extraClothes = clothes - load;
+  const totalWater = water * Math.pow(1.1, extraClothes);
+  
+  return Number(totalWater.toFixed(2));
+}
