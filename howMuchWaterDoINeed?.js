@@ -11,3 +11,4 @@ The washing machine also cannot handle any amount of clothes less than load (max
 The answer should be rounded to the nearest 2 decimal places.*/
 
 
+/*JS*/
