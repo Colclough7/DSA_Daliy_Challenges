@@ -23,3 +23,22 @@ Dog Years
 
 
 /*JS*/
+
+
+
+var ownedCatAndDog = function(catYears, dogYears) {
+
+  function catOwned(years) {
+    if (years < 15) return 0;
+    if (years < 24) return 1;
+    return 2 + Math.floor((years - 24) / 4);
+  }
+
+  function dogOwned(years) {
+    if (years < 15) return 0;
+    if (years < 24) return 1;
+    return 2 + Math.floor((years - 24) / 5);
+  }
+
+  return [catOwned(catYears), dogOwned(dogYears)];
+};
